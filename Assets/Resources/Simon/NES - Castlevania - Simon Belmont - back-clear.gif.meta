@@ -1,0 +1,1092 @@
+fileFormatVersion: 2
+guid: 6ea86496fd46f09418f898db60f12067
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: NES - Castlevania - Simon Belmont - back-clear_0
+    21300002: NES - Castlevania - Simon Belmont - back-clear_1
+    21300004: NES - Castlevania - Simon Belmont - back-clear_2
+    21300006: NES - Castlevania - Simon Belmont - back-clear_3
+    21300008: NES - Castlevania - Simon Belmont - back-clear_4
+    21300010: NES - Castlevania - Simon Belmont - back-clear_5
+    21300012: NES - Castlevania - Simon Belmont - back-clear_6
+    21300014: NES - Castlevania - Simon Belmont - back-clear_7
+    21300016: NES - Castlevania - Simon Belmont - back-clear_8
+    21300018: NES - Castlevania - Simon Belmont - back-clear_9
+    21300020: NES - Castlevania - Simon Belmont - back-clear_10
+    21300022: NES - Castlevania - Simon Belmont - back-clear_11
+    21300024: NES - Castlevania - Simon Belmont - back-clear_12
+    21300026: NES - Castlevania - Simon Belmont - back-clear_13
+    21300028: NES - Castlevania - Simon Belmont - back-clear_14
+    21300030: NES - Castlevania - Simon Belmont - back-clear_15
+    21300032: NES - Castlevania - Simon Belmont - back-clear_16
+    21300034: NES - Castlevania - Simon Belmont - back-clear_17
+    21300036: NES - Castlevania - Simon Belmont - back-clear_18
+    21300038: NES - Castlevania - Simon Belmont - back-clear_19
+    21300040: NES - Castlevania - Simon Belmont - back-clear_20
+    21300042: NES - Castlevania - Simon Belmont - back-clear_21
+    21300044: NES - Castlevania - Simon Belmont - back-clear_22
+    21300046: NES - Castlevania - Simon Belmont - back-clear_23
+    21300048: NES - Castlevania - Simon Belmont - back-clear_24
+    21300050: NES - Castlevania - Simon Belmont - back-clear_25
+    21300052: NES - Castlevania - Simon Belmont - back-clear_26
+    21300054: NES - Castlevania - Simon Belmont - back-clear_27
+    21300056: NES - Castlevania - Simon Belmont - back-clear_28
+    21300058: NES - Castlevania - Simon Belmont - back-clear_29
+    21300060: NES - Castlevania - Simon Belmont - back-clear_30
+    21300062: NES - Castlevania - Simon Belmont - back-clear_31
+    21300064: NES - Castlevania - Simon Belmont - back-clear_32
+    21300066: NES - Castlevania - Simon Belmont - back-clear_33
+    21300068: NES - Castlevania - Simon Belmont - back-clear_34
+    21300070: NES - Castlevania - Simon Belmont - back-clear_35
+    21300072: NES - Castlevania - Simon Belmont - back-clear_36
+    21300074: NES - Castlevania - Simon Belmont - back-clear_37
+    21300076: NES - Castlevania - Simon Belmont - back-clear_38
+    21300078: NES - Castlevania - Simon Belmont - back-clear_39
+    21300080: NES - Castlevania - Simon Belmont - back-clear_40
+    21300082: NES - Castlevania - Simon Belmont - back-clear_41
+    21300084: NES - Castlevania - Simon Belmont - back-clear_42
+    21300086: NES - Castlevania - Simon Belmont - back-clear_43
+    21300088: NES - Castlevania - Simon Belmont - back-clear_44
+    21300090: NES - Castlevania - Simon Belmont - back-clear_45
+    21300092: NES - Castlevania - Simon Belmont - back-clear_46
+    21300094: NES - Castlevania - Simon Belmont - back-clear_47
+    21300096: NES - Castlevania - Simon Belmont - back-clear_48
+    21300098: NES - Castlevania - Simon Belmont - back-clear_49
+    21300100: NES - Castlevania - Simon Belmont - back-clear_50
+    21300102: NES - Castlevania - Simon Belmont - back-clear_51
+    21300104: NES - Castlevania - Simon Belmont - back-clear_52
+    21300106: NES - Castlevania - Simon Belmont - back-clear_53
+    21300108: NES - Castlevania - Simon Belmont - back-clear_54
+    21300110: NES - Castlevania - Simon Belmont - back-clear_55
+    21300112: NES - Castlevania - Simon Belmont - back-clear_56
+    21300114: NES - Castlevania - Simon Belmont - back-clear_57
+    21300116: NES - Castlevania - Simon Belmont - back-clear_58
+    21300118: NES - Castlevania - Simon Belmont - back-clear_59
+    21300120: NES - Castlevania - Simon Belmont - back-clear_60
+    21300122: NES - Castlevania - Simon Belmont - back-clear_61
+    21300124: NES - Castlevania - Simon Belmont - back-clear_62
+    21300126: NES - Castlevania - Simon Belmont - back-clear_63
+    21300128: NES - Castlevania - Simon Belmont - back-clear_64
+    21300130: NES - Castlevania - Simon Belmont - back-clear_65
+    21300132: NES - Castlevania - Simon Belmont - back-clear_66
+    21300134: NES - Castlevania - Simon Belmont - back-clear_67
+    21300136: NES - Castlevania - Simon Belmont - back-clear_68
+    21300138: NES - Castlevania - Simon Belmont - back-clear_69
+    21300140: NES - Castlevania - Simon Belmont - back-clear_70
+    21300142: NES - Castlevania - Simon Belmont - back-clear_71
+    21300144: NES - Castlevania - Simon Belmont - back-clear_72
+    21300146: NES - Castlevania - Simon Belmont - back-clear_73
+    21300148: NES - Castlevania - Simon Belmont - back-clear_74
+    21300150: NES - Castlevania - Simon Belmont - back-clear_75
+    21300152: NES - Castlevania - Simon Belmont - back-clear_76
+    21300154: NES - Castlevania - Simon Belmont - back-clear_77
+    21300156: NES - Castlevania - Simon Belmont - back-clear_78
+    21300158: NES - Castlevania - Simon Belmont - back-clear_79
+    21300160: NES - Castlevania - Simon Belmont - back-clear_80
+    21300162: NES - Castlevania - Simon Belmont - back-clear_81
+    21300164: NES - Castlevania - Simon Belmont - back-clear_82
+    21300166: NES - Castlevania - Simon Belmont - back-clear_83
+    21300168: NES - Castlevania - Simon Belmont - back-clear_84
+    21300170: NES - Castlevania - Simon Belmont - back-clear_85
+    21300172: NES - Castlevania - Simon Belmont - back-clear_86
+    21300174: NES - Castlevania - Simon Belmont - back-clear_87
+    21300176: NES - Castlevania - Simon Belmont - back-clear_88
+    21300178: NES - Castlevania - Simon Belmont - back-clear_89
+    21300180: NES - Castlevania - Simon Belmont - back-clear_90
+    21300182: NES - Castlevania - Simon Belmont - back-clear_91
+    21300184: NES - Castlevania - Simon Belmont - back-clear_92
+    21300186: NES - Castlevania - Simon Belmont - back-clear_93
+    21300188: NES - Castlevania - Simon Belmont - back-clear_94
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: NES - Castlevania - Simon Belmont - back-clear_0
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 646
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 646
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 646
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_3
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 646
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 646
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_5
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 646
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_6
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 646
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_7
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 646
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_8
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 646
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_9
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 603
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_10
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 603
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_11
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 603
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_12
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 602
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_13
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 602
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_14
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 602
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_15
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 563
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: .25, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_16
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 563
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: .25, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_17
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 564
+        width: 44
+        height: 32
+      alignment: 9
+      pivot: {x: .818661094, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_18
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 562
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_19
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 562
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_20
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 563
+        width: 44
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_21
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 523
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_22
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 523
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_23
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 524
+        width: 44
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_24
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 523
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_25
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 522
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_26
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 523
+        width: 44
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_27
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 480
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_28
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 480
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_29
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 481
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_30
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 480
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_31
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 479
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_32
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 480
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_33
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 440
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_34
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 440
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_35
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 441
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_36
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 440
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_37
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 439
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_38
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 440
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_39
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 400
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_40
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 400
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_41
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 401
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_42
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 400
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_43
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 399
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_44
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 400
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_45
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 360
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_46
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 360
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_47
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 361
+        width: 60
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_48
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 360
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_49
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 359
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_50
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 360
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_51
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 323
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_52
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 327
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_53
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 326
+        width: 44
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_54
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 320
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_55
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 320
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_56
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 320
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_57
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 287
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_58
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 291
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_59
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 290
+        width: 44
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_60
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 281
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_61
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 281
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_62
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 282
+        width: 44
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_63
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 248
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_64
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 252
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_65
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 252
+        width: 60
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_66
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 242
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_67
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 241
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_68
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 242
+        width: 44
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_69
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 208
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_70
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 212
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_71
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 212
+        width: 60
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_72
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 199
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_73
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 198
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_74
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 199
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_75
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 168
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_76
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 172
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_77
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 172
+        width: 60
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_78
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 159
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_79
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 158
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_80
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 159
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_81
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 128
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_82
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 132
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_83
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 132
+        width: 60
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_84
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 119
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_85
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 118
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_86
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 119
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_87
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 82
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_88
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 82
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_89
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 82
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_90
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 82
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_91
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 79
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_92
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 78
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_93
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 79
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Castlevania - Simon Belmont - back-clear_94
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 416
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
