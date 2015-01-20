@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour {
 
 	}
 	void HandleOnKeyPress_Right () {
+		Debug.Log ("Get Axis Right");
 		if (!grounded)
 			return;
 		if (curHorizontalVelocity == 0) {
@@ -67,6 +68,7 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 	void HandleOnKeyPress_Left () {
+		Debug.Log ("Get Axis Left");
 		if (!grounded)
 			return;
 		if (curHorizontalVelocity == 0) {
@@ -102,8 +104,7 @@ public class PlayerController : MonoBehaviour {
 		grounded = false;
 
 		VerticalSpeed = initVerticalSpeed;
-		// TODO Hardcode
-		yield return new WaitForSeconds (1.0f);
+		yield return new WaitForSeconds (0.5f);
 		animator.SetBool ("Jump", false);
 		 
 	}
@@ -134,6 +135,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	// switch the facing to adjust the animation
 	void FixedUpdate () {
+
 		// Horizontal Update
 		transform.position = new Vector2 (
 			transform.position.x + curHorizontalVelocity * HorizonalSpeedScale * Time.fixedDeltaTime,
