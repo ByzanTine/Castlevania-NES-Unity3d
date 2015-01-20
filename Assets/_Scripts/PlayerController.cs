@@ -5,8 +5,15 @@ public class PlayerController : MonoBehaviour {
 	private Animator animator;
 	bool facingRight = false;
 	public float jumpHeight = 2.0f;
+	public float HorizonalSpeedScale; // define in editor
+	public float initVerticalSpeed;
 	public bool grounded;
-	private int curVelocity = 0; // should only have values -1, 0, 1
+
+	private int curHorizontalVelocity = 0; // should only have values -1, 0, 1
+	private int curVerticalVelocity = 0; 
+
+	public float VerticalSpeed;
+	public float VerticalAccerlation;
 	// Use this for initialization
 	void Start () {
 		// init input manager
@@ -31,45 +38,49 @@ public class PlayerController : MonoBehaviour {
 	 */
 	void HandleOnKeyUp_Right ()
 	{
-		if (curVelocity != 0) {
+		if (curHorizontalVelocity != 0) {
 			animator.SetInteger("Speed", 0);
 		}
 	}
 
 	void HandleOnKeyUp_Left ()
 	{
-		if (curVelocity != 0) {
+		if (curHorizontalVelocity != 0) {
 			animator.SetInteger("Speed", 0);
 		}
 
 	}
 	void HandleOnKeyPress_Right () {
-		if (curVelocity == 0) {
+		if (!grounded)
+			return;
+		if (curHorizontalVelocity == 0) {
 			animator.SetInteger("Speed", 1);
 		}
-		else if (curVelocity == 1) {
+		else if (curHorizontalVelocity == 1) {
 			;
 		}
-		else if (curVelocity == -1) {
+		else if (curHorizontalVelocity == -1) {
 			animator.SetInteger("Speed", 0);
 		}
 		else {
-			Debug.LogError("Speed of a value different to 1,-1,0; Speed: " + curVelocity);
+			Debug.LogError("Speed of a value different to 1,-1,0; Speed: " + curHorizontalVelocity);
 		}
 	}
 	void HandleOnKeyPress_Left () {
-		if (curVelocity == 0) {
+		if (!grounded)
+			return;
+		if (curHorizontalVelocity == 0) {
 			animator.SetInteger("Speed", -1);
 		}
-		else if (curVelocity == 1) {
+		else if (curHorizontalVelocity == 1) {
 			animator.SetInteger("Speed", 0);
 		}
-		else if (curVelocity == -1) {
+		else if (curHorizontalVelocity == -1) {
 			// do nothing
 			;
 		}
 		else {
-			Debug.LogError("Speed of a value different to 1,-1,0; Speed: " + curVelocity);
+			Debug.LogError("Speed of a value different to 1,-1,0; Speed: " + curHorizontalVelocity);
 		}
 	}
 
@@ -77,8 +88,7 @@ public class PlayerController : MonoBehaviour {
 		Debug.Log ("Key A pressed");
 		// jump	
 		Vector2 curPos = transform.position;
-		Debug.Log (curPos);
-		if (!grounded && !animator.GetBool("Jump"))
+		if (grounded && !animator.GetBool("Jump"))
 			StartCoroutine(Jump());
 
 
@@ -89,21 +99,11 @@ public class PlayerController : MonoBehaviour {
 	IEnumerator Jump () {
 		// jump animation 
 		animator.SetBool ("Jump", true);
-		Vector2 originPos = transform.position;
-		Vector2 upperPos = new Vector2(transform.position.x, transform.position.y + jumpHeight);
-		float increment = 0.3f;
-		float decay = 0.9f;
-		for (float i = 0; i < 1; i+= increment ) {
-			// TODO there should be a interrupt when hurt
-			yield return new WaitForSeconds(Time.fixedDeltaTime);
-			transform.position = Vector2.Lerp (transform.position, upperPos, i);
-			increment = increment * decay;
-		}
-		for (float i = 0; i < 1; i+= 0.1f) {
-			// TODO there should be a interrupt when hurt
-			yield return new WaitForSeconds(Time.fixedDeltaTime);
-			transform.position = Vector2.Lerp (transform.position, originPos, i);
-		}
+		grounded = false;
+
+		VerticalSpeed = initVerticalSpeed;
+		// TODO Hardcode
+		yield return new WaitForSeconds (1.0f);
 		animator.SetBool ("Jump", false);
 		 
 	}
@@ -134,19 +134,40 @@ public class PlayerController : MonoBehaviour {
 	}
 	// switch the facing to adjust the animation
 	void FixedUpdate () {
-		Vector2 afterPos = transform.position;
-
+		// Horizontal Update
+		transform.position = new Vector2 (
+			transform.position.x + curHorizontalVelocity * HorizonalSpeedScale * Time.fixedDeltaTime,
+			transform.position.y
+			);
+		// Vertical update
+		transform.position = new Vector2 (
+			transform.position.x ,
+			transform.position.y + VerticalSpeed * Time.fixedDeltaTime
+			);
+		if (!grounded)
+			VerticalSpeed += VerticalAccerlation*Time.fixedDeltaTime;
+		if (transform.position.y < 0.0f) {
+			grounded = true;
+			transform.position = new Vector2(transform.position.x, 0.0f);
+			VerticalSpeed = 0.0f;
+		}
+		// transform facing update
 		if (animator.GetInteger("Speed") > 0 && !facingRight)
 			Flip();
 		if (animator.GetInteger("Speed") < 0 && facingRight)
 			Flip();
 
-	}
-	// Update is called once per frame
-	void Update () {
-		curVelocity = animator.GetInteger ("Speed");
 
 	}
+
+
+	// Update is called once per frame
+	void Update () {
+		curHorizontalVelocity = animator.GetInteger ("Speed");
+
+	}
+
+
 
 
 
