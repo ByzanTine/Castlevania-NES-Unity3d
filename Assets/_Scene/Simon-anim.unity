@@ -119,7 +119,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 484619026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.708000004, y: .625, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -265,7 +265,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1326055855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.338999987, z: 0}
+  m_LocalPosition: {x: 0, y: -1.89400005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -318,7 +318,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1677072544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.11500001, y: .241999999, z: 0}
+  m_LocalPosition: {x: -1.12, y: .479999989, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -351,7 +351,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpHeight: .5
   HorizonalSpeedScale: .800000012
+  initVerticalSpeed: 1.5
   grounded: 0
+  VerticalSpeed: 0
+  VerticalAccerlation: -3
 --- !u!61 &1677072550
 BoxCollider2D:
   m_ObjectHideFlags: 0
