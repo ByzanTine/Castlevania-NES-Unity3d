@@ -2,23 +2,31 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-	private Animator animator;
-	bool facingRight = false;
 	public float jumpHeight = 2.0f;
 	public float HorizonalSpeedScale; // define in editor
 	public float initVerticalSpeed;
+	public float VerticalAccerlation;
+
+	[HideInInspector]
+	public bool facingRight = false;
+	[HideInInspector]
+	public float VerticalSpeed;
 	public bool grounded;
 
-	private int curHorizontalVelocity = 0; // should only have values -1, 0, 1
-	private int curVerticalVelocity = 0; 
 
-	public float VerticalSpeed;
-	public float VerticalAccerlation;
+	private Animator animator;
+	private WhipAttackManager whipAttManager;
+
+	private int curHorizontalVelocity = 0; // should only have values -1, 0, 1
+
+
+
 	// Use this for initialization
 	void Start () {
 		// init input manager
 		initInputEventHandler ();
 		animator = GetComponent<Animator> ();
+		whipAttManager = GetComponent<WhipAttackManager> ();
 		Flip (); // since the raw sprite face left
 	}
 	void initInputEventHandler () {
@@ -51,7 +59,8 @@ public class PlayerController : MonoBehaviour {
 
 	}
 	void HandleOnKeyPress_Right () {
-		if (!grounded)
+		Debug.Log ("Get Axis Right");
+		if (!grounded || whipAttManager.attacking)
 			return;
 		if (curHorizontalVelocity == 0) {
 			animator.SetInteger("Speed", 1);
@@ -67,7 +76,8 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 	void HandleOnKeyPress_Left () {
-		if (!grounded)
+		Debug.Log ("Get Axis Left");
+		if (!grounded || whipAttManager.attacking )
 			return;
 		if (curHorizontalVelocity == 0) {
 			animator.SetInteger("Speed", -1);
@@ -87,12 +97,22 @@ public class PlayerController : MonoBehaviour {
 	void HandleOnKeyDown_A () {
 		Debug.Log ("Key A pressed");
 		// jump	
-		Vector2 curPos = transform.position;
-		if (grounded && !animator.GetBool("Jump"))
+		if (grounded 
+		    && !animator.GetBool("Squat")
+		    && !animator.GetBool("Jump")
+		    && !whipAttManager.attacking)
 			StartCoroutine(Jump());
 
 
 	}
+
+	void HandleOnKeyDown_B () {
+		Debug.Log ("Key B pressed");
+		// attack
+		// delegate to WhipAttackManager
+		StartCoroutine (whipAttManager.WhipAttack());
+	}
+
 
 	// ============================================================================ //
 
@@ -102,24 +122,12 @@ public class PlayerController : MonoBehaviour {
 		grounded = false;
 
 		VerticalSpeed = initVerticalSpeed;
-		// TODO Hardcode
-		yield return new WaitForSeconds (1.0f);
+		yield return new WaitForSeconds (0.5f);
 		animator.SetBool ("Jump", false);
 		 
 	}
 
-	void HandleOnKeyDown_B () {
-		Debug.Log ("Key B pressed");
-		animator.SetInteger ("Attack", 1);
-		StartCoroutine (DelayDisableAttack());
-		// attack 
-	}
-
-	IEnumerator DelayDisableAttack() {
-		yield return new WaitForSeconds(0.1f);
-		animator.SetInteger ("Attack", 0);
-
-	}
+	
 
 	void HandleOnKeyDown_Down () {
 		// Debug.Log ("Key Down arrow or S is activated");
@@ -134,6 +142,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	// switch the facing to adjust the animation
 	void FixedUpdate () {
+
 		// Horizontal Update
 		transform.position = new Vector2 (
 			transform.position.x + curHorizontalVelocity * HorizonalSpeedScale * Time.fixedDeltaTime,
