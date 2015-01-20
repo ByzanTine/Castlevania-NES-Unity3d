@@ -78,19 +78,36 @@ public class PlayerController : MonoBehaviour {
 		// jump	
 		Vector2 curPos = transform.position;
 		Debug.Log (curPos);
-		if (!grounded)
-			Jump ();
+		if (!grounded && !animator.GetBool("Jump"))
+			StartCoroutine(Jump());
 
 
 	}
 
 	// ============================================================================ //
 
-	void Jump () {
+	IEnumerator Jump () {
 		// jump animation 
-//		animator.SetBool ("Jump", true);
-//		transform.position = new Vector2(transform.position.x, transform.position.y + 2);
+		animator.SetBool ("Jump", true);
+		Vector2 originPos = transform.position;
+		Vector2 upperPos = new Vector2(transform.position.x, transform.position.y + jumpHeight);
+		float increment = 0.3f;
+		float decay = 0.9f;
+		for (float i = 0; i < 1; i+= increment ) {
+			// TODO there should be a interrupt when hurt
+			yield return new WaitForSeconds(Time.fixedDeltaTime);
+			transform.position = Vector2.Lerp (transform.position, upperPos, i);
+			increment = increment * decay;
+		}
+		for (float i = 0; i < 1; i+= 0.1f) {
+			// TODO there should be a interrupt when hurt
+			yield return new WaitForSeconds(Time.fixedDeltaTime);
+			transform.position = Vector2.Lerp (transform.position, originPos, i);
+		}
+		animator.SetBool ("Jump", false);
+		 
 	}
+
 	void HandleOnKeyDown_B () {
 		Debug.Log ("Key B pressed");
 		animator.SetInteger ("Attack", 1);
@@ -117,6 +134,8 @@ public class PlayerController : MonoBehaviour {
 	}
 	// switch the facing to adjust the animation
 	void FixedUpdate () {
+		Vector2 afterPos = transform.position;
+
 		if (animator.GetInteger("Speed") > 0 && !facingRight)
 			Flip();
 		if (animator.GetInteger("Speed") < 0 && facingRight)
