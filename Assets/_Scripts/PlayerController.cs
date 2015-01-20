@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour {
 	private Animator animator;
 	bool facingRight = false;
 	public float jumpHeight = 2.0f;
+	public float HorizonalSpeedScale; // define in editor
 	public bool grounded;
 	private int curVelocity = 0; // should only have values -1, 0, 1
 	// Use this for initialization
@@ -134,8 +135,10 @@ public class PlayerController : MonoBehaviour {
 	}
 	// switch the facing to adjust the animation
 	void FixedUpdate () {
-		Vector2 afterPos = transform.position;
-
+		transform.position = new Vector2 (
+			transform.position.x + curVelocity * HorizonalSpeedScale * Time.fixedDeltaTime,
+			transform.position.y
+			);
 		if (animator.GetInteger("Speed") > 0 && !facingRight)
 			Flip();
 		if (animator.GetInteger("Speed") < 0 && facingRight)

@@ -350,6 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpHeight: .5
+  HorizonalSpeedScale: .800000012
   grounded: 0
 --- !u!61 &1677072550
 BoxCollider2D:
