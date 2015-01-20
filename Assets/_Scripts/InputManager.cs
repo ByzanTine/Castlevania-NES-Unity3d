@@ -14,13 +14,14 @@ public class InputManager : MonoBehaviour {
 			return instance;
 		}
 	}
-	public LayerMask collideLayer;// Only collide with the colliders in this layer
 	// Event Handler
 	public delegate void OnKeyPress();
 
 	// Map to classical control
 	public event OnKeyPress OnKeyPress_Right;
+	public event OnKeyPress OnKeyUp_Right;
 	public event OnKeyPress OnKeyPress_Left;
+	public event OnKeyPress OnKeyUp_Left;
 	public event OnKeyPress OnKeyDown_Down;
 	public event OnKeyPress OnKeyUp_Down;
 	public event OnKeyPress OnKeyPress_Up;
@@ -41,6 +42,17 @@ public class InputManager : MonoBehaviour {
 		if (Input.GetKeyUp (KeyCode.S) || Input.GetKeyUp (KeyCode.DownArrow)) {
 			OnKeyUp_Down();
 		}
-
+		if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.D)) {
+			OnKeyPress_Right();
+		}
+		if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.A)) {
+			OnKeyPress_Left();
+		}
+		if (Input.GetKeyUp (KeyCode.RightArrow) || Input.GetKeyUp (KeyCode.D)) {
+			OnKeyUp_Right();
+		}
+		if (Input.GetKeyUp (KeyCode.LeftArrow) || Input.GetKeyUp (KeyCode.A)) {
+			OnKeyUp_Left();
+		}
 	}
 }
