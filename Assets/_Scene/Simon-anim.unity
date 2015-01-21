@@ -305,7 +305,7 @@ MonoBehaviour:
   whipLevel: 1
   collideLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   attacking: 0
   testDamage: 0
 --- !u!212 &1677072546
