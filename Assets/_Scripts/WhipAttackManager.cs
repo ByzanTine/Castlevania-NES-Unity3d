@@ -45,11 +45,12 @@ public class WhipAttackManager : MonoBehaviour {
 			Vector3 To = WhipEnd(From);
 			RaycastHit2D[] hits = Physics2D.RaycastAll(From, (To-From).normalized, (To-From).magnitude, collideLayer);
 			Debug.Log("number of hits: " + hits.Length);
+			// Boardcast to all objects that has a WhipEventhandler
 			foreach (RaycastHit2D hit in hits) {
 				GameObject gb = hit.transform.gameObject;
-				ChangeColor CC = gb.GetComponent<ChangeColor>();
+				OnWhipEvent CC = gb.GetComponent<OnWhipEvent>();	
 				if (CC){
-					StartCoroutine(CC.changeColor());
+					CC.onWhipEnter();
 				}
 			}
 			Debug.DrawLine(From, To, Color.blue, 1.0f);
