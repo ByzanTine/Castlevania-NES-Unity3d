@@ -1,0 +1,102 @@
+fileFormatVersion: 2
+guid: 243cc5c33db112d4484f738e8a289143
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: level1-entrace-background_clear_0
+    21300002: level1-entrace-background_clear_1
+    21300004: level1-entrace-background_clear_2
+    21300006: level1-entrace-background_clear_3
+    21300008: level1-entrace-background_clear_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: level1-entrace-background_clear_0
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 510
+        width: 113
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: level1-entrace-background_clear_1
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 516
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: level1-entrace-background_clear_2
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 483
+        width: 127
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: level1-entrace-background_clear_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 401
+        width: 796
+        height: 193
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: level1-entrace-background_clear_4
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 212
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -25,10 +25,14 @@ public class WhipAttackManager : MonoBehaviour {
 	
 
 	public IEnumerator WhipAttack() {
-
+		// stop if walking 
+		if (playerControl.grounded && animator.GetInteger("Speed") != 0) {
+			animator.SetInteger("Speed", 0);
+		}
 		animator.SetInteger (tag_attack, whipLevel);
 		yield return new WaitForSeconds(attackWaitInterval);
 		animator.SetInteger (tag_attack, 0);
+
 
 		
 	}
