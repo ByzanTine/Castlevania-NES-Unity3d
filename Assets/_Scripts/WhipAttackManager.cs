@@ -13,7 +13,7 @@ public class WhipAttackManager : MonoBehaviour {
 	private PlayerController playerControl;
 
 	private string tag_attack = "Attack";
-	private float attackWaitInterval = 0.5f;
+	private float attackWaitInterval = 0.33f;
 
 	// Use this for initialization
 	void Start () {
