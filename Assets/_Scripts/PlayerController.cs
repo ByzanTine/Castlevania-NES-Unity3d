@@ -2,19 +2,25 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-	private Animator animator;
-	private WhipAttackManager whipAttManager;
-	bool facingRight = false;
 	public float jumpHeight = 2.0f;
 	public float HorizonalSpeedScale; // define in editor
 	public float initVerticalSpeed;
+	public float VerticalAccerlation;
+
+	[HideInInspector]
+	public bool facingRight = false;
+	[HideInInspector]
+	public float VerticalSpeed;
 	public bool grounded;
 
-	private int curHorizontalVelocity = 0; // should only have values -1, 0, 1
-	private int curVerticalVelocity = 0; 
 
-	public float VerticalSpeed;
-	public float VerticalAccerlation;
+	private Animator animator;
+	private WhipAttackManager whipAttManager;
+
+	private int curHorizontalVelocity = 0; // should only have values -1, 0, 1
+
+
+
 	// Use this for initialization
 	void Start () {
 		// init input manager

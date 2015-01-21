@@ -8,13 +8,13 @@ public class ChangeColor : MonoBehaviour {
 		spri = GetComponent<SpriteRenderer> ();
 	}
 	
+	// legacy 
+//	void OnTriggerEnter2D(Collider2D other) {
+//		Debug.Log ("Something enter me");
+//		StartCoroutine (changeColor ());
+//	}
 
-	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log ("PLayer enter me");
-		StartCoroutine (changeColor ());
-	}
-
-	IEnumerator changeColor() {
+	public IEnumerator changeColor() {
 		spri.color = Color.red;
 		yield return new WaitForSeconds(0.5f);
 		spri.color = Color.white;
