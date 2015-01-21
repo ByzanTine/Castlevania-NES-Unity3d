@@ -70,6 +70,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whipLevel: 1
+  collideLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
   attacking: 0
   testDamage: 0
 --- !u!114 &11478122
@@ -86,9 +89,10 @@ MonoBehaviour:
   jumpHeight: .5
   HorizonalSpeedScale: .699999988
   initVerticalSpeed: 2
-  grounded: 0
-  VerticalSpeed: 0
   VerticalAccerlation: -5.0999999
+  facingRight: 0
+  VerticalSpeed: 0
+  grounded: 0
 --- !u!212 &21278120
 SpriteRenderer:
   m_ObjectHideFlags: 1

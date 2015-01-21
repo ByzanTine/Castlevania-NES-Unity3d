@@ -1,18 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ChangeColor : MonoBehaviour {
+public class ChangeColor : OnWhipEvent {
 	private SpriteRenderer spri;
 	// Use this for initialization
 	void Start () {
 		spri = GetComponent<SpriteRenderer> ();
 	}
-	
-	// legacy 
-//	void OnTriggerEnter2D(Collider2D other) {
-//		Debug.Log ("Something enter me");
-//		StartCoroutine (changeColor ());
-//	}
+
+	public override void onWhipEnter (){
+		StartCoroutine (changeColor());
+	}
 
 	public IEnumerator changeColor() {
 		spri.color = Color.red;
