@@ -294,13 +294,14 @@ GameObject:
   - 4: {fileID: 1401310331}
   - 212: {fileID: 1401310330}
   - 61: {fileID: 1401310329}
+  - 114: {fileID: 1401310332}
   m_Layer: 0
   m_Name: Test_Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1401310329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -309,7 +310,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1401310328}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: .479999989, y: .159999996}
   m_Center: {x: 0, y: 0}
 --- !u!212 &1401310330
@@ -346,6 +347,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &1401310332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1401310328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2341bcc00f99e4a6aa8a3002bf35d219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1677072544
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +373,7 @@ GameObject:
   - 114: {fileID: 1677072545}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -543,6 +555,10 @@ Prefab:
     - target: {fileID: 478120, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 178120, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
