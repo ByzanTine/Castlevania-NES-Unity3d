@@ -17,7 +17,7 @@ public class CollisionResolve : MonoBehaviour {
 	
 	}
 
-	void OnTriggerEnter2D( Collider2D coll ) {
+	void OnTriggerStay2D( Collider2D coll ) {
 		Debug.Log ("collided");
 
 		GameObject collidedObj = coll.gameObject;
@@ -60,18 +60,19 @@ public class CollisionResolve : MonoBehaviour {
 		case Direction.Bottom:
 			break;
 		case Direction.Left:
-//			if(plScript.HorizonalSpeedScale > 0 && plScript.facingRight)
-//			{
-////				print ("bool" + plScript.facingRight);
-//				plScript.HorizonalSpeedScale = 0;
-//			}
+			if(plScript.CurHorizontalVelocity > 0)
+			{
+//				print ("bool" + plScript.facingRight);
+				plScript.CurHorizontalVelocity = -1;
+			}
 			break;
 
 		case Direction.Right:
-//			if(plScript.HorizonalSpeedScale > 0 && !plScript.facingRight)
-//			{
-//				plScript.HorizonalSpeedScale = 0;
-//			}
+			if(plScript.CurHorizontalVelocity < 0)
+			{
+				//				print ("bool" + plScript.facingRight);
+				plScript.CurHorizontalVelocity = 1;
+			}
 			break;
 
 		case Direction.Top:
