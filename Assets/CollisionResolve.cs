@@ -6,7 +6,9 @@ using System.Collections.Generic;
 public class CollisionResolve : MonoBehaviour {
 
 //	objUR.xotected GameObject collidedObj;
-	enum Direction{Left, Right, Bottom, Top};
+	enum Direction{Left, Right, Bottom, Top, None};
+
+	private int collIndex;
 	// Use this for initialization
 	void Start () {
 		
@@ -17,7 +19,7 @@ public class CollisionResolve : MonoBehaviour {
 	
 	}
 
-	void OnTriggerStay2D( Collider2D coll ) {
+	void OnTriggerEnter2D( Collider2D coll ) {
 		Debug.Log ("collided");
 
 		GameObject collidedObj = coll.gameObject;
@@ -28,7 +30,7 @@ public class CollisionResolve : MonoBehaviour {
 		Vector2 myLL = collider2D.bounds.min;
 		Vector2 myUR = collider2D.bounds.max;
 
-		Debug.Log ("objxy:" + objLL.x + objLL.y + "myxy:" + myLL.x + myLL.y);
+//		Debug.Log ("objxy:" + objLL.x + objLL.y + "myxy:" + myLL.x + myLL.y);
 	
 
 		List<float> collDepth = new List<float> (
@@ -44,11 +46,19 @@ public class CollisionResolve : MonoBehaviour {
 			collDepth[3] = myUR.y - objLL.y;
 		
 		// return the closest intersection
-		int collIndex = collDepth.IndexOf(Mathf.Min(collDepth.ToArray()));
-		for (int i=0; i<4; ++i)
-			Debug.Log (i + "=" + collDepth[i]);
+		collIndex = collDepth.IndexOf(Mathf.Min(collDepth.ToArray()));
+//		for (int i=0; i<4; ++i)
+//			Debug.Log (i + "=" + collDepth[i]);
 
-		Debug.Log ("list" + collDepth.ToArray().ToString() + " c@ " + ((Direction)collIndex).ToString() );
+//		Debug.Log ("" + " c@ " + ((Direction)collIndex).ToString() );
+
+		if (collidedObj.tag == "Player") 
+		{
+			PlayerCollisionManager plScript = collidedObj.GetComponent<PlayerCollisionManager>();
+			plScript.playerCollisionEnter(collIndex);
+		}
+
+		// will be depercated
 		collWithPlayer (collidedObj, (Direction)collIndex);
 	}
 
@@ -60,19 +70,14 @@ public class CollisionResolve : MonoBehaviour {
 		case Direction.Bottom:
 			break;
 		case Direction.Left:
-			if(plScript.CurHorizontalVelocity > 0)
-			{
-//				print ("bool" + plScript.facingRight);
-				plScript.CurHorizontalVelocity = -1;
-			}
 			break;
 
 		case Direction.Right:
-			if(plScript.CurHorizontalVelocity < 0)
-			{
-				//				print ("bool" + plScript.facingRight);
-				plScript.CurHorizontalVelocity = 1;
-			}
+//			if(plScript.CurHorizontalVelocity < 0)
+//			{
+//				//				print ("bool" + plScript.facingRight);
+//				plScript.CurHorizontalVelocity = 1;
+//			}
 			break;
 
 		case Direction.Top:
@@ -90,10 +95,23 @@ public class CollisionResolve : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D( Collider2D coll ) {
-		GameObject collidedObj = coll.gameObject;                          
-		if ( collidedObj.tag == "Player" ) {
-			PlayerController plScript = collidedObj.GetComponent<PlayerController>();
-			plScript.grounded = false;
+		GameObject collidedObj = coll.gameObject;  
+		//collidedObj.GetInstanceID
+		if (collidedObj.tag == "Player") 
+		{
+			PlayerCollisionManager plScript = collidedObj.GetComponent<PlayerCollisionManager>();
+			plScript.playerCollisionExit(collIndex);
+
+			// will be deprecated
+			if(!plScript.isWallOnBottom())
+			{			
+				PlayerController plScript2 = collidedObj.GetComponent<PlayerController>();
+				plScript2.grounded = false;
+			}
+
 		}
+
+
+
 	}
 }
