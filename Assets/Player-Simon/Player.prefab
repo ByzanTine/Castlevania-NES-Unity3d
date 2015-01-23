@@ -67,10 +67,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 178120}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba8469faa7929404397ea183de1df01b, type: 3}
+  m_Script: {fileID: 11500000, guid: eb35b4a9e6c3d7945976f66a08202661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onStairs: 2
+  onStairArea: 3
+  onStairState: 2
 --- !u!114 &11478120
 MonoBehaviour:
   m_ObjectHideFlags: 1

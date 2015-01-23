@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
 	public float StairStepLength; // absolute value.
 	public float VerticalAccerlation;
 
-	[HideInInspector]
+	// [HideInInspector]
 	public bool facingRight = false;
 	[HideInInspector]
 	public float VerticalSpeed;
@@ -123,9 +123,8 @@ public class PlayerController : MonoBehaviour {
 	void HandleOnKeyPress_Up ()
 	{
 		Debug.Log("On Key Press: Up");
-
-		if (!animator.GetBool("UpStair") && stairManager.isOnStair())
-			StartCoroutine (stairManager.GoUpStair ());
+		if (stairManager.isInStairArea())
+			stairManager.tryGoUpStair ();
 	}
 	
 	void HandleOnKeyUp_Up ()
@@ -158,8 +157,9 @@ public class PlayerController : MonoBehaviour {
 	void HandleOnKeyDown_Down () {
 		// Debug.Log ("Key Down arrow or S is activated");
 		// squat enable
-		if (stairManager.isOnStair()&& !animator.GetBool("DownStair")) {
-			StartCoroutine(stairManager.GoDownStair());
+		// TODO enable squat when in prep_up_stair
+		if (stairManager.isInStairArea()) {
+			stairManager.tryGoDownStair();
 		}
 		else {
 			animator.SetBool ("Squat", true);
@@ -171,8 +171,8 @@ public class PlayerController : MonoBehaviour {
 	{
 		Debug.Log("Get Axis Down");
 		// TODO decide if the object is already going down
-		if (stairManager.isOnStair() && !animator.GetBool("DownStair")) {
-			StartCoroutine(stairManager.GoDownStair());
+		if (stairManager.isInStairArea()) {
+			stairManager.tryGoDownStair();
 		}
 	}
 
@@ -198,7 +198,7 @@ public class PlayerController : MonoBehaviour {
 	// switch the facing to adjust the animation
 	void FixedUpdate () {
 
-		if (!stairManager.isOnStair()) {
+		if (!stairManager.isWalkingOnStair()) {
 			normalFixedUpdate();
 		}
 
