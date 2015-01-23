@@ -66,5 +66,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
+    - name: level1-entrace-background_clear_2
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 448
+        width: 48
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
