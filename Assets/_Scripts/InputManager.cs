@@ -23,8 +23,10 @@ public class InputManager : MonoBehaviour {
 	public event OnKeyPress OnKeyPress_Left;
 	public event OnKeyPress OnKeyUp_Left;
 	public event OnKeyPress OnKeyDown_Down;
+	public event OnKeyPress OnKeyPress_Down;
 	public event OnKeyPress OnKeyUp_Down;
 	public event OnKeyPress OnKeyPress_Up;
+	public event OnKeyPress OnKeyUp_Up;
 	public event OnKeyPress OnKeyDown_B;
 	public event OnKeyPress OnKeyDown_A;
 	// Handle our Ray and Hit
@@ -36,8 +38,11 @@ public class InputManager : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.X) || Input.GetKeyDown (KeyCode.Period)) {
 			OnKeyDown_B();
 		}
-		if (Input.GetKeyDown (KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
+		if (Input.GetKey (KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
 			OnKeyDown_Down();
+		}
+		if (Input.GetKeyUp (KeyCode.S) || Input.GetKeyUp (KeyCode.DownArrow)) {
+			OnKeyPress_Down();
 		}
 		if (Input.GetKeyUp (KeyCode.S) || Input.GetKeyUp (KeyCode.DownArrow)) {
 			OnKeyUp_Down();
@@ -54,5 +59,12 @@ public class InputManager : MonoBehaviour {
 		if (Input.GetKeyUp (KeyCode.LeftArrow) || Input.GetKeyUp (KeyCode.A)) {
 			OnKeyUp_Left();
 		}
+		if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
+			OnKeyPress_Up();
+		}
+		if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)) {
+			OnKeyUp_Up();
+		}
+	
 	}
 }
