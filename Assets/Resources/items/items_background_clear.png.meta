@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: 83bf2182062249640b3f8e0d8589480b
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: items_background_clear_0
+    21300002: items_background_clear_1
+    21300004: items_background_clear_2
+    21300006: items_background_clear_3
+    21300008: items_background_clear_4
+    21300010: items_background_clear_5
+    21300012: items_background_clear_6
+    21300014: items_background_clear_7
+    21300016: items_background_clear_8
+    21300018: items_background_clear_9
+    21300020: items_background_clear_10
+    21300022: items_background_clear_11
+    21300024: items_background_clear_12
+    21300026: items_background_clear_13
+    21300028: items_background_clear_14
+    21300030: items_background_clear_15
+    21300032: items_background_clear_16
+    21300034: items_background_clear_17
+    21300036: items_background_clear_18
+    21300038: items_background_clear_19
+    21300040: items_background_clear_20
+    21300042: items_background_clear_21
+    21300044: items_background_clear_22
+    21300046: items_background_clear_23
+    21300048: items_background_clear_24
+    21300050: items_background_clear_25
+    21300052: items_background_clear_26
+    21300054: items_background_clear_27
+    21300056: items_background_clear_28
+    21300058: items_background_clear_29
+    21300060: items_background_clear_30
+    21300062: items_background_clear_31
+    21300064: items_background_clear_32
+    21300066: items_background_clear_33
+    21300068: items_background_clear_34
+    21300070: items_background_clear_35
+    21300072: items_background_clear_36
+    21300074: items_background_clear_37
+    21300076: items_background_clear_38
+    21300078: items_background_clear_39
+    21300080: items_background_clear_40
+    21300082: items_background_clear_41
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -22,16 +64,16 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 1024
+  maxTextureSize: 4096
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +84,426 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: items_background_clear_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 248
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 248
+        width: 44
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_2
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 248
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_3
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 248
+        width: 69
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_4
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 247
+        width: 65
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_5
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 233
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_6
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 231
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 227
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_8
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 227
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_9
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 227
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_10
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 227
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_11
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 222
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_12
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 222
+        width: 53
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_13
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 211
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 203
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_15
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 184
+        width: 67
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_16
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 197
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 184
+        width: 60
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_18
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 184
+        width: 39
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_19
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 197
+        width: 53
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 177
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 161
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_22
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 173
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_23
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 173
+        width: 53
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 159
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_25
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 159
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_26
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 159
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_27
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 153
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_28
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 137
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_29
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 132
+        width: 66
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_30
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 143
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_31
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 143
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_32
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 143
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_33
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 143
+        width: 59
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_34
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 112
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_35
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 109
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_36
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 109
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_37
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 82
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_38
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 82
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_39
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 40
+        width: 127
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_40
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 41
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: items_background_clear_41
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 8
+        width: 122
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
