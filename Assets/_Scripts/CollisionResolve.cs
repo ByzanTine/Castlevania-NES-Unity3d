@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class CollisionResolve : MonoBehaviour {
 
 //	objUR.xotected GameObject collidedObj;
-	enum Direction{Left, Right, Bottom, Top, None};
+	private enum RDirection{Left, Right, Bottom, Top, None};
 
 	private int collIndex;
 	// Use this for initialization
@@ -52,31 +52,34 @@ public class CollisionResolve : MonoBehaviour {
 
 //		Debug.Log ("" + " c@ " + ((Direction)collIndex).ToString() );
 
-		if (collidedObj.tag == "Player") 
+		PlayerCollisionManager plScript = collidedObj.GetComponent<PlayerCollisionManager>();
+		if (plScript != null) 
 		{
-			PlayerCollisionManager plScript = collidedObj.GetComponent<PlayerCollisionManager>();
 			plScript.playerCollisionEnter(collIndex);
+			
+			// will be depercated
+			collWithPlayer (collidedObj, (RDirection)collIndex);
 		}
-		else if(collidedObj.tag == "Item")
+
+		ItemMotion itScript = collidedObj.GetComponent<ItemMotion>();
+		if(itScript != null)
 		{
-			ItemMotion itScript = collidedObj.GetComponent<ItemMotion>();
 			itScript.hitGround();
 		}
-		// will be depercated
-		collWithPlayer (collidedObj, (Direction)collIndex);
+
 	}
 
-	void collWithPlayer(GameObject playerObj, Direction dir)
+	void collWithPlayer(GameObject playerObj, RDirection dir)
 	{
 		PlayerController plScript = playerObj.GetComponent<PlayerController>();
 		switch (dir) 
 		{
-		case Direction.Bottom:
+		case RDirection.Bottom:
 			break;
-		case Direction.Left:
+		case RDirection.Left:
 			break;
 
-		case Direction.Right:
+		case RDirection.Right:
 //			if(plScript.CurHorizontalVelocity < 0)
 //			{
 //				//				print ("bool" + plScript.facingRight);
@@ -84,7 +87,7 @@ public class CollisionResolve : MonoBehaviour {
 //			}
 			break;
 
-		case Direction.Top:
+		case RDirection.Top:
 			if(plScript.VerticalSpeed < 0)
 			{
 				plScript.VerticalSpeed = 0;
@@ -107,7 +110,7 @@ public class CollisionResolve : MonoBehaviour {
 			plScript.playerCollisionExit(collIndex);
 
 			// will be deprecated
-			if(!plScript.isWallOnBottom())
+			if(!plScript.isWallOn(Globals.Direction.Bottom))
 			{			
 				PlayerController plScript2 = collidedObj.GetComponent<PlayerController>();
 				plScript2.grounded = false;
