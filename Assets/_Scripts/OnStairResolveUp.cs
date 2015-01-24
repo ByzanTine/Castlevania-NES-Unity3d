@@ -4,7 +4,13 @@ using System.Collections;
 public class OnStairResolveUp : MonoBehaviour {
 
 
-	public Globals.STAIR_FACING stairFacing;
+	private Globals.STAIR_FACING stairFacing;
+	private int StairSteps;
+	// init with the stair steps
+	void Start() {
+		StairSteps = transform.GetComponentInParent<StairController>().StairSteps;
+		stairFacing = transform.GetComponentInParent<StairController> ().stairFacing;
+	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		Debug.Log("STAIR: Enter Trigger of Going up stairs");
@@ -16,7 +22,8 @@ public class OnStairResolveUp : MonoBehaviour {
 			return;
 		}
 
-		stairMan.switchToState(StairManager.ON_STAIR_AREA.PrepUp, transform.position.x, stairFacing);
+		stairMan.switchToState(StairManager.ON_STAIR_AREA.PrepUp, transform.position.x, 
+		                       stairFacing, StairSteps);
 
 	}
 
