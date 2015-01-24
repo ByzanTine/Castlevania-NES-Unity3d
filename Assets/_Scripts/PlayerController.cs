@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour {
 
 	}
 	void HandleOnKeyPress_Right () {
-		Debug.Log ("Get Axis Right");
+		// Debug.Log ("Get Axis Right");
 		if (!grounded || whipAttManager.attacking)
 			return;
 		if (curHorizontalVelocity == 0) {
@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour {
 
 	}
 	void HandleOnKeyPress_Left () {
-		Debug.Log ("Get Axis Left");
+		// Debug.Log ("Get Axis Left");
 		if (!grounded || whipAttManager.attacking )
 			return;
 		if (curHorizontalVelocity == 0) {
@@ -136,19 +136,19 @@ public class PlayerController : MonoBehaviour {
 
 	void HandleOnKeyPress_Up ()
 	{
-		Debug.Log("On Key Press: Up");
+		// Debug.Log("On Key Press: Up");
 		if (stairManager.isInStairArea())
 			stairManager.tryGoUpStair ();
 	}
 	
 	void HandleOnKeyUp_Up ()
 	{
-		Debug.Log("On Key Up: Up");
+		// Debug.Log("On Key Up: Up");
 
 	}
 
 	void HandleOnKeyDown_A () {
-		Debug.Log ("Key A pressed");
+		// Debug.Log ("Key A pressed");
 		// jump	
 		if (grounded 
 		    && !animator.GetBool("Squat")
@@ -160,7 +160,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void HandleOnKeyDown_B () {
-		Debug.Log ("Key B pressed");
+		// Debug.Log ("Key B pressed");
 		// attack
 		// delegate to WhipAttackManager
 		StartCoroutine (whipAttManager.WhipAttack());
@@ -183,7 +183,7 @@ public class PlayerController : MonoBehaviour {
 
 	void HandleOnKeyPress_Down ()
 	{
-		Debug.Log("Get Axis Down");
+		// Debug.Log("Get Axis Down");
 		// TODO decide if the object is already going down
 		if (stairManager.isInStairArea()) {
 			stairManager.tryGoDownStair();
