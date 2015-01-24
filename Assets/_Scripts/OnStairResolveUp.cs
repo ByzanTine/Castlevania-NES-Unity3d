@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OnStairResolve : MonoBehaviour {
+public class OnStairResolveUp : MonoBehaviour {
 
 
 	public Globals.STAIR_FACING stairFacing;
