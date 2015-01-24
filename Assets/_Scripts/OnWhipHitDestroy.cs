@@ -3,6 +3,7 @@ using System.Collections;
 
 public class OnWhipHitDestroy : OnWhipEvent {
 
+	public GameObject itemPrefab;
 	// Use this for initialization
 	void Start () {
 	
@@ -20,7 +21,10 @@ public class OnWhipHitDestroy : OnWhipEvent {
 	IEnumerator revealItemAndDestroy()
 	{
 		yield return new WaitForSeconds(0.1f);
+		GameObject itemObj = Instantiate (itemPrefab) as GameObject;
+		itemObj.transform.position = this.transform.position;
 		Destroy (this.gameObject);
+
 	}
 }
 

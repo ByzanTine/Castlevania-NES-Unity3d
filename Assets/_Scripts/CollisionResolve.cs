@@ -57,7 +57,11 @@ public class CollisionResolve : MonoBehaviour {
 			PlayerCollisionManager plScript = collidedObj.GetComponent<PlayerCollisionManager>();
 			plScript.playerCollisionEnter(collIndex);
 		}
-
+		else if(collidedObj.tag == "Item")
+		{
+			ItemMotion itScript = collidedObj.GetComponent<ItemMotion>();
+			itScript.hitGround();
+		}
 		// will be depercated
 		collWithPlayer (collidedObj, (Direction)collIndex);
 	}
@@ -108,10 +112,6 @@ public class CollisionResolve : MonoBehaviour {
 				PlayerController plScript2 = collidedObj.GetComponent<PlayerController>();
 				plScript2.grounded = false;
 			}
-
 		}
-
-
-
 	}
 }
