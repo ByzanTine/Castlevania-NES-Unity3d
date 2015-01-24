@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
 	private Animator animator;
 	private WhipAttackManager whipAttManager;
 	private StairManager stairManager;
+	private PlayerCollisionManager collManager;
 	private int curHorizontalVelocity = 0; // should only have values -1, 0, 1
 
 	public int CurHorizontalVelocity
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour {
 		animator = GetComponent<Animator> ();
 		whipAttManager = GetComponent<WhipAttackManager> ();
 		stairManager = GetComponent<StairManager> ();
+		collManager = GetComponent<PlayerCollisionManager> ();
 		Flip (); // since the raw sprite face left
 	}
 	void initInputEventHandler () {
@@ -106,6 +108,9 @@ public class PlayerController : MonoBehaviour {
 		else {
 			Debug.LogError("Speed of a value different to 1,-1,0; Speed: " + curHorizontalVelocity);
 		}
+
+
+
 	}
 	void HandleOnKeyPress_Left () {
 		Debug.Log ("Get Axis Left");
@@ -124,6 +129,9 @@ public class PlayerController : MonoBehaviour {
 		else {
 			Debug.LogError("Speed of a value different to 1,-1,0; Speed: " + curHorizontalVelocity);
 		}
+
+
+
 	}
 
 	void HandleOnKeyPress_Up ()
@@ -217,8 +225,30 @@ public class PlayerController : MonoBehaviour {
 
 	// without considering stairs 
 	void normalFixedUpdate() {
+		// if on Wall, let curVelo 
+		
+		if (collManager.isWallOn(Globals.Direction.Right)) {
 
+			curHorizontalVelocity = curHorizontalVelocity > 0 ? 0 : curHorizontalVelocity;
+		}
+		if (collManager.isWallOn(Globals.Direction.Left)) {
+			curHorizontalVelocity = curHorizontalVelocity < 0 ? 0 : curHorizontalVelocity;
+		}
 		// Horizontal Update
+		if (collManager.isWallOn(Globals.Direction.Bottom)) {
+			if(VerticalSpeed < 0)
+			{
+				VerticalSpeed = 0;
+				
+				grounded = true;
+				animator.SetInteger("Speed", 0);
+				
+			}
+
+		}
+		else {
+			grounded = false;
+		}
 		transform.position = new Vector2 (
 			transform.position.x + curHorizontalVelocity * HorizonalSpeedScale * Time.fixedDeltaTime,
 			transform.position.y
@@ -231,12 +261,7 @@ public class PlayerController : MonoBehaviour {
 		if (!grounded)
 			VerticalSpeed += VerticalAccerlation*Time.fixedDeltaTime;
 
-		if (transform.position.y < 0.0f) {
-			grounded = true;
-			transform.position = new Vector2(transform.position.x, 0.0f);
-			VerticalSpeed = 0.0f;
-			animator.SetInteger("Speed", 0);
-		}
+
 
 	}
 

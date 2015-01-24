@@ -9,7 +9,12 @@ public class Globals : MonoBehaviour {
 	public static float SquatOffset = -0.05f; // 5 pixel 
 	public static float StairStepLength = 0.08f; // 8 pixel
 
-	public enum Direction{Right, Left, Top, Bottom};
+	public enum Direction {
+		Right, 
+		Left, 
+		Top, 
+		Bottom
+	};
 	
 	public enum STAIR_FACING {
 		Right,
