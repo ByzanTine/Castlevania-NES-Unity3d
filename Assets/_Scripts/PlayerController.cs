@@ -25,7 +25,19 @@ public class PlayerController : MonoBehaviour {
 	private StairManager stairManager;
 	private int curHorizontalVelocity = 0; // should only have values -1, 0, 1
 
-
+	public int CurHorizontalVelocity
+	{
+		get
+		{
+			//Some other code
+			return curHorizontalVelocity;
+		}
+		set
+		{
+			//Some other code
+			curHorizontalVelocity = value;
+		}
+	}
 
 	// Use this for initialization
 	void Start () {

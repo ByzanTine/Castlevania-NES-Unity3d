@@ -1,7 +1,58 @@
 fileFormatVersion: 2
 guid: e2ce5fe20c5cfb3479522227beff46f4
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: misc-background-clear_0
+    21300002: misc-background-clear_1
+    21300004: misc-background-clear_2
+    21300006: misc-background-clear_3
+    21300008: misc-background-clear_4
+    21300010: misc-background-clear_5
+    21300012: misc-background-clear_6
+    21300014: misc-background-clear_7
+    21300016: misc-background-clear_8
+    21300018: misc-background-clear_9
+    21300020: misc-background-clear_10
+    21300022: misc-background-clear_11
+    21300024: misc-background-clear_12
+    21300026: misc-background-clear_13
+    21300028: misc-background-clear_14
+    21300030: misc-background-clear_15
+    21300032: misc-background-clear_16
+    21300034: misc-background-clear_17
+    21300036: misc-background-clear_18
+    21300038: misc-background-clear_19
+    21300040: misc-background-clear_20
+    21300042: misc-background-clear_21
+    21300044: misc-background-clear_22
+    21300046: misc-background-clear_23
+    21300048: misc-background-clear_24
+    21300050: misc-background-clear_25
+    21300052: misc-background-clear_26
+    21300054: misc-background-clear_27
+    21300056: misc-background-clear_28
+    21300058: misc-background-clear_29
+    21300060: misc-background-clear_30
+    21300062: misc-background-clear_31
+    21300064: misc-background-clear_32
+    21300066: misc-background-clear_33
+    21300068: misc-background-clear_34
+    21300070: misc-background-clear_35
+    21300072: misc-background-clear_36
+    21300074: misc-background-clear_37
+    21300076: misc-background-clear_38
+    21300078: misc-background-clear_39
+    21300080: misc-background-clear_40
+    21300082: misc-background-clear_41
+    21300084: misc-background-clear_42
+    21300086: misc-background-clear_43
+    21300088: misc-background-clear_44
+    21300090: misc-background-clear_45
+    21300092: misc-background-clear_46
+    21300094: misc-background-clear_47
+    21300096: misc-background-clear_48
+    21300098: misc-background-clear_49
+    21300100: misc-background-clear_50
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -22,16 +73,16 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 1024
+  maxTextureSize: 4096
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +93,516 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: misc-background-clear_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 193
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 190
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_2
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 190
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 190
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_4
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 193
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_5
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 169
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_6
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 169
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_7
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 169
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_8
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 168
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_9
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 169
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_10
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 169
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_11
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 168
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_12
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 150
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_13
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 150
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_14
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 150
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_15
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 144
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_16
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 143
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_17
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 150
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_18
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 134
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_19
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 132
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_20
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 134
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_21
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 134
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_22
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 131
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_23
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 131
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_24
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 131
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_25
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 131
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_26
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 130
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_27
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 107
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 107
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_29
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 107
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_30
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 110
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_31
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 109
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_32
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 109
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_33
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 85
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_34
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 85
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_35
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 85
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_36
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 85
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_37
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 85
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_38
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 85
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_39
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 86
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_40
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 86
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_41
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 87
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_42
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 87
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_43
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 65
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_44
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 65
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_45
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 64
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_46
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 64
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_47
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 65
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_48
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 65
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_49
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 66
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: misc-background-clear_50
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 66
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
