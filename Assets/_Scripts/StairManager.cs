@@ -37,6 +37,7 @@ public class StairManager : MonoBehaviour {
 	public bool isOnStair() {
 		return onStairState != ON_STAIR_STATE.Not;
 	}
+
 	public bool isWalkingOnStair() {
 		return onStairState == ON_STAIR_STATE.Up || onStairState == ON_STAIR_STATE.Down;
 	}
@@ -108,7 +109,11 @@ public class StairManager : MonoBehaviour {
 		}
 		else if (onStairState == ON_STAIR_STATE.Not && onStairArea == ON_STAIR_AREA.PrepDown) {
 			// TODO
-			onStairArea = ON_STAIR_AREA.onStair;
+			transform.position = new Vector2(prepXcenter, transform.position.y);
+			adjustFacingToStair();
+			if (animator.GetBool("DownStair"))
+				Debug.LogError("Animator in impossible state, when in prep down area, but in down animation state");
+				StartCoroutine (GoDownStair ());
 		}
 
 
