@@ -60,6 +60,9 @@ public class PlayerController : MonoBehaviour {
 	 */
 	void HandleOnKeyUp_Right ()
 	{
+		if (!grounded) {
+			return;
+		}
 		if (curHorizontalVelocity != 0) {
 			animator.SetInteger("Speed", 0);
 		}
@@ -67,6 +70,9 @@ public class PlayerController : MonoBehaviour {
 
 	void HandleOnKeyUp_Left ()
 	{
+		if (!grounded) {
+			return;
+		}
 		if (curHorizontalVelocity != 0) {
 			animator.SetInteger("Speed", 0);
 		}
@@ -217,6 +223,7 @@ public class PlayerController : MonoBehaviour {
 			grounded = true;
 			transform.position = new Vector2(transform.position.x, 0.0f);
 			VerticalSpeed = 0.0f;
+			animator.SetInteger("Speed", 0);
 		}
 
 	}
