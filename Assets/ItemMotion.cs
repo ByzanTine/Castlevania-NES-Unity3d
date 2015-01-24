@@ -5,6 +5,7 @@ public class ItemMotion : MonoBehaviour {
 
 	public float speedY = -0.01f;
 	public float perishInSec = 10.0f;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -27,7 +28,7 @@ public class ItemMotion : MonoBehaviour {
 		GameObject collidedObj = coll.gameObject;
 		if (collidedObj.tag == "Player") 
 		{
-			itemPickedUp();
+			itemPickedUp();		              
 		}
 	}
 
@@ -38,10 +39,9 @@ public class ItemMotion : MonoBehaviour {
 		Destroy (this.gameObject);
 	}
 
-	private void itemPickedUp()
+	void itemPickedUp()
 	{
 		Debug.Log ("Player picked Up");
-
 		Destroy (this.gameObject);
 	}
 }
