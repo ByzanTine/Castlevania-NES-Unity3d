@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11478122}
   - 114: {fileID: 11478120}
   - 114: {fileID: 11444754}
-  - 114: {fileID: 11488928}
+  - 114: {fileID: 11473720}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -29,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.189999998, y: 0, z: 0}
+  m_LocalPosition: {x: -2.0720005, y: .734000027, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,6 +73,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onStairArea: 3
   onStairState: 2
+  curNumOfSteps: 0
+  curStairSteps: 0
+--- !u!114 &11473720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f97c063a5184ea08648025a21207be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallStatus: 00000000000000000000000000000000
+  curBoxTop: -10
 --- !u!114 &11478120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,17 +125,6 @@ MonoBehaviour:
   VerticalSpeed: 0
   HorizontalSpeed: 0
   grounded: 0
---- !u!114 &11488928
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63f97c063a5184ea08648025a21207be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &21278120
 SpriteRenderer:
   m_ObjectHideFlags: 1
