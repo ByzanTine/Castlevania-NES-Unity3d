@@ -8,7 +8,8 @@ public class CollisionResolve : MonoBehaviour {
 //	objUR.xotected GameObject collidedObj;
 	private enum RDirection{Left, Right, Bottom, Top, None};
 
-	private int collIndex;
+	public int collIndex;
+	private int playerCollIndex;
 	// Use this for initialization
 	void Start () {
 		
@@ -56,7 +57,7 @@ public class CollisionResolve : MonoBehaviour {
 		if (plScript != null) 
 		{
 			plScript.playerCollisionEnter(collIndex, this.gameObject.collider2D.bounds.max.y);
-			
+			playerCollIndex = collIndex;
 			// will be depercated
 //			 collWithPlayer (collidedObj, (RDirection)collIndex);
 		}
@@ -107,7 +108,7 @@ public class CollisionResolve : MonoBehaviour {
 		if (collidedObj.tag == "Player") 
 		{
 			PlayerCollisionManager plScript = collidedObj.GetComponent<PlayerCollisionManager>();
-			plScript.playerCollisionExit(collIndex);
+			plScript.playerCollisionExit(playerCollIndex);
 
 			// will be deprecated
 //			if(!plScript.isWallOn(Globals.Direction.Bottom))

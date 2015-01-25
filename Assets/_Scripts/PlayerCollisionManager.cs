@@ -5,14 +5,14 @@ public class PlayerCollisionManager : MonoBehaviour {
 	
 
 	//corresponding to: RDirection{Right,Left, Top, Bottom};
-	static private int[] wallStatus = new int[4] {0, 0, 0, 0}; // could be true on 0, 1, 2, 3;
-	public float curBoxTop = -10.0f;
+	public int[] wallStatus = new int[4] {0, 0, 0, 0}; // could be true on 0, 1, 2, 3;
+	public float curBoxTop = -1.0f;
 	public void playerCollisionEnter(int direction, float boxTop)
 	{
 		wallStatus[direction]++;
 
 		// add ground
-		if (direction == 3 && boxTop > curBoxTop) 
+		if (direction == 3 && boxTop >= curBoxTop) 
 		{
 			curBoxTop = boxTop;	
 		}
@@ -23,9 +23,9 @@ public class PlayerCollisionManager : MonoBehaviour {
 		wallStatus[direction]--;
 
 		// remove ground
-		if (direction == 3) 
+		if (direction == 3 && wallStatus[3] == 0) 
 		{
-			curBoxTop = -10.0f;	
+			curBoxTop = -1.0f;	
 		}
 	}
 
