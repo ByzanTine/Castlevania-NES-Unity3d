@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 467344}
   - 212: {fileID: 21267344}
+  - 95: {fileID: 9540068}
   m_Layer: 0
   m_Name: Flare
   m_TagString: Untagged
@@ -99,6 +100,21 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .200000003, y: .300000012}
   m_Center: {x: 0, y: .0700000003}
+--- !u!95 &9540068
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167344}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad2ec939a026a5e4296c0c2246e7bf2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11432778
 MonoBehaviour:
   m_ObjectHideFlags: 1
