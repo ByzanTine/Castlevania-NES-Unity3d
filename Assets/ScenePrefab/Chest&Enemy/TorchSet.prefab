@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 467344}
   - 212: {fileID: 21267344}
-  - 111: {fileID: 11145512}
+  - 95: {fileID: 9540068}
   m_Layer: 0
   m_Name: Flare
   m_TagString: Untagged
@@ -82,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .797795951, y: -.053248208, z: 0}
+  m_LocalPosition: {x: 1.04005599, y: -.270376146, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467346}
@@ -97,24 +97,24 @@ BoxCollider2D:
   m_GameObject: {fileID: 167348}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: .200000003, y: .300000012}
   m_Center: {x: 0, y: .0700000003}
---- !u!111 &11145512
-Animation:
+--- !u!95 &9540068
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167344}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 1d235f5d28130d549a10de0734a58222, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 1d235f5d28130d549a10de0734a58222, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad2ec939a026a5e4296c0c2246e7bf2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11432778
 MonoBehaviour:
   m_ObjectHideFlags: 1

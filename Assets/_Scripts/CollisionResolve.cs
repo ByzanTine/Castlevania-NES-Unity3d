@@ -8,7 +8,8 @@ public class CollisionResolve : MonoBehaviour {
 //	objUR.xotected GameObject collidedObj;
 	private enum RDirection{Left, Right, Bottom, Top, None};
 
-	private int collIndex;
+	public int collIndex;
+	private int playerCollIndex;
 	// Use this for initialization
 	void Start () {
 		
@@ -55,10 +56,10 @@ public class CollisionResolve : MonoBehaviour {
 		PlayerCollisionManager plScript = collidedObj.GetComponent<PlayerCollisionManager>();
 		if (plScript != null) 
 		{
-			plScript.playerCollisionEnter(collIndex);
-			
+			plScript.playerCollisionEnter(collIndex, this.gameObject.collider2D.bounds.max.y);
+			playerCollIndex = collIndex;
 			// will be depercated
-			// collWithPlayer (collidedObj, (RDirection)collIndex);
+//			 collWithPlayer (collidedObj, (RDirection)collIndex);
 		}
 
 		ItemMotion itScript = collidedObj.GetComponent<ItemMotion>();
@@ -80,11 +81,11 @@ public class CollisionResolve : MonoBehaviour {
 			break;
 
 		case RDirection.Right:
-//			if(plScript.CurHorizontalVelocity < 0)
-//			{
-//				//				print ("bool" + plScript.facingRight);
-//				plScript.CurHorizontalVelocity = 1;
-//			}
+			if(plScript.CurHorizontalVelocity < 0)
+			{
+				print ("bool" + plScript.facingRight);
+				plScript.CurHorizontalVelocity = 1;
+			}
 			break;
 
 		case RDirection.Top:
@@ -100,14 +101,14 @@ public class CollisionResolve : MonoBehaviour {
 
 
 	}
-
+	
 	void OnTriggerExit2D( Collider2D coll ) {
 		GameObject collidedObj = coll.gameObject;  
 		//collidedObj.GetInstanceID
-		if (collidedObj.tag == "Player") 
+		if (collidedObj.tag == Globals.playerTag) 
 		{
 			PlayerCollisionManager plScript = collidedObj.GetComponent<PlayerCollisionManager>();
-			plScript.playerCollisionExit(collIndex);
+			plScript.playerCollisionExit(playerCollIndex);
 
 			// will be deprecated
 //			if(!plScript.isWallOn(Globals.Direction.Bottom))

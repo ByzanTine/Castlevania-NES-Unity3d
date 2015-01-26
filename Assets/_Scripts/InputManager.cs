@@ -29,6 +29,23 @@ public class InputManager : MonoBehaviour {
 	public event OnKeyPress OnKeyUp_Up;
 	public event OnKeyPress OnKeyDown_B;
 	public event OnKeyPress OnKeyDown_A;
+
+	void Awake ()
+	{
+		// Instance control
+		if (instance != null && instance != this) 
+		{
+			Destroy (this.gameObject);
+			return;
+		}
+		else 
+		{
+			instance = this;
+		}
+		DontDestroyOnLoad(this.gameObject);
+	}
+
+
 	// Handle our Ray and Hit
 	void Update () 
 	{

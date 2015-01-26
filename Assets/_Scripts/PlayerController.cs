@@ -242,7 +242,14 @@ public class PlayerController : MonoBehaviour {
 				
 				grounded = true;
 				animator.SetInteger("Speed", 0);
-				
+
+//				float reviseHeight = collManager.curBoxTop - collider2D.bounds.min.y;
+
+				// Vertical overwrite update
+				transform.position = new Vector2 (
+					transform.position.x ,
+					collManager.curBoxTop + collider2D.bounds.size.y/2.0f
+					);
 			}
 
 		}

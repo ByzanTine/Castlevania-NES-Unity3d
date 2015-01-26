@@ -26,7 +26,7 @@ public class ItemMotion : MonoBehaviour {
 
 	void OnTriggerEnter2D( Collider2D coll ) {
 		GameObject collidedObj = coll.gameObject;
-		if (collidedObj.tag == "Player") 
+		if (collidedObj.tag == Globals.playerTag) 
 		{
 			itemPickedUp();		              
 		}
