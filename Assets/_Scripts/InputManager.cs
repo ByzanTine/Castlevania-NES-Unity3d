@@ -18,6 +18,7 @@ public class InputManager : MonoBehaviour {
 	public delegate void OnKeyPress();
 
 	// Map to classical control
+	// single button control 
 	public event OnKeyPress OnKeyPress_Right;
 	public event OnKeyPress OnKeyUp_Right;
 	public event OnKeyPress OnKeyPress_Left;
@@ -29,6 +30,8 @@ public class InputManager : MonoBehaviour {
 	public event OnKeyPress OnKeyUp_Up;
 	public event OnKeyPress OnKeyDown_B;
 	public event OnKeyPress OnKeyDown_A;
+	// chord
+	public event OnKeyPress OnKeyDown_Up_And_B;
 
 	void Awake ()
 	{
@@ -49,11 +52,15 @@ public class InputManager : MonoBehaviour {
 	// Handle our Ray and Hit
 	void Update () 
 	{
+		// chord detection, first priority 
+		if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) &&
+		    (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown (KeyCode.Period))) {
+			OnKeyDown_Up_And_B();
+			return;
+		}
+
 		if (Input.GetKeyDown (KeyCode.Z) || Input.GetKeyDown (KeyCode.Comma)) {
 			OnKeyDown_A();
-		}
-		if (Input.GetKeyDown (KeyCode.X) || Input.GetKeyDown (KeyCode.Period)) {
-			OnKeyDown_B();
 		}
 		if (Input.GetKey (KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
 			OnKeyDown_Down();
@@ -81,6 +88,11 @@ public class InputManager : MonoBehaviour {
 		}
 		if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow)) {
 			OnKeyUp_Up();
+		}
+
+
+		if (Input.GetKeyDown (KeyCode.X) || Input.GetKeyDown (KeyCode.Period)) {
+			OnKeyDown_B();
 		}
 	
 	}

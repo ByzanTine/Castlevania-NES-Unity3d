@@ -51,7 +51,9 @@ public class StairManager : MonoBehaviour {
 	public bool isWalkingOnStair() {
 		return onStairState == ON_STAIR_STATE.Up || onStairState == ON_STAIR_STATE.Down;
 	}
-	 
+	private bool isOnStairAnimationPlaying() {
+		return animator.GetBool("UpStair") || animator.GetBool("DownStair");
+	}
 	// change facing of the character
 	public void switchToState(ON_STAIR_STATE state_in) {
 		if (onStairState == ON_STAIR_STATE.Not) {
@@ -98,24 +100,23 @@ public class StairManager : MonoBehaviour {
 		if (onStairState == ON_STAIR_STATE.Down || onStairState == ON_STAIR_STATE.Up) {
 			// last step on the stair
 			if (curStairSteps - curNumOfSteps == 1) {
-				if (!animator.GetBool("UpStair"))
+				if (!isOnStairAnimationPlaying())
 					StartCoroutine (GoUpStairToNormal ());
 			}
 			else {
-				if (!animator.GetBool("UpStair"))
+				if (!isOnStairAnimationPlaying())
 					StartCoroutine (GoUpStair ());
 			}
 			
 		}
 		else if (onStairState == ON_STAIR_STATE.Not && onStairArea == ON_STAIR_AREA.PrepUp) {
-			StartCoroutine(MoveObjectToStairCenter());
-			Debug.Log ("finished smoothing");
+			// NOTICE: interrupt can happen here, say a up button is hit
+
 			if (animator.GetBool("UpStair"))
 				Debug.LogError("Animator in impossible state, when in prep up area, but in up animation state");
-			StartCoroutine (GoUpStair ());
-			// TODO
-		
-
+			// do two thigns, first ran to the center, then Go up stair
+			if (!isOnStairAnimationPlaying())
+				StartCoroutine(initGoUpStair());
 
 		}
 
@@ -125,23 +126,21 @@ public class StairManager : MonoBehaviour {
 		// inside the area of prep_up, could resolve to normal state
 		if (onStairState == ON_STAIR_STATE.Down || onStairState == ON_STAIR_STATE.Up) {
 			if (curNumOfSteps == 1) { // on the first level on stair
-				if (!animator.GetBool("DownStair"))
+				if (!isOnStairAnimationPlaying())
 					StartCoroutine (GoDownStairToNormal ());
 			}
 			else {
-				if (!animator.GetBool("DownStair"))
+				if (!isOnStairAnimationPlaying())
 					StartCoroutine (GoDownStair ());
 			}
 
 
 		}
 		else if (onStairState == ON_STAIR_STATE.Not && onStairArea == ON_STAIR_AREA.PrepDown) {
-			// TODO
-			StartCoroutine(MoveObjectToStairCenter());
 
 			if (animator.GetBool("DownStair"))
 				Debug.LogError("Animator in impossible state, when in prep down area, but in down animation state");
-			StartCoroutine (GoDownStair ());
+			StartCoroutine (initGoDownStair ());
 		}
 
 
@@ -189,36 +188,69 @@ public class StairManager : MonoBehaviour {
 		while (i < 1.0f) {
 			i += Time.fixedDeltaTime * rate;
 			transform.position = Vector2.Lerp(from, to, i);
-			Debug.Log("Lerp once" + i);
+			// Debug.Log("Lerp once" + i);
 			yield return null;
 		}
 	}
 
-	private IEnumerator MoveObjectToStairCenter_Wrapper () {
-		yield return StartCoroutine (MoveObjectToStairCenter());
-
-
-
-	}
-	private IEnumerator MoveObjectToStairCenter() {
+	private IEnumerator initGoUpStair() {
 		// using current speed system to move the object 
 		Vector2 destination = new Vector2(prepXcenter, transform.position.y);
-//		pc.GetComponent<Animator> ().SetInteger ("Speed", 1);
-//		IEnumerator func1 = MoveObject (transform.position, destination, 1.0f);
-//		while (func1.MoveNext())
-//			yield return null;
-//		pc.GetComponent<Animator> ().SetInteger ("Speed", 0);
-		// yield return StartCoroutine(MoveObject(transform.position, destination, 0.1f));
+		if (transform.position.x < prepXcenter)	
+			pc.GetComponent<Animator> ().SetInteger ("Speed", 1);
+		else 
+			pc.GetComponent<Animator> ().SetInteger ("Speed", -1);
+		// determine the animationRatio by the distance from the center
+		float animRatio = Mathf.Abs (transform.position.x - prepXcenter) / 
+						(Globals.StairUpTriggerColliderWidth / 2 + Globals.playerWidth / 2);
+		// Debug.Log ("animRatio: " + animRatio);
+		animRatio = Mathf.Clamp (animRatio, 0.01f, 1.0f);
 
-		Debug.Log("lerp finished");
+		yield return StartCoroutine(MoveObject(transform.position, destination, animRatio * 1.0f));
+		pc.GetComponent<Animator> ().SetInteger ("Speed", 0);
+
 		// Then do a pixel correction 
 		transform.position = new Vector2(prepXcenter, transform.position.y);
 		// Then correct the object facing
+		// small hack to reset the Speed when trying to adjust the facing
+		// Don't let the player controller do a fixed update that mess with the facing
+		pc.GetComponent<Animator> ().SetInteger ("Speed", 0);
+		// DIRTY HACK ABOVE
 		adjustFacingToStair();
-		yield return null;
 
-
+		if (!isOnStairAnimationPlaying())
+			StartCoroutine (GoUpStair());
 	}
+
+	private IEnumerator initGoDownStair() {
+		// using current speed system to move the object 
+		Vector2 destination = new Vector2(prepXcenter, transform.position.y);
+		if (transform.position.x < prepXcenter)	
+			pc.GetComponent<Animator> ().SetInteger ("Speed", 1);
+		else 
+			pc.GetComponent<Animator> ().SetInteger ("Speed", -1);
+		// determine the animationRatio by the distance from the center
+		float animRatio = Mathf.Abs (transform.position.x - prepXcenter) / 
+			(Globals.StairUpTriggerColliderWidth / 2 + Globals.playerWidth / 2);
+		// Debug.Log ("animRatio: " + animRatio);
+		animRatio = Mathf.Clamp (animRatio, 0.01f, 1.0f);
+		
+		yield return StartCoroutine(MoveObject(transform.position, destination, animRatio * 1.0f));
+		pc.GetComponent<Animator> ().SetInteger ("Speed", 0);
+		
+		// Then do a pixel correction 
+		transform.position = new Vector2(prepXcenter, transform.position.y);
+		// Then correct the object facing
+		// small hack to reset the Speed when trying to adjust the facing
+		// Don't let the player controller do a fixed update that mess with the facing
+		pc.GetComponent<Animator> ().SetInteger ("Speed", 0);
+		// DIRTY HACK ABOVE
+		adjustFacingToStair();
+		if (!isOnStairAnimationPlaying())
+			StartCoroutine (GoDownStair());
+	}
+
+
 	private IEnumerator GoDownStairToNormal() {
 		StartCoroutine (GoDownStair ());
 		yield return new WaitForSeconds (upDownStairAnimInterval);

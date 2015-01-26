@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour {
 		InputManager.Instance.OnKeyPress_Up += HandleOnKeyPress_Up;
 		InputManager.Instance.OnKeyUp_Up += HandleOnKeyUp_Up;
 		InputManager.Instance.OnKeyPress_Down += HandleOnKeyPress_Down;
+		InputManager.Instance.OnKeyDown_Up_And_B += HandleOnKeyPress_Up_And_B;
 	}
 
 
@@ -132,6 +133,7 @@ public class PlayerController : MonoBehaviour {
 
 			return;
 		}
+
 		if (!grounded || whipAttManager.attacking )
 			return;
 		if (curHorizontalVelocity == 0) {
@@ -147,6 +149,7 @@ public class PlayerController : MonoBehaviour {
 		else {
 			Debug.LogError("Speed of a value different to 1,-1,0; Speed: " + curHorizontalVelocity);
 		}
+		Debug.Log("Update the speed ");
 
 
 
@@ -213,6 +216,10 @@ public class PlayerController : MonoBehaviour {
 		animator.SetBool ("Squat", false);
 	}
 
+	void HandleOnKeyPress_Up_And_B () {
+		Debug.Log("INPUT: up and B pressed as chord");
+	}
+
 	// ============================================================================ //
 
 	IEnumerator Jump () {
@@ -235,6 +242,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		// transform facing update
+
 		if (animator.GetInteger("Speed") > 0 && !facingRight)
 			Flip();
 		if (animator.GetInteger("Speed") < 0 && facingRight)
