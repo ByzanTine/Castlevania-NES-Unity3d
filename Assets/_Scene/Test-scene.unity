@@ -198,50 +198,6 @@ Prefab:
   m_RootGameObject: {fileID: 342950253}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1001 &185773992
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: .596000016
-      objectReference: {fileID: 0}
-    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: .402999997
-      objectReference: {fileID: 0}
-    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
-  m_RootGameObject: {fileID: 1863910628}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &192263458
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +207,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 192263460}
   - 212: {fileID: 192263459}
+  - 95: {fileID: 192263461}
   m_Layer: 0
   m_Name: Flare
   m_TagString: Untagged
@@ -293,6 +250,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 765089800}
   m_RootOrder: 1
+--- !u!95 &192263461
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9540068, guid: 62a784e863a2c4349b460d0790577da3,
+    type: 2}
+  m_PrefabInternal: {fileID: 860275863}
+  m_GameObject: {fileID: 192263458}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad2ec939a026a5e4296c0c2246e7bf2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &260349351
 Prefab:
   m_ObjectHideFlags: 0
@@ -397,6 +370,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 334996818}
   - 212: {fileID: 334996817}
+  - 95: {fileID: 334996819}
   m_Layer: 0
   m_Name: Flare
   m_TagString: Untagged
@@ -439,6 +413,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 541286573}
   m_RootOrder: 1
+--- !u!95 &334996819
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9540068, guid: 62a784e863a2c4349b460d0790577da3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1542792047}
+  m_GameObject: {fileID: 334996816}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad2ec939a026a5e4296c0c2246e7bf2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &338179160
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,6 +794,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 494324800}
   - 212: {fileID: 494324799}
+  - 95: {fileID: 494324801}
   m_Layer: 0
   m_Name: Flare
   m_TagString: Untagged
@@ -846,6 +837,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 88698136}
   m_RootOrder: 1
+--- !u!95 &494324801
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9540068, guid: 62a784e863a2c4349b460d0790577da3,
+    type: 2}
+  m_PrefabInternal: {fileID: 634050184}
+  m_GameObject: {fileID: 494324798}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad2ec939a026a5e4296c0c2246e7bf2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &495308866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,6 +1500,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 779437021}
   - 212: {fileID: 779437020}
+  - 95: {fileID: 779437022}
   m_Layer: 0
   m_Name: Flare
   m_TagString: Untagged
@@ -1535,6 +1543,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 725259724}
   m_RootOrder: 1
+--- !u!95 &779437022
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9540068, guid: 62a784e863a2c4349b460d0790577da3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1732008938}
+  m_GameObject: {fileID: 779437019}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad2ec939a026a5e4296c0c2246e7bf2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &784000425
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,6 +1710,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 799049563}
   - 212: {fileID: 799049562}
+  - 95: {fileID: 799049564}
   m_Layer: 0
   m_Name: Flare
   m_TagString: Untagged
@@ -1728,6 +1753,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 417521078}
   m_RootOrder: 1
+--- !u!95 &799049564
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9540068, guid: 62a784e863a2c4349b460d0790577da3,
+    type: 2}
+  m_PrefabInternal: {fileID: 797081325}
+  m_GameObject: {fileID: 799049561}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad2ec939a026a5e4296c0c2246e7bf2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &856197085
 Prefab:
   m_ObjectHideFlags: 0
@@ -1869,6 +1910,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 919015410}
   - 212: {fileID: 919015409}
+  - 95: {fileID: 919015411}
   m_Layer: 0
   m_Name: Flare
   m_TagString: Untagged
@@ -1911,6 +1953,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 653494396}
   m_RootOrder: 1
+--- !u!95 &919015411
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9540068, guid: 62a784e863a2c4349b460d0790577da3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1585568663}
+  m_GameObject: {fileID: 919015408}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad2ec939a026a5e4296c0c2246e7bf2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &927243507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,6 +1978,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 927243508}
   - 212: {fileID: 927243509}
+  - 95: {fileID: 927243510}
   m_Layer: 0
   m_Name: Flare
   m_TagString: Untagged
@@ -1962,6 +2021,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300048, guid: e2ce5fe20c5cfb3479522227beff46f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &927243510
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9540068, guid: 62a784e863a2c4349b460d0790577da3,
+    type: 2}
+  m_PrefabInternal: {fileID: 856197085}
+  m_GameObject: {fileID: 927243507}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad2ec939a026a5e4296c0c2246e7bf2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &974728208
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,6 +2183,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1218427897}
   m_RootOrder: 3
+--- !u!1001 &1079584515
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .596000016
+      objectReference: {fileID: 0}
+    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .402999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+  m_RootGameObject: {fileID: 1863910628}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1001 &1153210129
 Prefab:
   m_ObjectHideFlags: 0
@@ -2161,6 +2280,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1166640530}
   - 212: {fileID: 1166640529}
+  - 95: {fileID: 1166640531}
   m_Layer: 0
   m_Name: Flare
   m_TagString: Untagged
@@ -2203,6 +2323,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 342950254}
   m_RootOrder: 1
+--- !u!95 &1166640531
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9540068, guid: 62a784e863a2c4349b460d0790577da3,
+    type: 2}
+  m_PrefabInternal: {fileID: 144821327}
+  m_GameObject: {fileID: 1166640528}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad2ec939a026a5e4296c0c2246e7bf2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1218427896
 GameObject:
   m_ObjectHideFlags: 0
@@ -2386,6 +2522,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1397449303}
   - 212: {fileID: 1397449304}
+  - 95: {fileID: 1397449305}
   m_Layer: 0
   m_Name: Flare
   m_TagString: Untagged
@@ -2428,6 +2565,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300048, guid: e2ce5fe20c5cfb3479522227beff46f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &1397449305
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9540068, guid: 62a784e863a2c4349b460d0790577da3,
+    type: 2}
+  m_PrefabInternal: {fileID: 908081842}
+  m_GameObject: {fileID: 1397449302}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad2ec939a026a5e4296c0c2246e7bf2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1401310328
 GameObject:
   m_ObjectHideFlags: 0
@@ -2993,6 +3146,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1561099236}
   - 212: {fileID: 1561099237}
+  - 95: {fileID: 1561099238}
   m_Layer: 0
   m_Name: Flare
   m_TagString: Untagged
@@ -3035,6 +3189,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300048, guid: e2ce5fe20c5cfb3479522227beff46f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &1561099238
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9540068, guid: 62a784e863a2c4349b460d0790577da3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1153210129}
+  m_GameObject: {fileID: 1561099235}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad2ec939a026a5e4296c0c2246e7bf2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1579866848
 GameObject:
   m_ObjectHideFlags: 0
@@ -3426,13 +3596,14 @@ SpriteRenderer:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 117926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
-  m_PrefabInternal: {fileID: 185773992}
+  m_PrefabInternal: {fileID: 1079584515}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1863910632}
   - 212: {fileID: 1863910631}
   - 61: {fileID: 1863910630}
   - 114: {fileID: 1863910629}
+  - 95: {fileID: 1863910633}
   m_Layer: 0
   m_Name: Candle
   m_TagString: Untagged
@@ -3445,7 +3616,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11417926, guid: 85f1d22876a8746388fc3908cb335e48,
     type: 2}
-  m_PrefabInternal: {fileID: 185773992}
+  m_PrefabInternal: {fileID: 1079584515}
   m_GameObject: {fileID: 1863910628}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3458,7 +3629,7 @@ BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6117926, guid: 85f1d22876a8746388fc3908cb335e48,
     type: 2}
-  m_PrefabInternal: {fileID: 185773992}
+  m_PrefabInternal: {fileID: 1079584515}
   m_GameObject: {fileID: 1863910628}
   m_Enabled: 1
   m_Material: {fileID: 0}
@@ -3470,7 +3641,7 @@ SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 21217926, guid: 85f1d22876a8746388fc3908cb335e48,
     type: 2}
-  m_PrefabInternal: {fileID: 185773992}
+  m_PrefabInternal: {fileID: 1079584515}
   m_GameObject: {fileID: 1863910628}
   m_Enabled: 1
   m_CastShadows: 0
@@ -3492,7 +3663,7 @@ SpriteRenderer:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
-  m_PrefabInternal: {fileID: 185773992}
+  m_PrefabInternal: {fileID: 1079584515}
   m_GameObject: {fileID: 1863910628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .596000016, y: .402999997, z: 0}
@@ -3500,6 +3671,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!95 &1863910633
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9565298, guid: 85f1d22876a8746388fc3908cb335e48,
+    type: 2}
+  m_PrefabInternal: {fileID: 1079584515}
+  m_GameObject: {fileID: 1863910628}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce4d7de369b8c4d37bc82ca0ab8c8afa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1920401627
 Prefab:
   m_ObjectHideFlags: 0
@@ -3767,6 +3954,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2079722780}
   - 212: {fileID: 2079722779}
+  - 95: {fileID: 2079722781}
   m_Layer: 0
   m_Name: Flare
   m_TagString: Untagged
@@ -3809,6 +3997,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1989952618}
   m_RootOrder: 1
+--- !u!95 &2079722781
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9540068, guid: 62a784e863a2c4349b460d0790577da3,
+    type: 2}
+  m_PrefabInternal: {fileID: 260349351}
+  m_GameObject: {fileID: 2079722778}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad2ec939a026a5e4296c0c2246e7bf2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &2083447180
 GameObject:
   m_ObjectHideFlags: 0

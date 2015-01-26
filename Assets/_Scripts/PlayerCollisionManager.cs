@@ -17,7 +17,12 @@ public class PlayerCollisionManager : MonoBehaviour {
 			curBoxTop = boxTop;	
 		}
 	}
-	
+
+	public void reset()
+	{
+		wallStatus = new int[4] {0, 0, 0, 0};
+	}
+
 	public void playerCollisionExit(int direction)
 	{
 		wallStatus[direction]--;

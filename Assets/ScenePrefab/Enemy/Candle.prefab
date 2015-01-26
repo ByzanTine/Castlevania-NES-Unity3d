@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21217926}
   - 61: {fileID: 6117926}
   - 114: {fileID: 11417926}
+  - 95: {fileID: 9565298}
   m_Layer: 0
   m_Name: Candle
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .596000016, y: .486999989, z: 0}
+  m_LocalPosition: {x: .596000016, y: .402999997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -41,6 +42,21 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .100000001, y: .150000006}
   m_Center: {x: 0, y: 0}
+--- !u!95 &9565298
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117926}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce4d7de369b8c4d37bc82ca0ab8c8afa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11417926
 MonoBehaviour:
   m_ObjectHideFlags: 1
