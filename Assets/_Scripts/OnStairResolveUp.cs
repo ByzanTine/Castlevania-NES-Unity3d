@@ -5,10 +5,8 @@ public class OnStairResolveUp : MonoBehaviour {
 
 
 	private Globals.STAIR_FACING stairFacing;
-	private int StairSteps;
 	// init with the stair steps
 	void Start() {
-		StairSteps = transform.GetComponentInParent<StairController>().StairSteps;
 		stairFacing = transform.GetComponentInParent<StairController> ().stairFacing;
 	}
 

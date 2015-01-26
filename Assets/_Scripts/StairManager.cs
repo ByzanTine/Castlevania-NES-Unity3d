@@ -21,7 +21,7 @@ public class StairManager : MonoBehaviour {
 	public int curNumOfSteps = 0;
 	public int curStairSteps = 0; // will obtain the value when switching state
 
-	private float upDownStairAnimInterval = 0.1f;
+	private float upDownStairAnimInterval = 0.33f;
 	private PlayerController pc;
 	private Animator animator;
 	private float prepXcenter; // Used only for preparation state, record the place player need to go 
@@ -108,8 +108,8 @@ public class StairManager : MonoBehaviour {
 			
 		}
 		else if (onStairState == ON_STAIR_STATE.Not && onStairArea == ON_STAIR_AREA.PrepUp) {
-			transform.position = new Vector2(prepXcenter, transform.position.y);
-			adjustFacingToStair();
+			StartCoroutine(MoveObjectToStairCenter());
+			Debug.Log ("finished smoothing");
 			if (animator.GetBool("UpStair"))
 				Debug.LogError("Animator in impossible state, when in prep up area, but in up animation state");
 			StartCoroutine (GoUpStair ());
@@ -137,11 +137,11 @@ public class StairManager : MonoBehaviour {
 		}
 		else if (onStairState == ON_STAIR_STATE.Not && onStairArea == ON_STAIR_AREA.PrepDown) {
 			// TODO
-			transform.position = new Vector2(prepXcenter, transform.position.y);
-			adjustFacingToStair();
+			StartCoroutine(MoveObjectToStairCenter());
+
 			if (animator.GetBool("DownStair"))
 				Debug.LogError("Animator in impossible state, when in prep down area, but in down animation state");
-				StartCoroutine (GoDownStair ());
+			StartCoroutine (GoDownStair ());
 		}
 
 
@@ -151,13 +151,13 @@ public class StairManager : MonoBehaviour {
 		
 		animator.SetBool ("UpStair", true);
 		switchToState (StairManager.ON_STAIR_STATE.Up);
-		// TODO Do Lerp here 
+		// Do Lerp here 
 		int facing = pc.facingRight ? 1 : -1;
-		
-		transform.position = new Vector2 (
+		Vector2 destination = new Vector2 (
 			transform.position.x + facing * Globals.StairStepLength,
 			transform.position.y + Globals.StairStepLength
 			);
+		StartCoroutine(MoveObject (transform.position, destination, upDownStairAnimInterval));
 		
 		yield return new WaitForSeconds (upDownStairAnimInterval);
 		curNumOfSteps++;
@@ -168,17 +168,56 @@ public class StairManager : MonoBehaviour {
 		
 		animator.SetBool ("DownStair", true);
 		switchToState (StairManager.ON_STAIR_STATE.Down);
-		// TODO Do Lerp here 
+		// Do Lerp here 
 		int facing = pc.facingRight ? 1 : -1;
 		
-		transform.position = new Vector2 (
+		Vector2 destination = new Vector2 (
 			transform.position.x + facing * Globals.StairStepLength,
 			transform.position.y + -1 * Globals.StairStepLength
 			);
-		
+		StartCoroutine(MoveObject (transform.position, destination, upDownStairAnimInterval));
+
 		yield return new WaitForSeconds (upDownStairAnimInterval);
 		curNumOfSteps--;
 		animator.SetBool ("DownStair", false);
+	}
+	// Move object using pure lerp smoothing 
+	private IEnumerator MoveObject(Vector2 from, Vector2 to, float time) {
+	
+		float i = 0.0f;
+		float rate = 1.0f / time;
+		while (i < 1.0f) {
+			i += Time.fixedDeltaTime * rate;
+			transform.position = Vector2.Lerp(from, to, i);
+			Debug.Log("Lerp once" + i);
+			yield return null;
+		}
+	}
+
+	private IEnumerator MoveObjectToStairCenter_Wrapper () {
+		yield return StartCoroutine (MoveObjectToStairCenter());
+
+
+
+	}
+	private IEnumerator MoveObjectToStairCenter() {
+		// using current speed system to move the object 
+		Vector2 destination = new Vector2(prepXcenter, transform.position.y);
+//		pc.GetComponent<Animator> ().SetInteger ("Speed", 1);
+//		IEnumerator func1 = MoveObject (transform.position, destination, 1.0f);
+//		while (func1.MoveNext())
+//			yield return null;
+//		pc.GetComponent<Animator> ().SetInteger ("Speed", 0);
+		// yield return StartCoroutine(MoveObject(transform.position, destination, 0.1f));
+
+		Debug.Log("lerp finished");
+		// Then do a pixel correction 
+		transform.position = new Vector2(prepXcenter, transform.position.y);
+		// Then correct the object facing
+		adjustFacingToStair();
+		yield return null;
+
+
 	}
 	private IEnumerator GoDownStairToNormal() {
 		StartCoroutine (GoDownStair ());
