@@ -26,6 +26,12 @@ public class StairManager : MonoBehaviour {
 	private Animator animator;
 	private float prepXcenter; // Used only for preparation state, record the place player need to go 
 	private Globals.STAIR_FACING Stairfacing; // true for right, false for left
+	private StairController curStair;
+	// NOTICE: this stair facing is the parent stair facing
+	// Not the facing of the two triggers
+	public Globals.STAIR_FACING getCurStairFacing() {
+		return curStair.stairFacing;
+	}
 
 	void Start () {
 		onStairState = ON_STAIR_STATE.Not;
@@ -45,6 +51,7 @@ public class StairManager : MonoBehaviour {
 	public bool isWalkingOnStair() {
 		return onStairState == ON_STAIR_STATE.Up || onStairState == ON_STAIR_STATE.Down;
 	}
+	 
 	// change facing of the character
 	public void switchToState(ON_STAIR_STATE state_in) {
 		if (onStairState == ON_STAIR_STATE.Not) {
@@ -65,12 +72,17 @@ public class StairManager : MonoBehaviour {
 
 	}
 	// When in prep state, call this function to change the state
-	public void switchToState(ON_STAIR_AREA state_in, float Xcenter_in, 
-	                          Globals.STAIR_FACING Stairfacing_in, int curStairSteps_in) {
-		prepXcenter = Xcenter_in;
+	public void switchToState(ON_STAIR_AREA state_in, Globals.STAIR_FACING Stairfacing_in, 
+	                          GameObject StairTrigger) {
+		prepXcenter = StairTrigger.transform.position.x;
 		Stairfacing = Stairfacing_in;
 		onStairArea = state_in;
-		curStairSteps = curStairSteps_in;
+
+		curStair = StairTrigger.transform.parent.gameObject.GetComponent<StairController>();
+		curStairSteps = curStair.StairSteps;
+		if (!curStair) {
+			Debug.LogError("STAIR: can't get parent stair controller");
+		}
 		// get the curStairSteps here
 		// determin curNumOfSteps here
 		if (state_in == ON_STAIR_AREA.PrepDown && onStairState == ON_STAIR_STATE.Not) {

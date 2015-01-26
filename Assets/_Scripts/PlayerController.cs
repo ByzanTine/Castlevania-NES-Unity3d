@@ -94,6 +94,15 @@ public class PlayerController : MonoBehaviour {
 	}
 	void HandleOnKeyPress_Right () {
 		// Debug.Log ("Get Axis Right");
+		// reverse as left, depend go up or down by stair facing
+		if (stairManager.isOnStair ()) {
+			if (stairManager.getCurStairFacing() == Globals.STAIR_FACING.Right)
+				stairManager.tryGoUpStair();
+			else 
+				stairManager.tryGoDownStair();
+
+			return;
+		}
 		if (!grounded || whipAttManager.attacking)
 			return;
 		if (curHorizontalVelocity == 0) {
@@ -114,6 +123,15 @@ public class PlayerController : MonoBehaviour {
 	}
 	void HandleOnKeyPress_Left () {
 		// Debug.Log ("Get Axis Left");
+		// When on stair, go up or down depend on the current stair facing 
+		if (stairManager.isOnStair ()) {
+			if (stairManager.getCurStairFacing() == Globals.STAIR_FACING.Right)
+				stairManager.tryGoDownStair();
+			else 
+				stairManager.tryGoUpStair();
+
+			return;
+		}
 		if (!grounded || whipAttManager.attacking )
 			return;
 		if (curHorizontalVelocity == 0) {
@@ -212,7 +230,7 @@ public class PlayerController : MonoBehaviour {
 	// switch the facing to adjust the animation
 	void FixedUpdate () {
 
-		if (!stairManager.isWalkingOnStair()) {
+		if (!stairManager.isOnStair()) {
 			normalFixedUpdate();
 		}
 

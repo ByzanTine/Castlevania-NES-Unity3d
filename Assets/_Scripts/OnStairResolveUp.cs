@@ -22,8 +22,8 @@ public class OnStairResolveUp : MonoBehaviour {
 			return;
 		}
 
-		stairMan.switchToState(StairManager.ON_STAIR_AREA.PrepUp, transform.position.x, 
-		                       stairFacing, StairSteps);
+		stairMan.switchToState(StairManager.ON_STAIR_AREA.PrepUp, 
+		                       stairFacing, gameObject);
 
 	}
 
