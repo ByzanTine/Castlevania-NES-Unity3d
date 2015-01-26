@@ -65,7 +65,7 @@ public class WhipAttackManager : MonoBehaviour {
 	Vector3 WhipStart() {
 		return new Vector3(
 			transform.position.x + Globals.PivotToWhipStart * (playerControl.facingRight ? 1.0f : -1.0f), 
-			transform.position.y + Globals.SquatOffset * (animator.GetBool("Squat") ? 1.0f : 0.0f), 0);
+			transform.position.y + Globals.WhipHeightOffset +  Globals.SquatOffset * (animator.GetBool("Squat") ? 1.0f : 0.0f), 0);
 	}
 
 	Vector3 WhipEnd(Vector3 From) {
