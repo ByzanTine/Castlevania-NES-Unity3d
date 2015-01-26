@@ -24,7 +24,7 @@ public class CameraMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		target = GameObject.FindGameObjectWithTag ("Player").transform;
+		target = GameObject.FindGameObjectWithTag (Globals.playerTag).transform;
 
 		if (target)
 		{

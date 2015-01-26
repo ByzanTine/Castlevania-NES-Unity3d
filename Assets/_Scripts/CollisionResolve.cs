@@ -105,7 +105,7 @@ public class CollisionResolve : MonoBehaviour {
 	void OnTriggerExit2D( Collider2D coll ) {
 		GameObject collidedObj = coll.gameObject;  
 		//collidedObj.GetInstanceID
-		if (collidedObj.tag == "Player") 
+		if (collidedObj.tag == Globals.playerTag) 
 		{
 			PlayerCollisionManager plScript = collidedObj.GetComponent<PlayerCollisionManager>();
 			plScript.playerCollisionExit(playerCollIndex);

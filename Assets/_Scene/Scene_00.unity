@@ -946,7 +946,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dampTime: .0500000007
-  target: {fileID: 1677072547}
 --- !u!1 &798816191
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,6 +1596,7 @@ GameObject:
   - 114: {fileID: 1677072545}
   - 114: {fileID: 1677072551}
   - 114: {fileID: 1677072552}
+  - 114: {fileID: 1677072553}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1736,6 +1736,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallStatus: 00000000000000000000000000000000
   curBoxTop: -10
+--- !u!114 &1677072553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11493434, guid: be5ae8606d2ce6240b40b99f11382191,
+    type: 2}
+  m_PrefabInternal: {fileID: 1662253787}
+  m_GameObject: {fileID: 1677072544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ffa6b906b6d4427b4d32157e1129ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savePos: 0
 --- !u!1 &1916263734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1918,6 +1931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScene: Scene_01
+  newPos: {x: 0, y: 0, z: 0}
 --- !u!50 &2072526500
 Rigidbody2D:
   m_ObjectHideFlags: 0

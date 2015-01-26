@@ -730,6 +730,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11493434, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
+      propertyPath: savePos
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
   m_RootGameObject: {fileID: 1677072544}
@@ -820,7 +824,7 @@ Transform:
   - {fileID: 288153450}
   - {fileID: 1597888004}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &217214818
 GameObject:
   m_ObjectHideFlags: 0
@@ -7693,7 +7697,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!95 &1677072548
 Animator:
   serializedVersion: 3
@@ -7785,7 +7789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ffa6b906b6d4427b4d32157e1129ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  savePos: 0
+  savePos: 1
 --- !u!1001 &1682102200
 Prefab:
   m_ObjectHideFlags: 0

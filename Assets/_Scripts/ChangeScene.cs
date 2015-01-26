@@ -3,15 +3,16 @@ using System.Collections;
 
 public class ChangeScene : MonoBehaviour {
 
+	// both var must be initialized in inspector
 	public string targetScene;
-	public Vector3 newPos = new Vector3(0,0,0);
+	public Vector3 newPos;
 
 	void OnTriggerEnter2D( Collider2D coll ) {
 		GameObject collObj = coll.gameObject;
-		Debug.Log ("rdy cg sce" + collObj.tag);
+		Debug.Log ("ready to change scene" + collObj.tag);
 
-		if (collObj.tag == "Player") {
-			Debug.Log ("cg sce");
+		if (collObj.tag == Globals.playerTag) {
+			Debug.Log ("changed position");
 			Application.LoadLevel (targetScene);
 			collObj.transform.position = newPos;
 		}

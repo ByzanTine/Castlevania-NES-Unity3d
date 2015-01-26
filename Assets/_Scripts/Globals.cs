@@ -10,6 +10,8 @@ public class Globals : MonoBehaviour {
 	public static float WhipHeightOffset = 0.05f;// 5 pixel
 	public static float StairStepLength = 0.08f; // 8 pixel
 
+	public const string playerTag = "Player";
+
 	public enum Direction {
 		Right, 
 		Left, 
