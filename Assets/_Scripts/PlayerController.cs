@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
 	private Animator animator;
 	private WhipAttackManager whipAttManager;
 	private StairManager stairManager;
+	private PlayerCollisionManager collManager;
 	private int curHorizontalVelocity = 0; // should only have values -1, 0, 1
 
 	public int CurHorizontalVelocity
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour {
 		animator = GetComponent<Animator> ();
 		whipAttManager = GetComponent<WhipAttackManager> ();
 		stairManager = GetComponent<StairManager> ();
+		collManager = GetComponent<PlayerCollisionManager> ();
 		Flip (); // since the raw sprite face left
 	}
 	void initInputEventHandler () {
@@ -91,7 +93,7 @@ public class PlayerController : MonoBehaviour {
 
 	}
 	void HandleOnKeyPress_Right () {
-		Debug.Log ("Get Axis Right");
+		// Debug.Log ("Get Axis Right");
 		if (!grounded || whipAttManager.attacking)
 			return;
 		if (curHorizontalVelocity == 0) {
@@ -106,9 +108,12 @@ public class PlayerController : MonoBehaviour {
 		else {
 			Debug.LogError("Speed of a value different to 1,-1,0; Speed: " + curHorizontalVelocity);
 		}
+
+
+
 	}
 	void HandleOnKeyPress_Left () {
-		Debug.Log ("Get Axis Left");
+		// Debug.Log ("Get Axis Left");
 		if (!grounded || whipAttManager.attacking )
 			return;
 		if (curHorizontalVelocity == 0) {
@@ -124,23 +129,26 @@ public class PlayerController : MonoBehaviour {
 		else {
 			Debug.LogError("Speed of a value different to 1,-1,0; Speed: " + curHorizontalVelocity);
 		}
+
+
+
 	}
 
 	void HandleOnKeyPress_Up ()
 	{
-		Debug.Log("On Key Press: Up");
+		// Debug.Log("On Key Press: Up");
 		if (stairManager.isInStairArea())
 			stairManager.tryGoUpStair ();
 	}
 	
 	void HandleOnKeyUp_Up ()
 	{
-		Debug.Log("On Key Up: Up");
+		// Debug.Log("On Key Up: Up");
 
 	}
 
 	void HandleOnKeyDown_A () {
-		Debug.Log ("Key A pressed");
+		// Debug.Log ("Key A pressed");
 		// jump	
 		if (grounded 
 		    && !animator.GetBool("Squat")
@@ -152,7 +160,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void HandleOnKeyDown_B () {
-		Debug.Log ("Key B pressed");
+		// Debug.Log ("Key B pressed");
 		// attack
 		// delegate to WhipAttackManager
 		StartCoroutine (whipAttManager.WhipAttack());
@@ -175,7 +183,7 @@ public class PlayerController : MonoBehaviour {
 
 	void HandleOnKeyPress_Down ()
 	{
-		Debug.Log("Get Axis Down");
+		// Debug.Log("Get Axis Down");
 		// TODO decide if the object is already going down
 		if (stairManager.isInStairArea()) {
 			stairManager.tryGoDownStair();
@@ -217,8 +225,30 @@ public class PlayerController : MonoBehaviour {
 
 	// without considering stairs 
 	void normalFixedUpdate() {
+		// if on Wall, let curVelo 
+		
+		if (collManager.isWallOn(Globals.Direction.Right)) {
 
+			curHorizontalVelocity = curHorizontalVelocity > 0 ? 0 : curHorizontalVelocity;
+		}
+		if (collManager.isWallOn(Globals.Direction.Left)) {
+			curHorizontalVelocity = curHorizontalVelocity < 0 ? 0 : curHorizontalVelocity;
+		}
 		// Horizontal Update
+		if (collManager.isWallOn(Globals.Direction.Bottom)) {
+			if(VerticalSpeed < 0)
+			{
+				VerticalSpeed = 0;
+				
+				grounded = true;
+				animator.SetInteger("Speed", 0);
+				
+			}
+
+		}
+		else {
+			grounded = false;
+		}
 		transform.position = new Vector2 (
 			transform.position.x + curHorizontalVelocity * HorizonalSpeedScale * Time.fixedDeltaTime,
 			transform.position.y
@@ -231,12 +261,7 @@ public class PlayerController : MonoBehaviour {
 		if (!grounded)
 			VerticalSpeed += VerticalAccerlation*Time.fixedDeltaTime;
 
-		if (transform.position.y < 0.0f) {
-			grounded = true;
-			transform.position = new Vector2(transform.position.x, 0.0f);
-			VerticalSpeed = 0.0f;
-			animator.SetInteger("Speed", 0);
-		}
+
 
 	}
 

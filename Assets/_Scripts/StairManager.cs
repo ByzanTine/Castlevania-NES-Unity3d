@@ -17,6 +17,10 @@ public class StairManager : MonoBehaviour {
 	public ON_STAIR_AREA  onStairArea = ON_STAIR_AREA.Not;
 	public ON_STAIR_STATE onStairState = ON_STAIR_STATE.Not;
 
+	//[HideInInspector]
+	public int curNumOfSteps = 0;
+	public int curStairSteps = 0; // will obtain the value when switching state
+
 	private float upDownStairAnimInterval = 0.1f;
 	private PlayerController pc;
 	private Animator animator;
@@ -61,16 +65,27 @@ public class StairManager : MonoBehaviour {
 
 	}
 	// When in prep state, call this function to change the state
-	public void switchToState(ON_STAIR_AREA state_in, float Xcenter_in, Globals.STAIR_FACING Stairfacing_in) {
+	public void switchToState(ON_STAIR_AREA state_in, float Xcenter_in, 
+	                          Globals.STAIR_FACING Stairfacing_in, int curStairSteps_in) {
 		prepXcenter = Xcenter_in;
 		Stairfacing = Stairfacing_in;
 		onStairArea = state_in;
+		curStairSteps = curStairSteps_in;
+		// get the curStairSteps here
+		// determin curNumOfSteps here
+		if (state_in == ON_STAIR_AREA.PrepDown && onStairState == ON_STAIR_STATE.Not) {
+			curNumOfSteps = curStairSteps;
+		}
+		else if (state_in == ON_STAIR_AREA.PrepUp && onStairState == ON_STAIR_STATE.Not) {
+			curNumOfSteps = 0;
+		}
 
 	}
 
 	public void tryGoUpStair () {
 		if (onStairState == ON_STAIR_STATE.Down || onStairState == ON_STAIR_STATE.Up) {
-			if (onStairArea == ON_STAIR_AREA.PrepDown) {
+			// last step on the stair
+			if (curStairSteps - curNumOfSteps == 1) {
 				if (!animator.GetBool("UpStair"))
 					StartCoroutine (GoUpStairToNormal ());
 			}
@@ -97,7 +112,7 @@ public class StairManager : MonoBehaviour {
 	public void tryGoDownStair () {
 		// inside the area of prep_up, could resolve to normal state
 		if (onStairState == ON_STAIR_STATE.Down || onStairState == ON_STAIR_STATE.Up) {
-			if (onStairArea == ON_STAIR_AREA.PrepUp) {
+			if (curNumOfSteps == 1) { // on the first level on stair
 				if (!animator.GetBool("DownStair"))
 					StartCoroutine (GoDownStairToNormal ());
 			}
@@ -105,6 +120,7 @@ public class StairManager : MonoBehaviour {
 				if (!animator.GetBool("DownStair"))
 					StartCoroutine (GoDownStair ());
 			}
+
 
 		}
 		else if (onStairState == ON_STAIR_STATE.Not && onStairArea == ON_STAIR_AREA.PrepDown) {
@@ -132,7 +148,7 @@ public class StairManager : MonoBehaviour {
 			);
 		
 		yield return new WaitForSeconds (upDownStairAnimInterval);
-		
+		curNumOfSteps++;
 		animator.SetBool ("UpStair", false);
 	}
 	
@@ -149,7 +165,7 @@ public class StairManager : MonoBehaviour {
 			);
 		
 		yield return new WaitForSeconds (upDownStairAnimInterval);
-		
+		curNumOfSteps--;
 		animator.SetBool ("DownStair", false);
 	}
 	private IEnumerator GoDownStairToNormal() {

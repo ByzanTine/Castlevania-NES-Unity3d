@@ -58,7 +58,7 @@ public class CollisionResolve : MonoBehaviour {
 			plScript.playerCollisionEnter(collIndex);
 			
 			// will be depercated
-			collWithPlayer (collidedObj, (RDirection)collIndex);
+			// collWithPlayer (collidedObj, (RDirection)collIndex);
 		}
 
 		ItemMotion itScript = collidedObj.GetComponent<ItemMotion>();
@@ -110,11 +110,11 @@ public class CollisionResolve : MonoBehaviour {
 			plScript.playerCollisionExit(collIndex);
 
 			// will be deprecated
-			if(!plScript.isWallOn(Globals.Direction.Bottom))
-			{			
-				PlayerController plScript2 = collidedObj.GetComponent<PlayerController>();
-				plScript2.grounded = false;
-			}
+//			if(!plScript.isWallOn(Globals.Direction.Bottom))
+//			{			
+//				PlayerController plScript2 = collidedObj.GetComponent<PlayerController>();
+//				plScript2.grounded = false;
+//			}
 		}
 	}
 }
