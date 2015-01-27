@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
 	private Animator animator;
 	private WhipAttackManager whipAttManager;
 	private StairManager stairManager;
-	private PlayerCollisionManager collManager;
+	private CollisionManager collManager;
 	private int curHorizontalVelocity = 0; // should only have values -1, 0, 1
 
 	public int CurHorizontalVelocity
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour {
 		animator = GetComponent<Animator> ();
 		whipAttManager = GetComponent<WhipAttackManager> ();
 		stairManager = GetComponent<StairManager> ();
-		collManager = GetComponent<PlayerCollisionManager> ();
+		collManager = GetComponent<CollisionManager> ();
 		Flip (); // since the raw sprite face left
 	}
 	void initInputEventHandler () {

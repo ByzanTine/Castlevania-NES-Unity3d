@@ -3,6 +3,11 @@ using System.Collections;
 
 public class StatusManager : MonoBehaviour {
 
+	public static int score = 0;
+	public static int heartNum = 0;
+	public static int playerHealth = Globals.maxPlayerHealth;
+	public static int bossHealth = Globals.maxBossHealth;
+
 	private static StatusManager playerInstance = null;
 	private static float prevPos = 0.0f;
 	public bool savePos = false;
@@ -22,8 +27,8 @@ public class StatusManager : MonoBehaviour {
 	{
 		if (playerInstance != null && playerInstance != this) 
 		{
-			PlayerCollisionManager pcmScript = 
-				playerInstance.gameObject.GetComponent<PlayerCollisionManager>();
+			CollisionManager pcmScript = 
+				playerInstance.gameObject.GetComponent<CollisionManager>();
 			pcmScript.reset();
 			Destroy (this.gameObject);
 			return;

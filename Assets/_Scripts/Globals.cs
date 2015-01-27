@@ -14,7 +14,12 @@ public class Globals : MonoBehaviour {
 	public static float playerWidth = 0.16f; // 16 pixelß
 
 
+
 	public const string playerTag = "Player";
+
+	public const int maxPlayerHealth = 20;
+	public const int maxBossHealth = 20;
+
 
 	public enum Direction {
 		Right, 
@@ -22,6 +27,12 @@ public class Globals : MonoBehaviour {
 		Top, 
 		Bottom
 	};
+
+	public enum ItemName
+	{
+		Money_S, Money_M, Money_L,
+		LargeHeart, SmallHeart
+	}
 	
 	public enum STAIR_FACING {
 		Right,
