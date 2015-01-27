@@ -27,6 +27,12 @@ public class Globals : MonoBehaviour {
 		Top, 
 		Bottom
 	};
+
+	public enum ItemName
+	{
+		Money_S, Money_M, Money_L,
+		LargeHeart, SmallHeart
+	}
 	
 	public enum STAIR_FACING {
 		Right,

@@ -591,6 +591,10 @@ Prefab:
       propertyPath: StairSteps
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 415358, guid: 1b4fe8596248044eab06249f39c5789d, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b4fe8596248044eab06249f39c5789d, type: 2}
   m_RootGameObject: {fileID: 1690924519}
@@ -5988,7 +5992,7 @@ Transform:
   m_GameObject: {fileID: 1171598182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.76100016, y: .206999958, z: -10}
-  m_LocalScale: {x: 3.0999999, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1096123362}
   m_RootOrder: 6

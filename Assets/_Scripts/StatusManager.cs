@@ -5,8 +5,8 @@ public class StatusManager : MonoBehaviour {
 
 	public static int score = 0;
 	public static int heartNum = 0;
-	public static int playerHealth = 0;
-	public static int bossHealth = 0;
+	public static int playerHealth = Globals.maxPlayerHealth;
+	public static int bossHealth = Globals.maxBossHealth;
 
 	private static StatusManager playerInstance = null;
 	private static float prevPos = 0.0f;

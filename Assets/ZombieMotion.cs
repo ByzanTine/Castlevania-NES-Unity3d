@@ -65,6 +65,7 @@ public class ZombieMotion : MonoBehaviour {
 	void onPlayerEnter()
 	{
 		Debug.Log ("Player hitted");
+		StatusManager.playerHealth -= 2;
 		OnWhipHitDestroy owhScript = GetComponent<OnWhipHitDestroy>();
 		owhScript.onWhipEnter();
 	}

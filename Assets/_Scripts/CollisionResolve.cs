@@ -46,6 +46,8 @@ public class CollisionResolve : MonoBehaviour {
 			collDepth[2] = objUR.y- myLL.y;
 //		if(objLL.y <= myUR.y && objUR.y>= myUR.y)             // Player on Top
 			collDepth[3] = myUR.y - objLL.y;
+
+
 		
 		// return the closest intersection
 		collIndex = collDepth.IndexOf(Mathf.Min(collDepth.ToArray()));
@@ -56,6 +58,14 @@ public class CollisionResolve : MonoBehaviour {
 
 		CollisionManager cmScript = collidedObj.GetComponent<CollisionManager>();
 		if (cmScript != null) {
+
+			if (collidedObj.tag == "Player") {
+				StairManager smScript = collidedObj.GetComponent<StairManager>();
+				if(smScript.isOnStair())
+				{
+					collIndex = 3;
+				}
+			}
 			cmScript.playerCollisionEnter (collIndex, this.gameObject.collider2D.bounds.max.y);
 			collIdTable.Add(collidedObj.GetInstanceID(), collIndex);
 		}

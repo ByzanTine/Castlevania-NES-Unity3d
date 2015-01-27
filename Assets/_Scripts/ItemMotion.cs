@@ -6,6 +6,9 @@ public class ItemMotion : MonoBehaviour {
 	public float speedY = -0.01f;
 	public float perishInSec = 10.0f;
 
+	//must be specified in inspector
+	public Globals.ItemName itemName;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -41,7 +44,7 @@ public class ItemMotion : MonoBehaviour {
 		GameObject collidedObj = coll.gameObject;
 		if (collidedObj.tag == Globals.playerTag) 
 		{
-			itemPickedUp();		              
+			itemPickedUp(collidedObj);		              
 		}
 	}
 
@@ -51,8 +54,20 @@ public class ItemMotion : MonoBehaviour {
 		Destroy (this.gameObject);
 	}
 
-	void itemPickedUp()
+	void itemPickedUp(GameObject plObj)
 	{
+//		StatusManager smScript = plObj.GetComponent<StatusManager> ();
+		if (itemName == Globals.ItemName.Money_S) 
+		{
+			StatusManager.score += 100;
+			Debug.Log ("fetched small money");
+		} 
+		else if (itemName == Globals.ItemName.LargeHeart) 
+		{
+			StatusManager.heartNum += 5;
+			Debug.Log ("fetched heart");
+		}
+
 		Debug.Log ("Player picked Up");
 		Destroy (this.gameObject);
 	}

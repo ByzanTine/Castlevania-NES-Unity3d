@@ -84,6 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedY: -.00999999978
   perishInSec: 10
+  itemName: 3
 --- !u!212 &21286290
 SpriteRenderer:
   m_ObjectHideFlags: 1
