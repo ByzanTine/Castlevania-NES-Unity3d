@@ -8,10 +8,10 @@ public class ItemMotion : MonoBehaviour {
 
 	//must be specified in inspector
 	public Globals.ItemName itemName;
-
+	private StatusManager status;
 	// Use this for initialization
 	void Start () {
-	
+
 	}
 	
 	// Update is called once per frame
@@ -56,15 +56,15 @@ public class ItemMotion : MonoBehaviour {
 
 	void itemPickedUp(GameObject plObj)
 	{
-//		StatusManager smScript = plObj.GetComponent<StatusManager> ();
+		StatusManager smScript = plObj.GetComponent<StatusManager> ();
 		if (itemName == Globals.ItemName.Money_S) 
 		{
-			StatusManager.score += 100;
+			smScript.score += 100;
 			Debug.Log ("fetched small money");
 		} 
 		else if (itemName == Globals.ItemName.LargeHeart) 
 		{
-			StatusManager.heartNum += 5;
+			smScript.heartNum += 5;
 			Debug.Log ("fetched heart");
 		}
 

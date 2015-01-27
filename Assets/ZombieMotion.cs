@@ -51,7 +51,7 @@ public class ZombieMotion : MonoBehaviour {
 		GameObject collidedObj = coll.gameObject;
 		if (collidedObj.tag == Globals.playerTag) 
 		{
-			onPlayerEnter();		              
+			onPlayerEnter(coll.gameObject);		              
 		}
 	}
 	
@@ -62,10 +62,10 @@ public class ZombieMotion : MonoBehaviour {
 		Destroy (this.gameObject);
 	}
 	
-	void onPlayerEnter()
+	void onPlayerEnter(GameObject gb)
 	{
 		Debug.Log ("Player hitted");
-		StatusManager.playerHealth -= 2;
+		gb.GetComponent<StatusManager>().playerHealth -= 2;
 		OnWhipHitDestroy owhScript = GetComponent<OnWhipHitDestroy>();
 		owhScript.onWhipEnter();
 	}
