@@ -9,7 +9,8 @@ public class CollisionResolve : MonoBehaviour {
 	private enum RDirection{Left, Right, Bottom, Top, None};
 
 	public int collIndex;
-	private int playerCollIndex;
+	//private int playerCollIndex;
+	public Hashtable collIdTable = new Hashtable();
 	// Use this for initialization
 	void Start () {
 		
@@ -53,69 +54,20 @@ public class CollisionResolve : MonoBehaviour {
 
 //		Debug.Log ("" + " c@ " + ((Direction)collIndex).ToString() );
 
-		PlayerCollisionManager plScript = collidedObj.GetComponent<PlayerCollisionManager>();
-		if (plScript != null) 
-		{
-			plScript.playerCollisionEnter(collIndex, this.gameObject.collider2D.bounds.max.y);
-			playerCollIndex = collIndex;
-			// will be depercated
-//			 collWithPlayer (collidedObj, (RDirection)collIndex);
+		CollisionManager cmScript = collidedObj.GetComponent<CollisionManager>();
+		if (cmScript != null) {
+			cmScript.playerCollisionEnter (collIndex, this.gameObject.collider2D.bounds.max.y);
+			collIdTable.Add(collidedObj.GetInstanceID(), collIndex);
 		}
-
-		ItemMotion itScript = collidedObj.GetComponent<ItemMotion>();
-		if(itScript != null)
-		{
-			itScript.hitGround();
-		}
-
-	}
-
-	void collWithPlayer(GameObject playerObj, RDirection dir)
-	{
-		PlayerController plScript = playerObj.GetComponent<PlayerController>();
-		switch (dir) 
-		{
-		case RDirection.Bottom:
-			break;
-		case RDirection.Left:
-			break;
-
-		case RDirection.Right:
-			if(plScript.CurHorizontalVelocity < 0)
-			{
-				print ("bool" + plScript.facingRight);
-				plScript.CurHorizontalVelocity = 1;
-			}
-			break;
-
-		case RDirection.Top:
-			if(plScript.VerticalSpeed < 0)
-			{
-				plScript.VerticalSpeed = 0;
-				plScript.grounded = true;
-			}
-			break;
-		default:
-			break;
-		}
-
-
 	}
 	
 	void OnTriggerExit2D( Collider2D coll ) {
 		GameObject collidedObj = coll.gameObject;  
 		//collidedObj.GetInstanceID
-		if (collidedObj.tag == Globals.playerTag) 
-		{
-			PlayerCollisionManager plScript = collidedObj.GetComponent<PlayerCollisionManager>();
-			plScript.playerCollisionExit(playerCollIndex);
-
-			// will be deprecated
-//			if(!plScript.isWallOn(Globals.Direction.Bottom))
-//			{			
-//				PlayerController plScript2 = collidedObj.GetComponent<PlayerController>();
-//				plScript2.grounded = false;
-//			}
+		CollisionManager cmScript = collidedObj.GetComponent<CollisionManager>();
+		if (cmScript != null) {
+			cmScript.playerCollisionExit ((int)collIdTable[collidedObj.GetInstanceID()]);
+			collIdTable.Remove(collidedObj.GetInstanceID());
 		}
 	}
 }

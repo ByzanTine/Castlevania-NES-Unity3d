@@ -13,9 +13,22 @@ public class ItemMotion : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		Vector3 pos = this.transform.position;
-		pos.y += speedY;
-		this.transform.position = pos;
+		move ();
+	}
+	void move()
+	{
+		if (speedY < 0) {
+			Vector3 pos = this.transform.position;
+			pos.y += speedY;
+			this.transform.position = pos;
+			
+			CollisionManager cmScript = GetComponent<CollisionManager> ();
+			if (cmScript != null) {
+				if (cmScript.isWallOn (Globals.Direction.Bottom)) {
+					hitGround();
+				}
+			}
+		}
 	}
 
 	public void hitGround()
@@ -31,7 +44,6 @@ public class ItemMotion : MonoBehaviour {
 			itemPickedUp();		              
 		}
 	}
-
 
 	IEnumerator autoDie()
 	{

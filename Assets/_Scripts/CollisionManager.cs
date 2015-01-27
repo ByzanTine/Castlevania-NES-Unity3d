@@ -1,12 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerCollisionManager : MonoBehaviour {
+public class CollisionManager : MonoBehaviour {
 	
 
 	//corresponding to: RDirection{Right,Left, Top, Bottom};
 	public int[] wallStatus = new int[4] {0, 0, 0, 0}; // could be true on 0, 1, 2, 3;
-	public float curBoxTop = -1.0f;
+	public float curBoxTop = -3.0f;
 	public void playerCollisionEnter(int direction, float boxTop)
 	{
 		wallStatus[direction]++;
@@ -30,7 +30,7 @@ public class PlayerCollisionManager : MonoBehaviour {
 		// remove ground
 		if (direction == 3 && wallStatus[3] == 0) 
 		{
-			curBoxTop = -1.0f;	
+			curBoxTop = -3.0f;	
 		}
 	}
 
@@ -38,5 +38,7 @@ public class PlayerCollisionManager : MonoBehaviour {
 	public bool isWallOn(Globals.Direction dir) {
 		return wallStatus[(int)dir] != 0;
 	}
+
+	// functions
 	
 }
