@@ -5,10 +5,9 @@ public class OnStairResolveDown : MonoBehaviour {
 
 
 	private Globals.STAIR_FACING stairFacing;
-	private int StairSteps;
+
 	// init with the stair steps
 	void Start() {
-		StairSteps = transform.GetComponentInParent<StairController>().StairSteps;
 		stairFacing = transform.GetComponentInParent<StairController> ().stairFacing == Globals.STAIR_FACING.Left ? 
 			Globals.STAIR_FACING.Right : Globals.STAIR_FACING.Left;
 	}
@@ -22,8 +21,8 @@ public class OnStairResolveDown : MonoBehaviour {
 			return;
 		}
 
-		stairMan.switchToState(StairManager.ON_STAIR_AREA.PrepDown, transform.position.x, 
-		                       stairFacing, StairSteps);
+		stairMan.switchToState(StairManager.ON_STAIR_AREA.PrepDown, 
+		                       stairFacing, gameObject);
 
 	}
 
