@@ -51,7 +51,7 @@ public class StairManager : MonoBehaviour {
 	public bool isWalkingOnStair() {
 		return onStairState == ON_STAIR_STATE.Up || onStairState == ON_STAIR_STATE.Down;
 	}
-	private bool isOnStairAnimationPlaying() {
+	public bool isOnStairAnimationPlaying() {
 		return animator.GetBool("UpStair") || animator.GetBool("DownStair");
 	}
 	// change facing of the character

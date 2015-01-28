@@ -19,6 +19,9 @@ public class updateTimer : MonoBehaviour {
 		if (Time.time - timerTime > 1.0f) {
 			timerTime = Time.time;
 			curTime--;
+			if (curTime == 0) {
+				// Die
+			}
 			// update the text
 			text.text = curTime.ToString ("D3");
 

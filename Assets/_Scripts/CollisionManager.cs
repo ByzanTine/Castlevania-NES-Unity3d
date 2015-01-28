@@ -7,6 +7,13 @@ public class CollisionManager : MonoBehaviour {
 	//corresponding to: RDirection{Right,Left, Top, Bottom};
 	public int[] wallStatus = new int[4] {0, 0, 0, 0}; // could be true on 0, 1, 2, 3;
 	public float curBoxTop = -3.0f;
+
+	public delegate void OnTrigger();
+
+	public event OnTrigger ExitGround;
+	public event OnTrigger EnterGround;
+
+
 	public void playerCollisionEnter(int direction, float boxTop)
 	{
 		wallStatus[direction]++;
@@ -14,6 +21,8 @@ public class CollisionManager : MonoBehaviour {
 		// add ground
 		if (direction == 3 && boxTop >= curBoxTop) 
 		{
+			if(EnterGround != null)
+				EnterGround();
 			curBoxTop = boxTop;	
 		}
 	}
@@ -30,6 +39,8 @@ public class CollisionManager : MonoBehaviour {
 		// remove ground
 		if (direction == 3 && wallStatus[3] == 0) 
 		{
+			if(ExitGround != null)
+				ExitGround();
 			curBoxTop = -3.0f;	
 		}
 	}

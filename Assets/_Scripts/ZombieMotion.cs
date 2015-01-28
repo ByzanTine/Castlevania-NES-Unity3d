@@ -6,11 +6,13 @@ public class ZombieMotion : MonoBehaviour {
 	private static Vector2 defaultSpeed = new Vector2 (-0.01f, -0.015f);
 	private const float perishInSec = 1.0f;
 
-	public Vector2 speed = new Vector2(0.0f, defaultSpeed.y);
+	private Vector2 speed = new Vector2(0.0f, defaultSpeed.y);
+	public bool isMoveLeft = true;
 
 	// Use this for initialization
 	void Start () {
-		
+		if (!isMoveLeft)
+			defaultSpeed.x *= -1;
 	}
 	
 	// Update is called once per frame
@@ -51,7 +53,7 @@ public class ZombieMotion : MonoBehaviour {
 		GameObject collidedObj = coll.gameObject;
 		if (collidedObj.tag == Globals.playerTag) 
 		{
-			onPlayerEnter();		              
+			onPlayerEnter(coll.gameObject);		              
 		}
 	}
 	
@@ -62,10 +64,10 @@ public class ZombieMotion : MonoBehaviour {
 		Destroy (this.gameObject);
 	}
 	
-	void onPlayerEnter()
+	void onPlayerEnter(GameObject gb)
 	{
 		Debug.Log ("Player hitted");
-		StatusManager.playerHealth -= 2;
+		gb.GetComponent<StatusManager>().playerHealth -= 2;
 		OnWhipHitDestroy owhScript = GetComponent<OnWhipHitDestroy>();
 		owhScript.onWhipEnter();
 	}

@@ -1,7 +1,60 @@
 fileFormatVersion: 2
 guid: ca346ccdcd911e942901afbae66c9f6c
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: boss-clear_0
+    21300002: boss-clear_1
+    21300004: boss-clear_2
+    21300006: boss-clear_3
+    21300008: boss-clear_4
+    21300010: boss-clear_5
+    21300012: boss-clear_6
+    21300014: boss-clear_7
+    21300016: boss-clear_8
+    21300018: boss-clear_9
+    21300020: boss-clear_10
+    21300022: boss-clear_11
+    21300024: boss-clear_12
+    21300026: boss-clear_13
+    21300028: boss-clear_14
+    21300030: boss-clear_15
+    21300032: boss-clear_16
+    21300034: boss-clear_17
+    21300036: boss-clear_18
+    21300038: boss-clear_19
+    21300040: boss-clear_20
+    21300042: boss-clear_21
+    21300044: boss-clear_22
+    21300046: boss-clear_23
+    21300048: boss-clear_24
+    21300050: boss-clear_25
+    21300052: boss-clear_26
+    21300054: boss-clear_27
+    21300056: boss-clear_28
+    21300058: boss-clear_29
+    21300060: boss-clear_30
+    21300062: boss-clear_31
+    21300064: boss-clear_32
+    21300066: boss-clear_33
+    21300068: boss-clear_34
+    21300070: boss-clear_35
+    21300072: boss-clear_36
+    21300074: boss-clear_37
+    21300076: boss-clear_38
+    21300078: boss-clear_39
+    21300080: boss-clear_40
+    21300082: boss-clear_41
+    21300084: boss-clear_42
+    21300086: boss-clear_43
+    21300088: boss-clear_44
+    21300090: boss-clear_45
+    21300092: boss-clear_46
+    21300094: boss-clear_47
+    21300096: boss-clear_48
+    21300098: boss-clear_49
+    21300100: boss-clear_50
+    21300102: boss-clear_51
+    21300104: boss-clear_52
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -22,16 +75,16 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 1024
+  maxTextureSize: 4096
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +95,536 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: boss-clear_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 372
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 367
+        width: 48
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_2
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 367
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_3
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 384
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 384
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_5
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 363
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_6
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 363
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_7
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 363
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_8
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 363
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_9
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 365
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_10
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 365
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_11
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 332
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_12
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 307
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_13
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 307
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_14
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 306
+        width: 16
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_15
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 305
+        width: 16
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_16
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 304
+        width: 14
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_17
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 305
+        width: 16
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_18
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 330
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_19
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 312
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_20
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 308
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_21
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 309
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_22
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 259
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_23
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 259
+        width: 16
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_24
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 258
+        width: 16
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_25
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_26
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 267
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_27
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 247
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_28
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 172
+        width: 26
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_29
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 172
+        width: 33
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_30
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 172
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_31
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 172
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_32
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 210
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_33
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 187
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_34
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 79
+        width: 50
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_35
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 87
+        width: 50
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_36
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 82
+        width: 50
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_37
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 79
+        width: 50
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_38
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 28
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_39
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 25
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_40
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 16
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_41
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 17
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_42
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 21
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_43
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 27
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_44
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 27
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_45
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 27
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_46
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 11
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 329
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_48
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 14
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_49
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 12
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_50
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 11
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_51
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 11
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss-clear_52
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 11
+        width: 24
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
