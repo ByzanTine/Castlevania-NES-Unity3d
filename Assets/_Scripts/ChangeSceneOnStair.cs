@@ -41,8 +41,8 @@ public class ChangeSceneOnStair : MonoBehaviour {
 					||(targetScene.Equals("Scene_02") && plScript.facingRight == true))
 				{
 					Debug.Log ("changed to " + targetScene +" on stair");
-					Application.LoadLevel (targetScene);
 					stScript.portalNum = thisPortalNum;
+					Application.LoadLevel (targetScene);
 				}
 			}
 

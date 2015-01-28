@@ -56,7 +56,10 @@ public class StatusManager : MonoBehaviour {
 
 	void Update()
 	{
-		if (!isTransed)
+		StairManager smScript = 
+			GetComponent<StairManager>();
+
+		if (!isTransed && !smScript.isOnStairAnimationPlaying())
 		{
 			transform.position = transformedVec;
 			Debug.Log ("Transed");
