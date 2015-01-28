@@ -6,11 +6,13 @@ public class ZombieMotion : MonoBehaviour {
 	private static Vector2 defaultSpeed = new Vector2 (-0.01f, -0.015f);
 	private const float perishInSec = 1.0f;
 
-	public Vector2 speed = new Vector2(0.0f, defaultSpeed.y);
+	private Vector2 speed = new Vector2(0.0f, defaultSpeed.y);
+	public bool isMoveLeft = true;
 
 	// Use this for initialization
 	void Start () {
-		
+		if (!isMoveLeft)
+			defaultSpeed.x *= -1;
 	}
 	
 	// Update is called once per frame

@@ -90,7 +90,6 @@ public class InputManager : MonoBehaviour {
 			OnKeyUp_Up();
 		}
 
-
 		if (Input.GetKeyDown (KeyCode.X) || Input.GetKeyDown (KeyCode.Period)) {
 			OnKeyDown_B();
 		}

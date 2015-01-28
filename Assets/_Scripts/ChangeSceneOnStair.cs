@@ -5,7 +5,27 @@ public class ChangeSceneOnStair : MonoBehaviour {
 
 	// both var must be initialized in inspector
 	public string targetScene;
-	public Vector3 newPos;
+	public int thisPortalNum;
+
+//	private static ChangeSceneOnStair portalInstance = null;
+
+	void Awake () {
+//		instanceControl ();
+	}
+
+//	void instanceControl()
+//	{
+//		if (portalInstance != null && portalInstance != this) 
+//		{
+//			Destroy (this.gameObject);
+//			return;
+//		}
+//		else 
+//		{
+//			portalInstance = this;
+//		}
+//		DontDestroyOnLoad(this.gameObject);
+//	}
 	
 	void OnTriggerStay2D( Collider2D coll ) {
 		GameObject collObj = coll.gameObject;
@@ -14,6 +34,7 @@ public class ChangeSceneOnStair : MonoBehaviour {
 		if (collObj.tag == Globals.playerTag) {
 			PlayerController plScript = collObj.GetComponent<PlayerController>();
 			StairManager smScript = collObj.GetComponent<StairManager>();
+			StatusManager stScript = collObj.GetComponent<StatusManager>();
 			if(smScript.isOnStair())
 			{
 				if((targetScene.Equals("Scene_01") && plScript.facingRight == false)
@@ -21,7 +42,7 @@ public class ChangeSceneOnStair : MonoBehaviour {
 				{
 					Debug.Log ("changed to " + targetScene +" on stair");
 					Application.LoadLevel (targetScene);
-					collObj.transform.position = newPos;
+					stScript.portalNum = thisPortalNum;
 				}
 			}
 
