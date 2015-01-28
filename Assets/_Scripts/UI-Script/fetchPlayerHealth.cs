@@ -4,9 +4,11 @@ using UnityEngine.UI;
 public class fetchPlayerHealth : MonoBehaviour {
 	private Image image;
 	private Sprite[] healths;
+	private StatusManager status;
 	// Use this for initialization
 	void Start () {	
 		image = GetComponent<Image> ();
+		status = GameObject.FindGameObjectWithTag("Player").GetComponent<StatusManager>();
 		healths = new Sprite[17];
 		for (int i = 0; i <= 16; i++) {
 			string assetname_prefix = "gui/player-health/health-";
@@ -19,7 +21,7 @@ public class fetchPlayerHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		int coming_int = 7;
-		image.sprite = healths [coming_int];
+		int playerHealth = Mathf.Clamp (status.playerHealth, 0, 16);
+		image.sprite = healths [playerHealth];
 	}
 }

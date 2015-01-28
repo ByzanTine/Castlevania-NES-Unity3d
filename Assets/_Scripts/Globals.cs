@@ -17,8 +17,8 @@ public class Globals : MonoBehaviour {
 
 	public const string playerTag = "Player";
 
-	public const int maxPlayerHealth = 20;
-	public const int maxBossHealth = 20;
+	public const int maxPlayerHealth = 16;
+	public const int maxBossHealth = 16;
 
 
 	public enum Direction {
