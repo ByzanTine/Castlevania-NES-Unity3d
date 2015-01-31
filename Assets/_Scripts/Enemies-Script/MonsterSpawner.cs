@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CreateMoster : MonoBehaviour {
+public class MonsterSpawner : MonoBehaviour {
 
 	// all public var need to be init in Inspector
 	public GameObject  demonPrefab;

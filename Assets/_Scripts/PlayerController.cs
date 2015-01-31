@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour {
 	private WhipAttackManager whipAttManager;
 	private StairManager stairManager;
 	private CollisionManager collManager;
+	private SubWeaponManager subWeaponManager;
+	private HurtManager hurtManager;
 	private int curHorizontalVelocity = 0; // should only have values -1, 0, 1
 
 	public int CurHorizontalVelocity
@@ -48,6 +50,8 @@ public class PlayerController : MonoBehaviour {
 		whipAttManager = GetComponent<WhipAttackManager> ();
 		stairManager = GetComponent<StairManager> ();
 		collManager = GetComponent<CollisionManager> ();
+		subWeaponManager = GetComponent<SubWeaponManager> ();
+		hurtManager = GetComponent<HurtManager> ();
 		Flip (); // since the raw sprite face left
 	}
 	void initInputEventHandler () {
@@ -218,9 +222,25 @@ public class PlayerController : MonoBehaviour {
 
 	void HandleOnKeyPress_Up_And_B () {
 		Debug.Log("INPUT: up and B pressed as chord");
+
+		StartCoroutine (subWeaponManager.Throw());
+		// do what 
+		// animator.SetBool ("Throw", false);
 	}
 
 	// ============================================================================ //
+	// =====
+	// Events
+	// =====
+
+	public void HandleHurt() {
+		if (!hurtManager.Hurting)
+			StartCoroutine (hurtManager.Hurt ());
+
+	}
+
+	// ============================================================================ //
+
 
 	IEnumerator Jump () {
 		// jump animation 
@@ -301,7 +321,8 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		curHorizontalVelocity = animator.GetInteger ("Speed");
+		if (!animator.GetBool("Hurt"))
+			curHorizontalVelocity = animator.GetInteger ("Speed");
 
 	}
 

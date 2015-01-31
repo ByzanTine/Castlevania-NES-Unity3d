@@ -19,7 +19,7 @@ public class fetchEnemyHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		int coming_int = 7;
+		int coming_int = 16;
 		image.sprite = healths [coming_int];
 	}
 }

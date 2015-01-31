@@ -8,36 +8,39 @@ public class ItemMotion : MonoBehaviour {
 
 	//must be specified in inspector
 	public Globals.ItemName itemName;
+
 	private StatusManager status;
+	private CollisionManager cmScript;
 	// Use this for initialization
 	void Start () {
-
+		cmScript = GetComponent<CollisionManager> ();
+		if (!cmScript)
+			Debug.LogError("CollisionManager can't retrieve, check your prefab if it's linked");
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		move ();
 	}
+
 	void move()
 	{
 		if (speedY < 0) {
 			Vector3 pos = this.transform.position;
 			pos.y += speedY;
 			this.transform.position = pos;
-			
-			CollisionManager cmScript = GetComponent<CollisionManager> ();
-			if (cmScript != null) {
-				if (cmScript.isWallOn (Globals.Direction.Bottom)) {
-					hitGround();
-				}
+
+			if (cmScript.isWallOn (Globals.Direction.Bottom)) {
+				hitGround();
 			}
+
 		}
 	}
 
 	public void hitGround()
 	{
 		speedY = 0;
-		StartCoroutine (autoDie());
+		Destroy (this.gameObject, perishInSec);
 	}
 
 	void OnTriggerEnter2D( Collider2D coll ) {
@@ -48,11 +51,7 @@ public class ItemMotion : MonoBehaviour {
 		}
 	}
 
-	IEnumerator autoDie()
-	{
-		yield return new WaitForSeconds(perishInSec);
-		Destroy (this.gameObject);
-	}
+
 
 	void itemPickedUp(GameObject plObj)
 	{
