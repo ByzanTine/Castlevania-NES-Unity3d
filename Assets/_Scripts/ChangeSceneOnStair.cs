@@ -7,26 +7,6 @@ public class ChangeSceneOnStair : MonoBehaviour {
 	public string targetScene;
 	public int thisPortalNum;
 
-//	private static ChangeSceneOnStair portalInstance = null;
-
-	void Awake () {
-//		instanceControl ();
-	}
-
-//	void instanceControl()
-//	{
-//		if (portalInstance != null && portalInstance != this) 
-//		{
-//			Destroy (this.gameObject);
-//			return;
-//		}
-//		else 
-//		{
-//			portalInstance = this;
-//		}
-//		DontDestroyOnLoad(this.gameObject);
-//	}
-	
 	void OnTriggerStay2D( Collider2D coll ) {
 		GameObject collObj = coll.gameObject;
 		Debug.Log ("ready to change scene on stair" + collObj.tag);
