@@ -3,10 +3,10 @@ using System.Collections;
 
 public class LeoMotion : MonoBehaviour {
 	
-	private static Vector2 defaultSpeed = new Vector2 (-0.02f, -0.02f);
+	private Vector2 defaultSpeed = new Vector2 (0.02f, -0.02f);
 	private const float perishInSec = 1.0f;
 	private bool isAwake = false;
-	private Vector2 speed = new Vector2(0.0f, defaultSpeed.y);
+	private Vector2 speed;
 
 //	private bool onGround = false;
 	public bool isMoveLeft = true;
@@ -15,6 +15,9 @@ public class LeoMotion : MonoBehaviour {
 	void Start () {
 		if (!isMoveLeft)
 			defaultSpeed.x *= -1;
+
+		speed = new Vector2(0.0f, defaultSpeed.y);
+
 		CollisionManager cmScript = GetComponent<CollisionManager>();
 		cmScript.ExitGround += onExitGround;
 		cmScript.EnterGround += onEnterGround;
@@ -33,9 +36,7 @@ public class LeoMotion : MonoBehaviour {
 
 	void onEnterGround()
 	{
-		Debug.Log ("enter ground responsed");
-		if(transform.position.y < 0.5f)
-			defaultSpeed.x *= -1.0f;
+		defaultSpeed.x *= -1;
 		speed.x = defaultSpeed.x;
 		speed.y = 0;
 	}
@@ -62,6 +63,13 @@ public class LeoMotion : MonoBehaviour {
 		{
 			onPlayerEnter(coll.gameObject);		              
 		}
+//		else if(collidedObj.tag == Globals.basicGroundTag)
+//		{
+//			Debug.Log("coll baisc ground");
+//			speed.x = defaultSpeed.x;
+//			speed.y = 0;
+//		}
+
 	}
 	
 	void onPlayerEnter(GameObject gb)

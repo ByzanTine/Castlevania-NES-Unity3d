@@ -19,6 +19,7 @@ public class Globals : MonoBehaviour {
 
 
 	public const string playerTag = "Player";
+	public const string basicGroundTag = "BasicGround";
 
 	public const int maxPlayerHealth = 16;
 	public const int maxBossHealth = 16;
