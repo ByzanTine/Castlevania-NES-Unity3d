@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11495404}
   - 114: {fileID: 11463628}
   - 114: {fileID: 11492288}
+  - 95: {fileID: 9561764}
   m_Layer: 0
   m_Name: Leopard
   m_TagString: Enemy
@@ -46,7 +47,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.86100006, y: .564999998, z: 0}
+  m_LocalPosition: {x: 5.55547571, y: -.0419818163, z: 0}
   m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 1}
   m_Children:
   - {fileID: 499816}
@@ -114,8 +115,23 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .300000012, y: .200000003}
+  m_Size: {x: .300000012, y: 1}
   m_Center: {x: -.200000003, y: 0}
+--- !u!95 &9561764
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195404}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 357203455eac5ed48a8d80b734522efd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11463628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,7 +156,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9684d9d9bfdca44858b51c4a34274d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoveLeft: 1
+  initVerticalSpeed: 1
+  HorizontalSpeed: -1.70000005
+  VerticalSpeed: 0
+  VerticalAccerlation: -5.0999999
+  facingRight: 1
 --- !u!114 &11495404
 MonoBehaviour:
   m_ObjectHideFlags: 1
