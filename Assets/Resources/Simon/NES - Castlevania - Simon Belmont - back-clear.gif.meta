@@ -352,11 +352,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 34
-        y: 523
+        y: 524
         width: 32
-        height: 31
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        height: 32
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Castlevania - Simon Belmont - back-clear_22
       rect:
@@ -364,9 +364,9 @@ TextureImporter:
         x: 78
         y: 523
         width: 32
-        height: 30
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        height: 32
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Castlevania - Simon Belmont - back-clear_23
       rect:
@@ -374,9 +374,9 @@ TextureImporter:
         x: 136
         y: 524
         width: 44
-        height: 29
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        height: 32
+      alignment: 9
+      pivot: {x: .818661094, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Castlevania - Simon Belmont - back-clear_24
       rect:
@@ -412,11 +412,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 28
-        y: 480
+        y: 481
         width: 32
-        height: 31
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        height: 32
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Castlevania - Simon Belmont - back-clear_28
       rect:
@@ -424,9 +424,9 @@ TextureImporter:
         x: 72
         y: 480
         width: 32
-        height: 30
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        height: 32
+      alignment: 9
+      pivot: {x: .25, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Castlevania - Simon Belmont - back-clear_29
       rect:
@@ -434,9 +434,9 @@ TextureImporter:
         x: 120
         y: 481
         width: 60
-        height: 29
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        height: 32
+      alignment: 9
+      pivot: {x: .870000005, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Castlevania - Simon Belmont - back-clear_30
       rect:
@@ -651,7 +651,7 @@ TextureImporter:
     - name: NES - Castlevania - Simon Belmont - back-clear_51
       rect:
         serializedVersion: 2
-        x: 21
+        x: 20
         y: 323
         width: 32
         height: 32
@@ -714,9 +714,9 @@ TextureImporter:
         x: 21
         y: 287
         width: 32
-        height: 31
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        height: 32
+      alignment: 9
+      pivot: {x: .289999992, y: .75}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Castlevania - Simon Belmont - back-clear_58
       rect:
@@ -724,9 +724,9 @@ TextureImporter:
         x: 65
         y: 291
         width: 32
-        height: 23
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        height: 32
+      alignment: 9
+      pivot: {x: .294983089, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Castlevania - Simon Belmont - back-clear_59
       rect:
@@ -734,9 +734,9 @@ TextureImporter:
         x: 131
         y: 290
         width: 44
-        height: 22
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        height: 32
+      alignment: 9
+      pivot: {x: .848282874, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Castlevania - Simon Belmont - back-clear_60
       rect:
@@ -774,19 +774,19 @@ TextureImporter:
         x: 20
         y: 248
         width: 32
-        height: 31
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        height: 32
+      alignment: 9
+      pivot: {x: .289999992, y: .75}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Castlevania - Simon Belmont - back-clear_64
       rect:
         serializedVersion: 2
-        x: 64
-        y: 252
+        x: 63
+        y: 251
         width: 32
-        height: 23
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        height: 32
+      alignment: 9
+      pivot: {x: .294983089, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Castlevania - Simon Belmont - back-clear_65
       rect:
@@ -794,9 +794,9 @@ TextureImporter:
         x: 114
         y: 252
         width: 60
-        height: 22
-      alignment: 0
-      pivot: {x: .5, y: .5}
+        height: 32
+      alignment: 9
+      pivot: {x: .888917565, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Castlevania - Simon Belmont - back-clear_66
       rect:
