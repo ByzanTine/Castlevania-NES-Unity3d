@@ -92,7 +92,9 @@ public class LeoMotion : MonoBehaviour {
 	void onPlayerEnter(GameObject gb)
 	{
 		Debug.Log ("Player hitted");
-		gb.GetComponent<StatusManager>().playerHealth -= 2;
+		HurtManager hmScript = gb.GetComponent<HurtManager> ();
+		if (!hmScript.Hurting)
+			StartCoroutine (hmScript.Hurt());
 	}
 
 	public void Flip() {

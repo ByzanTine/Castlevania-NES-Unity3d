@@ -4,6 +4,8 @@ using UnityEngine.UI;
 public class fetchEnemyHealth : MonoBehaviour {
 	private Image image;
 	private Sprite[] healths;
+	private BossMotion bossStatus;
+	private int bossHealth;
 	// Use this for initialization
 	void Start () {	
 		image = GetComponent<Image> ();
@@ -15,11 +17,26 @@ public class fetchEnemyHealth : MonoBehaviour {
 			if (!healths[i])
 				Debug.LogError("RESOURCE: player health information init failed");
 		}
+
+		GameObject boss = GameObject.FindGameObjectWithTag ("Boss");
+		if(boss)
+		{
+			Debug.Log("Boss found");
+			bossStatus = boss.GetComponent<BossMotion>();
+			if(!bossStatus)
+				Debug.LogError("Boss scripts not found");
+		}
+		bossHealth = Globals.maxBossHealth;
+		image.sprite = healths [bossHealth];
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		int coming_int = 16;
-		image.sprite = healths [coming_int];
+		if (bossStatus != null) {
+			bossHealth = bossStatus.bossHealth;
+			image.sprite = healths [bossHealth];
+		}
+
+			
 	}
 }

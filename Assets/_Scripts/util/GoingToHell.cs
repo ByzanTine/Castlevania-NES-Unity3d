@@ -16,6 +16,7 @@ public class GoingToHell : MonoBehaviour {
 		}
 		else
 		{
+			Debug.Log("item destroyed:" + collidedObj.name);
 			Destroy(collidedObj);
 		}
 

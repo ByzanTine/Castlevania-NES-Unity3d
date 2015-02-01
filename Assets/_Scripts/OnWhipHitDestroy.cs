@@ -18,7 +18,8 @@ public class OnWhipHitDestroy : OnWhipEvent {
 	{
 		hitted = true;
 		GameObject deathEffect = Resources.Load ("Prefab/death") as GameObject;
-		Instantiate (deathEffect, transform.position, Quaternion.identity);
+		Instantiate (deathEffect, collider2D.bounds.center, Quaternion.identity);
+
 		yield return new WaitForSeconds (0.1f);
 		Instantiate (itemPrefab, transform.position, Quaternion.identity);
 

@@ -22,7 +22,8 @@ public class ChangeSceneOnStair : MonoBehaviour {
 				{
 					Debug.Log ("changed to " + targetScene +" on stair");
 					stScript.portalNum = thisPortalNum;
-					Application.LoadLevel (targetScene);
+
+					stScript.enterStairPortal(targetScene);
 				}
 			}
 

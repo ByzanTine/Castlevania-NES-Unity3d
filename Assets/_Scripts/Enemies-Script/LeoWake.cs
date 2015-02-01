@@ -14,7 +14,6 @@ public class LeoWake : MonoBehaviour {
 		if (other.gameObject.tag == "Player") {
 			leoWake();
 			collider2D.enabled = false;
-
 		}
 	}
 	

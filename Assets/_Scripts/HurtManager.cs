@@ -16,18 +16,20 @@ public class HurtManager : MonoBehaviour {
 	private Animator animator;
 	private PlayerController pc;
 	private SpriteRenderer sprite;
+	private StatusManager status;
 
 
 	void Start () {
 		animator = GetComponent<Animator> ();
 		pc = GetComponent<PlayerController> ();
 		sprite = GetComponent<SpriteRenderer> ();
+		status = GetComponent<StatusManager> ();
 		hurting = false;
 	}
 	// ============================================================================ //
 	public IEnumerator Hurt () {
-		// TODO deduct health at first
-		// CODE HERE
+
+		status.playerHealth -= 2;
 
 		hurting = true;
 
