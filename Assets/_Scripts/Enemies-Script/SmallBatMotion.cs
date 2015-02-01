@@ -5,7 +5,8 @@ public class SmallBatMotion : MonoBehaviour {
 	
 	public float HorizontalSpeed; // adjust in inspector 
 	public float VerticalSpeed; // should be private 
-
+	public float omega;
+	public float amplitude;
 	// could be negative 
 	
 	private const float perishInSec = 1.0f;
@@ -15,9 +16,11 @@ public class SmallBatMotion : MonoBehaviour {
 	private bool onGround;
 	public bool facingRight; // true for right 
 	private Animator animator;
+	private float inittime;
+
 	// Use this for initialization
 	void Start () {
-		
+		inittime = Time.time;
 		isAwake = false;
 		VerticalSpeed = 0.0f;
 		if (!facingRight)
@@ -48,6 +51,7 @@ public class SmallBatMotion : MonoBehaviour {
 	void move()
 	{
 		int direction = facingRight ? 1 : -1;
+		VerticalSpeed = amplitude * Mathf.Cos (omega * (Time.time - inittime));
 		transform.position = new Vector2(transform.position.x + HorizontalSpeed * Time.fixedDeltaTime * direction,
 		                                 transform.position.y + VerticalSpeed * Time.fixedDeltaTime);
 

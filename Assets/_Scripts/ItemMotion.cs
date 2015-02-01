@@ -3,16 +3,21 @@ using System.Collections;
 
 public class ItemMotion : MonoBehaviour {
 
-	public float speedY = -0.01f;
+	public float speedY = -1.0f;
 	public float perishInSec = 10.0f;
 
+	public float Amplitude = 0.5f;
+	public float omega = 2f;
 	//must be specified in inspector
 	public Globals.ItemName itemName;
 
+	private float SpeedX;
+	private float time;
 	private StatusManager status;
 	private CollisionManager cmScript;
 	// Use this for initialization
 	void Start () {
+		time = Time.time;
 		cmScript = GetComponent<CollisionManager> ();
 		if (!cmScript)
 			Debug.LogError("CollisionManager can't retrieve, check your prefab if it's linked");
@@ -26,13 +31,16 @@ public class ItemMotion : MonoBehaviour {
 	void move()
 	{
 		if (speedY < 0) {
-			Vector3 pos = this.transform.position;
-			pos.y += speedY;
-			this.transform.position = pos;
+
 
 			if (cmScript.isWallOn (Globals.Direction.Bottom)) {
 				hitGround();
 			}
+			SpeedX = Amplitude * Mathf.Cos(omega * (Time.time - time));
+			Vector3 pos = this.transform.position;
+			pos.y += speedY * Time.fixedDeltaTime;
+			pos.x += SpeedX * Time.fixedDeltaTime;
+			this.transform.position = pos;
 
 		}
 	}

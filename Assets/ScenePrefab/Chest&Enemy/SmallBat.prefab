@@ -101,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HorizontalSpeed: 1
   VerticalSpeed: 0
+  omega: 5
+  amplitude: .5
   facingRight: 1
 --- !u!114 &11495404
 MonoBehaviour:
