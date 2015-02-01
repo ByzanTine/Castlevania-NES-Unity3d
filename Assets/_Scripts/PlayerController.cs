@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour {
 	private WhipAttackManager whipAttManager;
 	private StairManager stairManager;
 	private CollisionManager collManager;
+	private SubWeaponManager subWeaponManager;
 	private int curHorizontalVelocity = 0; // should only have values -1, 0, 1
 
 	public int CurHorizontalVelocity
@@ -48,6 +49,7 @@ public class PlayerController : MonoBehaviour {
 		whipAttManager = GetComponent<WhipAttackManager> ();
 		stairManager = GetComponent<StairManager> ();
 		collManager = GetComponent<CollisionManager> ();
+		subWeaponManager = GetComponent<SubWeaponManager> ();
 		Flip (); // since the raw sprite face left
 	}
 	void initInputEventHandler () {
@@ -218,6 +220,10 @@ public class PlayerController : MonoBehaviour {
 
 	void HandleOnKeyPress_Up_And_B () {
 		Debug.Log("INPUT: up and B pressed as chord");
+
+		StartCoroutine (subWeaponManager.Throw());
+		// do what 
+		// animator.SetBool ("Throw", false);
 	}
 
 	// ============================================================================ //
