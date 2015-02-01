@@ -758,7 +758,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 444560, guid: 49ef41adbcb854a0c98549520ee7f15f, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49ef41adbcb854a0c98549520ee7f15f, type: 2}
@@ -995,6 +995,7 @@ GameObject:
   - 114: {fileID: 145145608}
   - 114: {fileID: 145145607}
   - 114: {fileID: 145145606}
+  - 95: {fileID: 145145612}
   m_Layer: 0
   m_Name: Leopard
   m_TagString: Enemy
@@ -1027,7 +1028,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9684d9d9bfdca44858b51c4a34274d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoveLeft: 1
+  initVerticalSpeed: 1
+  HorizontalSpeed: -1.70000005
+  VerticalSpeed: 0
+  VerticalAccerlation: -5.0999999
+  facingRight: 1
 --- !u!114 &145145607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,6 +1111,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 89731179a2fea184f94d0a46a0908c8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &145145612
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9561764, guid: a8e943d17d5534d01a8822521b54d766,
+    type: 2}
+  m_PrefabInternal: {fileID: 362671058}
+  m_GameObject: {fileID: 145145604}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 357203455eac5ed48a8d80b734522efd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &175247362
 Prefab:
   m_ObjectHideFlags: 0
@@ -1235,7 +1256,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .300000012, y: .200000003}
+  m_Size: {x: .300000012, y: 1}
   m_Center: {x: -.200000003, y: 0}
 --- !u!50 &245242435
 Rigidbody2D:
@@ -1304,7 +1325,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 21267348, guid: 62a784e863a2c4349b460d0790577da3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 62a784e863a2c4349b460d0790577da3, type: 2}
   m_RootGameObject: {fileID: 1989952617}
   m_IsPrefabParent: 0
@@ -2064,7 +2086,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .300000012, y: .200000003}
+  m_Size: {x: .300000012, y: 1}
   m_Center: {x: -.200000003, y: 0}
 --- !u!50 &428518486
 Rigidbody2D:
@@ -2188,7 +2210,7 @@ GameObject:
   - 212: {fileID: 484619027}
   m_Layer: 0
   m_Name: level1-entrance_0
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2789,6 +2811,7 @@ GameObject:
   - 114: {fileID: 652487651}
   - 114: {fileID: 652487650}
   - 114: {fileID: 652487649}
+  - 95: {fileID: 652487655}
   m_Layer: 0
   m_Name: Leopard
   m_TagString: Enemy
@@ -2821,7 +2844,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9684d9d9bfdca44858b51c4a34274d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoveLeft: 1
+  initVerticalSpeed: 1
+  HorizontalSpeed: -1.70000005
+  VerticalSpeed: 0
+  VerticalAccerlation: -5.0999999
+  facingRight: 1
 --- !u!114 &652487650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2900,6 +2927,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 89731179a2fea184f94d0a46a0908c8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &652487655
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9561764, guid: a8e943d17d5534d01a8822521b54d766,
+    type: 2}
+  m_PrefabInternal: {fileID: 981292177}
+  m_GameObject: {fileID: 652487647}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 357203455eac5ed48a8d80b734522efd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &653494395
 GameObject:
   m_ObjectHideFlags: 0
@@ -3141,7 +3184,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 478120, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6178120, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
       propertyPath: m_IsTrigger
@@ -3154,6 +3197,10 @@ Prefab:
     - target: {fileID: 178120, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478120, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
+      propertyPath: whipLevel
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
@@ -3692,7 +3739,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .300000012, y: .200000003}
+  m_Size: {x: .300000012, y: 1}
   m_Center: {x: -.200000003, y: 0}
 --- !u!50 &865960381
 Rigidbody2D:
@@ -4525,6 +4572,7 @@ GameObject:
   - 114: {fileID: 1035798376}
   - 114: {fileID: 1035798374}
   - 114: {fileID: 1035798373}
+  - 95: {fileID: 1035798375}
   m_Layer: 0
   m_Name: Leopard
   m_TagString: Enemy
@@ -4544,7 +4592,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9684d9d9bfdca44858b51c4a34274d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoveLeft: 1
+  initVerticalSpeed: 1
+  HorizontalSpeed: -1.70000005
+  VerticalSpeed: 0
+  VerticalAccerlation: -5.0999999
+  facingRight: 1
 --- !u!114 &1035798374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4559,6 +4611,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallStatus: 00000000000000000000000000000000
   curBoxTop: -1
+--- !u!95 &1035798375
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9561764, guid: a8e943d17d5534d01a8822521b54d766,
+    type: 2}
+  m_PrefabInternal: {fileID: 100339601}
+  m_GameObject: {fileID: 1035798372}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 357203455eac5ed48a8d80b734522efd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &1035798376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4812,8 +4880,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 186290, guid: 31e00960517f6714b86f5ffe31dd865b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
   m_RootGameObject: {fileID: 1863910628}
@@ -4833,6 +4905,7 @@ GameObject:
   - 114: {fileID: 1084277473}
   - 114: {fileID: 1084277472}
   - 114: {fileID: 1084277471}
+  - 95: {fileID: 1084277478}
   m_Layer: 0
   m_Name: Leopard
   m_TagString: Enemy
@@ -4852,7 +4925,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9684d9d9bfdca44858b51c4a34274d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoveLeft: 1
+  initVerticalSpeed: 1
+  HorizontalSpeed: -1.70000005
+  VerticalSpeed: 0
+  VerticalAccerlation: -5.0999999
+  facingRight: 1
 --- !u!114 &1084277472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4944,6 +5021,22 @@ Transform:
   - {fileID: 1519979596}
   m_Father: {fileID: 1218427897}
   m_RootOrder: 39
+--- !u!95 &1084277478
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9561764, guid: a8e943d17d5534d01a8822521b54d766,
+    type: 2}
+  m_PrefabInternal: {fileID: 1859287340}
+  m_GameObject: {fileID: 1084277470}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 357203455eac5ed48a8d80b734522efd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1097517221
 GameObject:
   m_ObjectHideFlags: 0
@@ -4958,6 +5051,7 @@ GameObject:
   - 114: {fileID: 1097517225}
   - 114: {fileID: 1097517224}
   - 114: {fileID: 1097517223}
+  - 95: {fileID: 1097517229}
   m_Layer: 0
   m_Name: Leopard
   m_TagString: Enemy
@@ -4990,7 +5084,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9684d9d9bfdca44858b51c4a34274d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoveLeft: 1
+  initVerticalSpeed: 1
+  HorizontalSpeed: -1.70000005
+  VerticalSpeed: 0
+  VerticalAccerlation: -5.0999999
+  facingRight: 1
 --- !u!114 &1097517224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5069,6 +5167,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 89731179a2fea184f94d0a46a0908c8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &1097517229
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9561764, guid: a8e943d17d5534d01a8822521b54d766,
+    type: 2}
+  m_PrefabInternal: {fileID: 1217878033}
+  m_GameObject: {fileID: 1097517221}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 357203455eac5ed48a8d80b734522efd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1100747974
 Prefab:
   m_ObjectHideFlags: 0
@@ -5364,6 +5478,54 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!1001 &1203613458
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .104000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .467000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 186290, guid: 31e00960517f6714b86f5ffe31dd865b, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+  m_RootGameObject: {fileID: 1274070919}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1001 &1217878033
 Prefab:
   m_ObjectHideFlags: 0
@@ -5678,6 +5840,101 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1218427897}
   m_RootOrder: 24
+--- !u!1 &1274070919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 117926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+  m_PrefabInternal: {fileID: 1203613458}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1274070924}
+  - 212: {fileID: 1274070923}
+  - 61: {fileID: 1274070922}
+  - 114: {fileID: 1274070921}
+  - 95: {fileID: 1274070920}
+  m_Layer: 0
+  m_Name: Candle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1274070920
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9565298, guid: 85f1d22876a8746388fc3908cb335e48,
+    type: 2}
+  m_PrefabInternal: {fileID: 1203613458}
+  m_GameObject: {fileID: 1274070919}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce4d7de369b8c4d37bc82ca0ab8c8afa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1274070921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11417926, guid: 85f1d22876a8746388fc3908cb335e48,
+    type: 2}
+  m_PrefabInternal: {fileID: 1203613458}
+  m_GameObject: {fileID: 1274070919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d0406e980cf483fb07bd836e35389b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 186290, guid: 31e00960517f6714b86f5ffe31dd865b, type: 2}
+--- !u!61 &1274070922
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6117926, guid: 85f1d22876a8746388fc3908cb335e48,
+    type: 2}
+  m_PrefabInternal: {fileID: 1203613458}
+  m_GameObject: {fileID: 1274070919}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: .100000001, y: .150000006}
+  m_Center: {x: 0, y: 0}
+--- !u!212 &1274070923
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21217926, guid: 85f1d22876a8746388fc3908cb335e48,
+    type: 2}
+  m_PrefabInternal: {fileID: 1203613458}
+  m_GameObject: {fileID: 1274070919}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300010, guid: e2ce5fe20c5cfb3479522227beff46f4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &1274070924
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 417926, guid: 85f1d22876a8746388fc3908cb335e48, type: 2}
+  m_PrefabInternal: {fileID: 1203613458}
+  m_GameObject: {fileID: 1274070919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .104000002, y: .467000008, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
 --- !u!1 &1294063709
 GameObject:
   m_ObjectHideFlags: 0
@@ -5731,7 +5988,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .300000012, y: .200000003}
+  m_Size: {x: .300000012, y: 1}
   m_Center: {x: -.200000003, y: 0}
 --- !u!50 &1294063713
 Rigidbody2D:
@@ -6443,7 +6700,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .300000012, y: .200000003}
+  m_Size: {x: .300000012, y: 1}
   m_Center: {x: -.200000003, y: 0}
 --- !u!50 &1519979599
 Rigidbody2D:
@@ -6475,6 +6732,7 @@ GameObject:
   - 114: {fileID: 1526288648}
   - 114: {fileID: 1526288647}
   - 114: {fileID: 1526288646}
+  - 95: {fileID: 1526288652}
   m_Layer: 0
   m_Name: Leopard
   m_TagString: Enemy
@@ -6507,7 +6765,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9684d9d9bfdca44858b51c4a34274d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoveLeft: 1
+  initVerticalSpeed: 1
+  HorizontalSpeed: -1.70000005
+  VerticalSpeed: 0
+  VerticalAccerlation: -5.0999999
+  facingRight: 1
 --- !u!114 &1526288647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6586,6 +6848,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 89731179a2fea184f94d0a46a0908c8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &1526288652
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9561764, guid: a8e943d17d5534d01a8822521b54d766,
+    type: 2}
+  m_PrefabInternal: {fileID: 1301179726}
+  m_GameObject: {fileID: 1526288644}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 357203455eac5ed48a8d80b734522efd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1548359524
 GameObject:
   m_ObjectHideFlags: 0
@@ -7269,6 +7547,7 @@ GameObject:
   - 114: {fileID: 1593141559}
   - 114: {fileID: 1593141558}
   - 114: {fileID: 1593141557}
+  - 95: {fileID: 1593141564}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
@@ -7379,6 +7658,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!95 &1593141564
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9596004, guid: 76228d1e12d9d4c1e867ff25915b392d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1700872128}
+  m_GameObject: {fileID: 1593141556}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9b8029a06ec0dbd41bc2df6bf583bec9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1606676316
 GameObject:
   m_ObjectHideFlags: 0
@@ -7432,7 +7727,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .300000012, y: .200000003}
+  m_Size: {x: .300000012, y: 1}
   m_Center: {x: -.200000003, y: 0}
 --- !u!50 &1606676320
 Rigidbody2D:
@@ -7503,7 +7798,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .300000012, y: .200000003}
+  m_Size: {x: .300000012, y: 1}
   m_Center: {x: -.200000003, y: 0}
 --- !u!50 &1653695369
 Rigidbody2D:
@@ -7537,6 +7832,8 @@ GameObject:
   - 114: {fileID: 1677072551}
   - 114: {fileID: 1677072553}
   - 114: {fileID: 1677072552}
+  - 114: {fileID: 1677072555}
+  - 114: {fileID: 1677072554}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -7556,7 +7853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d46fbff6de199d48a14a96e9ece74ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whipLevel: 1
+  whipLevel: 3
   collideLayer:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -7581,7 +7878,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 825011621
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6ea86496fd46f09418f898db60f12067, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7677,7 +7974,6 @@ MonoBehaviour:
   score: 0
   heartNum: 0
   playerHealth: 16
-  bossHealth: 16
   portalNum: 0
   transformedVec: {x: 3.40282347e+38, y: 3.40282347e+38, z: 3.40282347e+38}
   savePos: 0
@@ -7695,6 +7991,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallStatus: 00000000000000000000000000000000
   curBoxTop: -3
+--- !u!114 &1677072554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11475154, guid: be5ae8606d2ce6240b40b99f11382191,
+    type: 2}
+  m_PrefabInternal: {fileID: 770125860}
+  m_GameObject: {fileID: 1677072544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3956f6472823ed049acf788cda9fd99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InvisibleInterval: 1
+  initHurtVericalSpeed: 1
+--- !u!114 &1677072555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11412042, guid: be5ae8606d2ce6240b40b99f11382191,
+    type: 2}
+  m_PrefabInternal: {fileID: 770125860}
+  m_GameObject: {fileID: 1677072544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046f768a99585bf48a6a39ef4d9d652c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwing: 0
+  subWeapons: []
 --- !u!1001 &1682635657
 Prefab:
   m_ObjectHideFlags: 0
@@ -8115,8 +8439,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76afb7848bcc4f2c8522e5fdebbcdb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedY: -.00999999978
+  speedY: -1
   perishInSec: 10
+  Amplitude: 0
+  omega: 2
   itemName: 3
 --- !u!61 &1773312579
 BoxCollider2D:
@@ -8481,7 +8807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d0406e980cf483fb07bd836e35389b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 186290, guid: ea2058658ae3f4302bbe9bdbda148429, type: 2}
+  itemPrefab: {fileID: 186290, guid: 31e00960517f6714b86f5ffe31dd865b, type: 2}
 --- !u!61 &1863910630
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8656,7 +8982,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22407924, guid: ad54ffe415c00dc43963bf5b474fe027, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 22407924, guid: ad54ffe415c00dc43963bf5b474fe027, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -8902,7 +9228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 492132, guid: cdd1c93be1471468aad3cad3deb60477, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdd1c93be1471468aad3cad3deb60477, type: 2}
@@ -9157,8 +9483,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76afb7848bcc4f2c8522e5fdebbcdb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedY: -.00999999978
+  speedY: -1
   perishInSec: 10
+  Amplitude: 0
+  omega: 2
   itemName: 0
 --- !u!61 &1986060917
 BoxCollider2D:
@@ -9245,7 +9573,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1989952618}
-  - 212: {fileID: 1989952621}
   - 61: {fileID: 1989952620}
   - 114: {fileID: 1989952619}
   m_Layer: 0
@@ -9294,29 +9621,6 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .200000003, y: .300000012}
   m_Center: {x: 0, y: .0700000003}
---- !u!212 &1989952621
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 21267348, guid: 62a784e863a2c4349b460d0790577da3,
-    type: 2}
-  m_PrefabInternal: {fileID: 260349351}
-  m_GameObject: {fileID: 1989952617}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2013211310
 GameObject:
   m_ObjectHideFlags: 0
@@ -9405,6 +9709,7 @@ GameObject:
   - 114: {fileID: 2017149010}
   - 114: {fileID: 2017149009}
   - 114: {fileID: 2017149008}
+  - 95: {fileID: 2017149014}
   m_Layer: 0
   m_Name: Leopard
   m_TagString: Enemy
@@ -9437,7 +9742,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9684d9d9bfdca44858b51c4a34274d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoveLeft: 1
+  initVerticalSpeed: 1
+  HorizontalSpeed: -1.70000005
+  VerticalSpeed: 0
+  VerticalAccerlation: -5.0999999
+  facingRight: 1
 --- !u!114 &2017149009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9516,6 +9825,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 89731179a2fea184f94d0a46a0908c8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!95 &2017149014
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9561764, guid: a8e943d17d5534d01a8822521b54d766,
+    type: 2}
+  m_PrefabInternal: {fileID: 1158997565}
+  m_GameObject: {fileID: 2017149006}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 357203455eac5ed48a8d80b734522efd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &2079722778
 GameObject:
   m_ObjectHideFlags: 0

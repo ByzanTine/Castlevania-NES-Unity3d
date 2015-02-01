@@ -82,10 +82,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76afb7848bcc4f2c8522e5fdebbcdb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedY: -1
+  speedY: -.25
   perishInSec: 10
-  Amplitude: 0
-  omega: 2
+  Amplitude: .5
+  omega: 3
   itemName: 3
 --- !u!212 &21286290
 SpriteRenderer:
