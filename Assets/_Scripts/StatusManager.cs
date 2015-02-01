@@ -6,7 +6,6 @@ public class StatusManager : MonoBehaviour {
 	public int score = 0;
 	public int heartNum = 0;
 	public int playerHealth = Globals.maxPlayerHealth;
-	public int bossHealth = Globals.maxBossHealth;
 
 	private static StatusManager playerInstance = null;
 	private static float prevPos = 0.0f;
@@ -14,18 +13,20 @@ public class StatusManager : MonoBehaviour {
 	public int portalNum = 0;
 	public Vector3 transformedVec = new Vector3 (float.MaxValue,float.MaxValue,float.MaxValue);
 	private bool isTransed = true;
+	private string targetScene;
 
-	void OnLevelWasLoaded(int level) {
-		if (level == 0)
+
+	public void enterStairPortal(string levelName) {
+		if (levelName == "Scene_00")
 			print("Woohoo");
-		else if (level == 1)
+		else if (levelName == "Scene_01")
 		{
 			if(portalNum == 1)
 				this.gameObject.transform.position = Globals.subPortalTarget1;
 			else if(portalNum == 2)
 				this.gameObject.transform.position = Globals.subPortalTarget2;
 		}
-		else if (level == 2)
+		else if (levelName == "Scene_02")
 		{
 			if(portalNum == 1)
 				this.gameObject.transform.position = Globals.groundPortalTarget1;
@@ -37,6 +38,7 @@ public class StatusManager : MonoBehaviour {
 			portalNum = 0;
 			transformedVec = transform.position;
 			isTransed = false;
+			targetScene = levelName;
 			Debug.Log ("portal transform done:" + transform.position);
 		}
 
@@ -61,6 +63,7 @@ public class StatusManager : MonoBehaviour {
 
 		if (!isTransed && !smScript.isOnStairAnimationPlaying())
 		{
+			Application.LoadLevel (targetScene);
 			transform.position = transformedVec;
 			Debug.Log ("Transed");
 			isTransed = true;

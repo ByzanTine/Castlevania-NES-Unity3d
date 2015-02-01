@@ -17,6 +17,7 @@ GameObject:
   - 114: {fileID: 11473720}
   - 114: {fileID: 11493434}
   - 114: {fileID: 11412042}
+  - 114: {fileID: 11475154}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -103,6 +104,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallStatus: 00000000000000000000000000000000
   curBoxTop: -10
+--- !u!114 &11475154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3956f6472823ed049acf788cda9fd99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InvisibleInterval: 1
+  initHurtVericalSpeed: 1
 --- !u!114 &11478120
 MonoBehaviour:
   m_ObjectHideFlags: 1

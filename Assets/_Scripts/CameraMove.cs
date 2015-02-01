@@ -9,8 +9,12 @@ public class CameraMove : MonoBehaviour {
 	private GameObject map; // retrieve map for calculating the size of the background
 	private float minX; // bound to left 
 	private float maxX;	// bound to right
+	private bool isFrozen;
+	private float frozenPos;
 	// assume the bg is x is at the center 
 	void Start() {
+		isFrozen = false;
+		frozenPos = 0.0f;
 		map = GameObject.FindGameObjectWithTag (Globals.MapTag);
 		if (!map) {
 			Debug.LogError("There is no map background in the scene, make sure you have a object with a tag Map");
@@ -23,20 +27,17 @@ public class CameraMove : MonoBehaviour {
 
 
 	}
-//	private static CameraMove instance;
-//	void Awake()
-//	{
-//		if (instance != null && instance != this) 
-//		{
-//			Destroy (this.gameObject);
-//			return;
-//		}
-//		else 
-//		{
-//			instance = this;
-//		}
-//		DontDestroyOnLoad(this.gameObject);
-//	}
+
+	public void freeze(float xPos)
+	{
+		isFrozen = true;
+		frozenPos = xPos;
+	}
+
+	public void defrost()
+	{
+		isFrozen = false;
+	}
 
 	// Update is called once per frame
 	void Update () {
@@ -51,6 +52,8 @@ public class CameraMove : MonoBehaviour {
 			destination.y = transform.position.y;
 			// clamp x 
 			destination.x = Mathf.Clamp(destination.x, minX, maxX);
+			if(isFrozen)
+				destination.x = frozenPos;
 			transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);
 		}
 	}
