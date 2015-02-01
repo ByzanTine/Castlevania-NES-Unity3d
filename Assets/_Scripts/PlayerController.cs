@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour {
 	private StairManager stairManager;
 	private CollisionManager collManager;
 	private SubWeaponManager subWeaponManager;
+	private HurtManager hurtManager;
 	private int curHorizontalVelocity = 0; // should only have values -1, 0, 1
 
 	public int CurHorizontalVelocity
@@ -50,6 +51,7 @@ public class PlayerController : MonoBehaviour {
 		stairManager = GetComponent<StairManager> ();
 		collManager = GetComponent<CollisionManager> ();
 		subWeaponManager = GetComponent<SubWeaponManager> ();
+		hurtManager = GetComponent<HurtManager> ();
 		Flip (); // since the raw sprite face left
 	}
 	void initInputEventHandler () {
@@ -227,6 +229,18 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	// ============================================================================ //
+	// =====
+	// Events
+	// =====
+
+	public void HandleHurt() {
+		if (!hurtManager.Hurting)
+			StartCoroutine (hurtManager.Hurt ());
+
+	}
+
+	// ============================================================================ //
+
 
 	IEnumerator Jump () {
 		// jump animation 
@@ -307,7 +321,8 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		curHorizontalVelocity = animator.GetInteger ("Speed");
+		if (!animator.GetBool("Hurt"))
+			curHorizontalVelocity = animator.GetInteger ("Speed");
 
 	}
 
