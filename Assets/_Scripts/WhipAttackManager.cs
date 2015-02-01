@@ -69,9 +69,15 @@ public class WhipAttackManager : MonoBehaviour {
 	}
 
 	Vector3 WhipEnd(Vector3 From) {
-		return new Vector3(
-			From.x + Globals.WhipLengthShort * (playerControl.facingRight ? 1.0f : -1.0f), 
-			From.y, 0);
+		if (whipLevel <= 2)
+			return new Vector3(
+				From.x + Globals.WhipLengthShort * (playerControl.facingRight ? 1.0f : -1.0f), 
+				From.y, 0);
+		else 
+			return new Vector3(
+				From.x + Globals.WhipLengthLong * (playerControl.facingRight ? 1.0f : -1.0f), 
+				From.y, 0);
+
 	}
 
 }
