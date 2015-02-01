@@ -45,27 +45,41 @@ public class WhipAttackManager : MonoBehaviour {
 			// collide with other 
 			// generate collider or do over raycast
 			// there is also a position y drift of squat
-			Vector3 From = WhipStart();
-			Vector3 To = WhipEnd(From);
-			RaycastHit2D[] hits = Physics2D.RaycastAll(From, (To-From).normalized, (To-From).magnitude, collideLayer);
-			Debug.Log("number of hits: " + hits.Length);
-			// Boardcast to all objects that has a WhipEventhandler
-			foreach (RaycastHit2D hit in hits) {
-				GameObject gb = hit.transform.gameObject;
-				OnWhipEvent CC = gb.GetComponent<OnWhipEvent>();	
-				if (CC){
-					CC.onWhipEnter();
-				}
-			}
-			Debug.DrawLine(From, To, Color.blue, 1.0f);
+
+			genWhipHit(0.04f);
+			genWhipHit(-0.02f);
 
 		}
 	}
 
-	Vector3 WhipStart() {
+	void genWhipHit(float yCorrection) {
+		Vector3 From = WhipStart(yCorrection);
+		Vector3 To = WhipEnd(From);
+		// pixel correction +- heightOffset
+		genRayHit(From, To);
+	}
+
+
+
+	void genRayHit (Vector3 From, Vector3 To) {
+		RaycastHit2D[] hits = Physics2D.RaycastAll(From, (To-From).normalized, (To-From).magnitude, collideLayer);
+		Debug.Log("number of hits: " + hits.Length);
+		// Boardcast to all objects that has a WhipEventhandler
+		foreach (RaycastHit2D hit in hits) {
+			GameObject gb = hit.transform.gameObject;
+			OnWhipEvent CC = gb.GetComponent<OnWhipEvent>();	
+			if (CC){
+				CC.onWhipEnter();
+			}
+		}
+		Debug.DrawLine(From, To, Color.blue, 1.0f);
+	}
+
+
+	Vector3 WhipStart(float yCorrection) {
 		return new Vector3(
 			transform.position.x + Globals.PivotToWhipStart * (playerControl.facingRight ? 1.0f : -1.0f), 
-			transform.position.y + Globals.WhipHeightOffset +  Globals.SquatOffset * (animator.GetBool("Squat") ? 1.0f : 0.0f), 0);
+			transform.position.y + yCorrection + Globals.SquatOffset * (animator.GetBool("Squat") ? 1.0f : 0.0f), 0);
 	}
 
 	Vector3 WhipEnd(Vector3 From) {
