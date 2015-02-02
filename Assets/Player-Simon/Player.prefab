@@ -32,7 +32,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23, y: 0, z: 0}
+  m_LocalPosition: {x: 6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,6 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwing: 0
   subWeapons: []
+  isCarrying: 0
 --- !u!114 &11444754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,7 +149,7 @@ MonoBehaviour:
   jumpHeight: .5
   HorizonalSpeedScale: .699999988
   initVerticalSpeed: 2
-  DropVerticalSpeed: 5
+  DropVerticalSpeed: -5
   StairStepLength: 0
   VerticalAccerlation: -5.0999999
   facingRight: 0

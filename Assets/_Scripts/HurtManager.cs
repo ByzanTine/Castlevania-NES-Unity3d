@@ -61,15 +61,12 @@ public class HurtManager : MonoBehaviour {
 			yield return new WaitForSeconds (0.33f);
 			animator.SetBool ("Hurt", false);
 			Debug.Log("HURTING: fly state cleaned");
-
 			StartCoroutine (turnInvisible ());	
 			// turn 
 			animator.SetInteger ("Speed", 0);
-			animator.SetBool ("Squat", true);
-			
-			yield return new WaitForSeconds (0.33f);
+
+			yield return new WaitForSeconds (0f);
 			pc.CurHorizontalVelocity = 0;
-			animator.SetBool ("Squat", false);
 			disableControl = false;
 		}
 		
