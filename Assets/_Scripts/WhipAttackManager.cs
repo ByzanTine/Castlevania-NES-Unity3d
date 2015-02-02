@@ -39,6 +39,18 @@ public class WhipAttackManager : MonoBehaviour {
 
 		
 	}
+	public void UpgradWhip () {
+		StartCoroutine (UpgradeWhipAnim ());
+	}
+
+	IEnumerator UpgradeWhipAnim() {
+		whipLevel++;
+		animator.SetBool ("PickUpWhip", true);
+		// TODO pause ?
+		yield return new WaitForSeconds (1.0f);
+		animator.SetBool ("PickUpWhip", false);
+
+	}
 	void FixedUpdate() {
 		// for freeze the movement of Simon when attacking
 		attacking = (animator.GetInteger (tag_attack) > 0);	
