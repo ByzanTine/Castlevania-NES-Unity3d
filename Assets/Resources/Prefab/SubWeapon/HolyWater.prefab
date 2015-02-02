@@ -9,10 +9,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 407704}
   - 212: {fileID: 21207704}
-  - 114: {fileID: 11443794}
   - 114: {fileID: 11460150}
   - 50: {fileID: 5095882}
   - 61: {fileID: 6165658}
+  - 114: {fileID: 11403046}
+  - 95: {fileID: 9594998}
   m_Layer: 0
   m_Name: HolyWater
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107704}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.95308018, y: .0807006061, z: 0}
+  m_LocalPosition: {x: -.197562933, y: .436098933, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,10 +56,25 @@ BoxCollider2D:
   m_GameObject: {fileID: 107704}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: .170000002, y: .0900000036}
+  m_IsTrigger: 1
+  m_Size: {x: .159999996, y: .159999996}
   m_Center: {x: 0, y: 0}
---- !u!114 &11443794
+--- !u!95 &9594998
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107704}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cd658efdf3e494d4780e2fe93eee7498, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11403046
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -66,10 +82,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 107704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a208ae81ca8dc564bb525f691d445efe, type: 3}
+  m_Script: {fileID: 11500000, guid: c6a88e80b14ea4211a5bf35a13688c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
 --- !u!114 &11460150
 MonoBehaviour:
   m_ObjectHideFlags: 1

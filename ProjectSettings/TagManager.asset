@@ -5,7 +5,7 @@ TagManager:
   tags:
   - Item
   - Enemy
-  - BasicGround
+  - Ground
   - Map
   - Boss
   - 
