@@ -3,16 +3,35 @@ using System.Collections;
 
 public class ZombieMotion : MonoBehaviour {
 
-	private static Vector2 defaultSpeed = new Vector2 (-0.01f, -0.015f);
+	private Vector2 defaultSpeed = new Vector2 (-0.01f, -0.015f);
 	private const float perishInSec = 1.0f;
 
-	private Vector2 speed = new Vector2(0.0f, defaultSpeed.y);
+	private Vector2 speed;
 	public bool isMoveLeft = true;
 
 	// Use this for initialization
 	void Start () {
+
+
+		GameObject playerObj = GameObject.FindGameObjectWithTag (Globals.playerTag);
+		
+		if(playerObj.transform.position.x > transform.position.x)
+		{
+			isMoveLeft = false;
+			Flip();
+		}
+
 		if (!isMoveLeft)
 			defaultSpeed.x *= -1;
+
+		speed = new Vector2(0.0f, defaultSpeed.y);
+	}
+
+	public void Flip() {
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+		
 	}
 	
 	// Update is called once per frame
@@ -67,8 +86,7 @@ public class ZombieMotion : MonoBehaviour {
 	void onPlayerEnter(GameObject gb)
 	{
 		Debug.Log ("Player hitted");
-		HurtManager hmScript = gb.GetComponent<HurtManager> ();
-		if (!hmScript.Hurting)
-			StartCoroutine (hmScript.Hurt());
+		PlayerController pcScript = gb.GetComponent<PlayerController> ();
+		pcScript.HandleHurt ();
 	}
 }

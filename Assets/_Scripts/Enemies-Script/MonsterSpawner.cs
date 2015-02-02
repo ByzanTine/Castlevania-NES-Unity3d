@@ -9,7 +9,7 @@ public class MonsterSpawner : MonoBehaviour {
 	public Vector2 createAt;
 	private int demonNum = 0;
 	public float creationDelayInSec = 0.5f;
-	private float refreshTime = 5.0f;
+	public float refreshTime = 5.0f;
 	// Use this for initialization
 	void Start () {
 	}
@@ -39,7 +39,17 @@ public class MonsterSpawner : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Player") {
 			Debug.Log ("Disabled collider");
-			collider2D.enabled = false;
+			StartCoroutine(waitToReset());
+
+
 		}
+	}
+
+	IEnumerator waitToReset()
+	{
+		collider2D.enabled = false;
+		yield return new WaitForSeconds (refreshTime);
+		collider2D.enabled = true;
+
 	}
 }

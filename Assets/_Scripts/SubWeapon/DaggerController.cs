@@ -16,6 +16,14 @@ public class DaggerController : MonoBehaviour {
 		                                  transform.position.y);
 	}
 
+	void OnTriggerEnter2D( Collider2D coll ) {
+		GameObject collidedObj = coll.gameObject;
+		OnWhipHitDestroy whipScript = collidedObj.GetComponent<OnWhipHitDestroy>();
 
-
+		if(whipScript != null)
+		{
+			whipScript.onWhipEnter();
+			Destroy(this.gameObject);
+		}
+	}	
 }

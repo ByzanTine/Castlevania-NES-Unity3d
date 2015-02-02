@@ -12,7 +12,7 @@ GameObject:
   - 61: {fileID: 6152546}
   - 114: {fileID: 11452546}
   m_Layer: 0
-  m_Name: ZombieTrap
+  m_Name: MonsterTrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

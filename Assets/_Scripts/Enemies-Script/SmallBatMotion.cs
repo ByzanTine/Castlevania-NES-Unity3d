@@ -23,6 +23,15 @@ public class SmallBatMotion : MonoBehaviour {
 		inittime = Time.time;
 		isAwake = false;
 		VerticalSpeed = 0.0f;
+
+		facingRight = true;
+
+		GameObject playerObj = GameObject.FindGameObjectWithTag (Globals.playerTag);
+		if(playerObj.transform.position.x < transform.position.x)
+		{
+			facingRight = false;
+		}
+
 		if (!facingRight)
 			Flip();
 		CollisionManager cmScript = GetComponent<CollisionManager>();
@@ -30,8 +39,7 @@ public class SmallBatMotion : MonoBehaviour {
 		if (!animator) {
 			Debug.LogError("animator can't retrieve");
 		}
-
-
+		wakeUp ();
 	}
 	public void wakeUp()
 	{
@@ -45,16 +53,13 @@ public class SmallBatMotion : MonoBehaviour {
 		if(isAwake)
 			move ();
 	}
-	
 
-	
 	void move()
 	{
 		int direction = facingRight ? 1 : -1;
 		VerticalSpeed = amplitude * Mathf.Cos (omega * (Time.time - inittime));
 		transform.position = new Vector2(transform.position.x + HorizontalSpeed * Time.fixedDeltaTime * direction,
 		                                 transform.position.y + VerticalSpeed * Time.fixedDeltaTime);
-
 	}
 	
 	
@@ -71,9 +76,8 @@ public class SmallBatMotion : MonoBehaviour {
 	void onPlayerEnter(GameObject gb)
 	{
 		Debug.Log ("Player hitted");
-		HurtManager hmScript = gb.GetComponent<HurtManager> ();
-		if (!hmScript.Hurting)
-			StartCoroutine (hmScript.Hurt());
+		PlayerController pcScript = gb.GetComponent<PlayerController> ();
+		pcScript.HandleHurt ();
 
 		OnWhipHitDestroy owhScript = GetComponent<OnWhipHitDestroy>();
 		owhScript.onWhipEnter();

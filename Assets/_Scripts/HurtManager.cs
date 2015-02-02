@@ -37,13 +37,14 @@ public class HurtManager : MonoBehaviour {
 	}
 	// ============================================================================ //
 	public IEnumerator Hurt () {
+		status.playerHealth -= 2;
+
 		if (stairMan.isOnStair()) {
 			hurting = true;
 			StartCoroutine (turnInvisible ());	
 			yield return null;
 		}
 		else {
-			status.playerHealth -= 2;
 			Debug.Log("HURTING: Hurt fucntion called");
 			hurting = true;
 

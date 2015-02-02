@@ -5,13 +5,13 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Zombie-Controller
+  m_Name: Fishout-controller 1
   serializedVersion: 2
   m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
-    m_StateMachine: {fileID: 110793252}
+    m_StateMachine: {fileID: 110781814}
     m_Mask: {fileID: 0}
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
@@ -20,31 +20,31 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &110295550
+--- !u!1102 &110272082
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Zombie-Anim
+  m_Name: Death-Anim
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 613d1688b52363e4ab2bcb1a3121b3a0, type: 2}
-  m_ParentStateMachine: {fileID: 110793252}
-  m_Position: {x: 12, y: -84, z: 0}
+  - {fileID: 7400000, guid: d9cd37faae6bcce41adb8317ceea87ad, type: 2}
+  m_ParentStateMachine: {fileID: 110781814}
+  m_Position: {x: 24, y: -84, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
---- !u!1107 &110793252
+--- !u!1107 &110781814
 StateMachine:
   serializedVersion: 2
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Base Layer
-  m_DefaultState: {fileID: 110295550}
+  m_DefaultState: {fileID: 110272082}
   m_States:
-  - {fileID: 110295550}
+  - {fileID: 110272082}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions: {}
