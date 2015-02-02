@@ -42,8 +42,8 @@ public class Globals : MonoBehaviour {
 
 	public enum SubWeapon
 	{
-		Dagger,
 		Axe,
+		Dagger,
 		HolyWater,
 		StopWatch
 	}

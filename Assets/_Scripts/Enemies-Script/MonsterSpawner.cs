@@ -29,8 +29,14 @@ public class MonsterSpawner : MonoBehaviour {
 					new Vector3 (transform.position.x + createAt.x, 
             	transform.position.y + createAt.y, 0);
 				yield return new WaitForSeconds (creationDelayInSec);
+				if(collider2D.enabled == false)
+					return true;
 			}
-			yield return new WaitForSeconds (refreshTime);
+			yield return new WaitForSeconds (refreshTime/2f);
+			if(collider2D.enabled == false)
+				return true;
+			yield return new WaitForSeconds (refreshTime/2f);
+
 			demonNum = 0;
 		}
 	}

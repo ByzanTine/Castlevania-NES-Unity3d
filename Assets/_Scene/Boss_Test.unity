@@ -1302,7 +1302,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 478120, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.338
+      value: -3.54999995
       objectReference: {fileID: 0}
     - target: {fileID: 478120, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3100,7 +3100,7 @@ Transform:
   m_PrefabInternal: {fileID: 532488925}
   m_GameObject: {fileID: 1677072544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.338, y: 0, z: 0}
+  m_LocalPosition: {x: -3.54999995, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3136,6 +3136,7 @@ MonoBehaviour:
   jumpHeight: .5
   HorizonalSpeedScale: .699999988
   initVerticalSpeed: 2
+  DropVerticalSpeed: -5
   StairStepLength: 0
   VerticalAccerlation: -5.0999999
   facingRight: 0
@@ -3230,6 +3231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwing: 0
   subWeapons: []
+  isCarrying: 0
 --- !u!1001 &1911541083
 Prefab:
   m_ObjectHideFlags: 0

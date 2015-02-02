@@ -250,7 +250,8 @@ public class PlayerController : MonoBehaviour {
 	void handleOnExitGround() {
 
 		if (stairManager.isOnStair() || 
-		    animator.GetBool("Jump")) {
+		    animator.GetBool("Jump") ||
+		    hurtManager.Hurting) {
 			return;
 		}
 		Debug.Log("Rapid Drop");

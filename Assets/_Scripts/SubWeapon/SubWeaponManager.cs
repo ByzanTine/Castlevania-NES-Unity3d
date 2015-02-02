@@ -10,8 +10,10 @@ public class SubWeaponManager : MonoBehaviour {
 
 	private Animator animator;
 	private PlayerController playerControl;
+	private StatusManager status;
 	private int numWeapons = 3; 
 	public GameObject[] subWeapons; // fixed size 
+	private float throwDelay = 0.2f;
 	private float throwWaitInterval = 0.33f;
 	private float throwCD = 0.67f;
 
@@ -22,6 +24,7 @@ public class SubWeaponManager : MonoBehaviour {
 	void Start () {
 		animator = GetComponent<Animator> ();
 		playerControl = GetComponent<PlayerController> ();
+		status = GetComponent<StatusManager> ();
 		throwing = false;
 		subWeapons = new GameObject[numWeapons];
 		// obtain all prefabs first 
@@ -29,6 +32,13 @@ public class SubWeaponManager : MonoBehaviour {
 
 		isCarrying = false;
 		weaponId = -1;
+	}
+
+	public GameObject getSubWeaponObject () {
+		if (weaponId == -1)
+			return null;
+		else 
+			return subWeapons[weaponId];
 	}
 
 	public void weaponPickedUp(Globals.SubWeapon weaponId_in)
@@ -42,22 +52,27 @@ public class SubWeaponManager : MonoBehaviour {
 		// TODO
 		// update GUI
 		// 
+
 	}
 
 	public IEnumerator Throw() {
 		if(isCarrying)
 		{
+
 			// stop if walking 
 			if (playerControl.grounded && animator.GetInteger("Speed") != 0) {
 				animator.SetInteger("Speed", 0);
 			}
 			animator.SetBool ("Throw", true);
 			throwing = true;	
+			status.heartNum -= weaponId == (int)Globals.SubWeapon.StopWatch ? 5 : 1;
+			yield return new WaitForSeconds(throwDelay);
 
 			// generate whatever 
 			GameObject thrown = Instantiate (subWeapons [weaponId], transform.position, Quaternion.identity) as GameObject;
-			thrown.transform.localScale = transform.localScale;
-
+			thrown.transform.localScale = new Vector3 (-1 * transform.localScale.x, 
+					                                    transform.localScale.y,
+					                                    transform.localScale.z);
 			yield return new WaitForSeconds(throwWaitInterval);
 			animator.SetBool ("Throw", false);
 

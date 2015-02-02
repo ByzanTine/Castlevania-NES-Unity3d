@@ -21,7 +21,7 @@ public class CameraMove : MonoBehaviour {
 		}
 		float verExtent = Camera.main.camera.orthographicSize;
 		float horExtent = verExtent * Screen.width / Screen.height;
-		float camera_width = Screen.width/2;
+		// float camera_width = Screen.width/2;
 		minX = -map.renderer.bounds.size.x/ 2 + horExtent + map.transform.position.x;
 		maxX = map.renderer.bounds.size.x/ 2 - horExtent + map.transform.position.x;
 
