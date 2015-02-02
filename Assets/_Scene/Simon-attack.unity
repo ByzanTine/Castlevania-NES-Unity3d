@@ -1432,6 +1432,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11478120, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
+      propertyPath: whipLevel
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
   m_RootGameObject: {fileID: 1677072544}
@@ -2942,6 +2946,7 @@ GameObject:
   - 114: {fileID: 1677072553}
   - 114: {fileID: 1677072552}
   - 114: {fileID: 1677072551}
+  - 114: {fileID: 1677072555}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2961,7 +2966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d46fbff6de199d48a14a96e9ece74ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whipLevel: 1
+  whipLevel: 3
   collideLayer:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -3080,7 +3085,6 @@ MonoBehaviour:
   score: 0
   heartNum: 0
   playerHealth: 16
-  bossHealth: 16
   portalNum: 0
   transformedVec: {x: 3.40282347e+38, y: 3.40282347e+38, z: 3.40282347e+38}
   savePos: 0
@@ -3114,6 +3118,20 @@ MonoBehaviour:
   onStairState: 2
   curNumOfSteps: 0
   curStairSteps: 0
+--- !u!114 &1677072555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11475154, guid: be5ae8606d2ce6240b40b99f11382191,
+    type: 2}
+  m_PrefabInternal: {fileID: 916437498}
+  m_GameObject: {fileID: 1677072544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3956f6472823ed049acf788cda9fd99d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InvisibleInterval: 1
+  initHurtVericalSpeed: 1
 --- !u!1001 &1680011825
 Prefab:
   m_ObjectHideFlags: 0

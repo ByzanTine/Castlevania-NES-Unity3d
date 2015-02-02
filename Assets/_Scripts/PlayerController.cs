@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour {
 
 			return;
 		}
-		if (!grounded || whipAttManager.attacking)
+		if (!grounded || whipAttManager.attacking || animator.GetBool("Squat"))
 			return;
 		if (curHorizontalVelocity == 0) {
 			animator.SetInteger("Speed", 1);
@@ -138,7 +138,8 @@ public class PlayerController : MonoBehaviour {
 			return;
 		}
 
-		if (!grounded || whipAttManager.attacking )
+		if (!grounded || whipAttManager.attacking 
+		    || hurtManager.onFlyHurting() || animator.GetBool("Squat"))
 			return;
 		if (curHorizontalVelocity == 0) {
 			animator.SetInteger("Speed", -1);

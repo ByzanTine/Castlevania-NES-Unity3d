@@ -47,7 +47,7 @@ public class LeoMotion : MonoBehaviour {
 	void onEnterGround()
 	{
 		// flip 
-		if (isAwake) {
+		if (isAwake && transform.position.y < 0.1) {
 			HorizontalSpeed *= -1;
 			VerticalSpeed = 0.0f;
 			animator.SetBool ("Jump", false);

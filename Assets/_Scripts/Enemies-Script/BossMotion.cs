@@ -17,7 +17,7 @@ public class BossMotion : OnWhipEvent {
 	void Start()
 	{
 		float verExtent = Camera.main.camera.orthographicSize;
-		horExtent = verExtent * Screen.width / Screen.height;
+		horExtent = verExtent * Screen.width / Screen.height - 0.15f;
 		animator = GetComponent<Animator> ();
 		playerPos = GameObject.FindGameObjectWithTag ("Player").transform;
 		initPosition = new Vector2 (transform.position.x, transform.position.y);
@@ -47,7 +47,7 @@ public class BossMotion : OnWhipEvent {
 
 	IEnumerator bossSpeedControl ()
 	{
-		speed = new Vector2 (0.01f, -0.003f);
+		speed = new Vector2 (-0.01f, -0.003f);
 		yield return new WaitForSeconds (2f);
 		speed *= 0;
 		yield return new WaitForSeconds (1f);
@@ -55,15 +55,15 @@ public class BossMotion : OnWhipEvent {
 		while(bossHealth >= 0 )
 		{
 			// Weak attack
+			Vector3 moveDir;
 			for(int i = 0; i < 7; i++)
 			{
-				Vector3 weakMoveDir = playerPos.position - transform.position;
-				speed = new Vector2 (weakMoveDir.x/100,weakMoveDir.y/100);
+				moveDir = playerPos.position - transform.position;
+				speed = new Vector2 (moveDir.x/100,moveDir.y/100);
 				yield return new WaitForSeconds (0.2f);
 			}
 
 			// Go back to top slightly
-
 			speed = new Vector2 (-0.01f, 
 			                     (playerPos.position.y + 0.3f * Random.value + 0.2f)/100f);
 			yield return new WaitForSeconds (2f);
@@ -71,25 +71,25 @@ public class BossMotion : OnWhipEvent {
 			yield return new WaitForSeconds (1f);
 
 			// Strong attack
-
-			Vector3 strongMoveDir = playerPos.position - transform.position;;
+			moveDir = playerPos.position - transform.position;
 			for(int i = 1; i <= 2; i++)
 			{
-				strongMoveDir = playerPos.position - transform.position;
-				speed = new Vector2 (strongMoveDir.x/35,strongMoveDir.y/30);
+				moveDir = playerPos.position - transform.position;
+				speed = new Vector2 (moveDir.x/35,moveDir.y/30);
 				yield return new WaitForSeconds (0.4f * i);
 			}
 
 
 			// Go back to top
-			speed = new Vector2 (strongMoveDir.x/50, 
+			speed = new Vector2 (-0.005f, 
 			                     (playerPos.position.y + 0.3f * Random.value + 0.2f)/100f);
 			yield return new WaitForSeconds (2f);
 			speed *= 0;
 			yield return new WaitForSeconds (1f);
 
+			moveDir = playerPos.position - transform.position;
 			speed = new Vector2 (
-				(playerPos.position.x + Random.value/5f - 0.1f)/50f, 0.003f);
+				(-moveDir.x + Random.value/5f - 0.1f)/50f, 0.003f);
 			yield return new WaitForSeconds (2f);
 			speed *= 0;
 			yield return new WaitForSeconds (2f);
