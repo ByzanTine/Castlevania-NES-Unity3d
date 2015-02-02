@@ -13,6 +13,7 @@ public class SubWeaponManager : MonoBehaviour {
 	private StatusManager status;
 	private int numWeapons = 3; 
 	public GameObject[] subWeapons; // fixed size 
+	private float throwDelay = 0.2f;
 	private float throwWaitInterval = 0.33f;
 	private float throwCD = 0.67f;
 
@@ -57,10 +58,13 @@ public class SubWeaponManager : MonoBehaviour {
 			animator.SetBool ("Throw", true);
 			throwing = true;	
 			status.heartNum -= weaponId == (int)Globals.SubWeapon.StopWatch ? 5 : 1;
+			yield return new WaitForSeconds(throwDelay);
+
 			// generate whatever 
 			GameObject thrown = Instantiate (subWeapons [weaponId], transform.position, Quaternion.identity) as GameObject;
-			thrown.transform.localScale = transform.localScale;
-
+			thrown.transform.localScale = new Vector3 (-1 * transform.localScale.x, 
+					                                    transform.localScale.y,
+					                                    transform.localScale.z);
 			yield return new WaitForSeconds(throwWaitInterval);
 			animator.SetBool ("Throw", false);
 

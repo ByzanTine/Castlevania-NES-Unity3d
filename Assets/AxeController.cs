@@ -1,25 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DaggerController : MonoBehaviour {
-	public float Speed;
+public class AxeController : MonoBehaviour {
+	private Vector3 speed = new Vector3(1.6f, 3.6f, 0.0f);
+	private float gravity = 10f;
 	// Use this for initialization
 	void Start () {
+		speed.x *= transform.localScale.x;
 	}
-
+	
 	void FixedUpdate () {
-		transform.position = new Vector2 (transform.position.x + Speed * Time.fixedDeltaTime * transform.localScale.x,
-		                                  transform.position.y);
+		transform.position 
+			= transform.position + speed * Time.fixedDeltaTime;
+		speed.y -= gravity * Time.fixedDeltaTime;
 	}
-
+	
 	void OnTriggerEnter2D( Collider2D coll ) {
 		GameObject collidedObj = coll.gameObject;
 		OnWhipHitDestroy whipScript = collidedObj.GetComponent<OnWhipHitDestroy>();
-
+		
 		if(whipScript != null)
 		{
 			whipScript.onWhipEnter();
 			Destroy(this.gameObject);
 		}
-	}	
+	}
 }
