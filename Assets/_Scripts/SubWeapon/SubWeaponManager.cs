@@ -15,6 +15,9 @@ public class SubWeaponManager : MonoBehaviour {
 	private float throwWaitInterval = 0.33f;
 	private float throwCD = 0.67f;
 
+	public bool isCarrying;
+	private int weaponId;
+
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator> ();
@@ -24,28 +27,43 @@ public class SubWeaponManager : MonoBehaviour {
 		// obtain all prefabs first 
 		subWeapons = Resources.LoadAll<GameObject> ("Prefab/SubWeapon") as GameObject[];
 
+		isCarrying = false;
+		weaponId = -1;
+	}
+
+	public void weaponPickedUp(Globals.SubWeapon weaponId_in)
+	{
+		isCarrying = true;
+		Debug.Log ("subweapon Loaded:" + weaponId_in.ToString ());
+		weaponId = (int)weaponId_in;
+		if(weaponId >= subWeapons.Length)
+			Debug.LogError("weapon not found");
+
+		// TODO
+		// update GUI
+		// 
 	}
 
 	public IEnumerator Throw() {
-		// stop if walking 
-		if (playerControl.grounded && animator.GetInteger("Speed") != 0) {
-			animator.SetInteger("Speed", 0);
+		if(isCarrying)
+		{
+			// stop if walking 
+			if (playerControl.grounded && animator.GetInteger("Speed") != 0) {
+				animator.SetInteger("Speed", 0);
+			}
+			animator.SetBool ("Throw", true);
+			throwing = true;	
+
+			// generate whatever 
+			GameObject thrown = Instantiate (subWeapons [weaponId], transform.position, Quaternion.identity) as GameObject;
+			thrown.transform.localScale = transform.localScale;
+
+			yield return new WaitForSeconds(throwWaitInterval);
+			animator.SetBool ("Throw", false);
+
+			yield return new WaitForSeconds(throwCD);
+			throwing = false;	
 		}
-		animator.SetBool ("Throw", true);
-		throwing = true;	
-
-		// generate whatever 
-		GameObject thrown = Instantiate (subWeapons [0], transform.position, Quaternion.identity) as GameObject;
-		thrown.transform.localScale = transform.localScale;
-
-		yield return new WaitForSeconds(throwWaitInterval);
-		animator.SetBool ("Throw", false);
-
-		yield return new WaitForSeconds(throwCD);
-		throwing = false;	
-
-
-
 	}
 
 //	void FixedUpdate() {

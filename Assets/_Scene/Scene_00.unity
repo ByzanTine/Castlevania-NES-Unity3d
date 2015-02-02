@@ -1975,7 +1975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d0406e980cf483fb07bd836e35389b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 186290, guid: ea2058658ae3f4302bbe9bdbda148429, type: 2}
+  itemPrefab: {fileID: 192132, guid: 3434da5d9ee4344638807c05eba3c7e4, type: 2}
 --- !u!61 &867631697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2757,6 +2757,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11432778, guid: 62a784e863a2c4349b460d0790577da3, type: 2}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 192132, guid: 3434da5d9ee4344638807c05eba3c7e4, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62a784e863a2c4349b460d0790577da3, type: 2}
   m_RootGameObject: {fileID: 867631694}
@@ -3074,6 +3078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwing: 0
   subWeapons: []
+  isCarrying: 0
 --- !u!1001 &1911541083
 Prefab:
   m_ObjectHideFlags: 0

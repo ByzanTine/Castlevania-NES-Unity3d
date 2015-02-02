@@ -36,7 +36,16 @@ public class Globals : MonoBehaviour {
 	{
 		Money_S, Money_M, Money_L,
 		LargeHeart, SmallHeart,
-		WhipUp
+		WhipUp,
+		Dagger, Axe, HolyWater, StopWatch
+	}
+
+	public enum SubWeapon
+	{
+		Dagger,
+		Axe,
+		HolyWater,
+		StopWatch
 	}
 	
 	public enum STAIR_FACING {

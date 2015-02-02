@@ -224,7 +224,7 @@ public class PlayerController : MonoBehaviour {
 	void HandleOnKeyPress_Up_And_B () {
 		Debug.Log("INPUT: up and B pressed as chord");
 
-		if(!subWeaponManager.throwing && !whipAttManager.attacking)
+		if(!subWeaponManager.throwing && subWeaponManager.isCarrying && !whipAttManager.attacking)
 			StartCoroutine (subWeaponManager.Throw());
 		else if(!whipAttManager.attacking)
 			StartCoroutine (whipAttManager.WhipAttack());

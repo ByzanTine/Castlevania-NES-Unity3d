@@ -12844,6 +12844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwing: 0
   subWeapons: []
+  isCarrying: 0
 --- !u!114 &2109555519
 MonoBehaviour:
   m_ObjectHideFlags: 0
