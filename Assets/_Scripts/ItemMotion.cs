@@ -96,7 +96,7 @@ public class ItemMotion : MonoBehaviour {
 		
 		case Globals.ItemName.WhipUp:
 			if(attManager.whipLevel < 3)
-				attManager.whipLevel += 1;
+				attManager.UpgradWhip();
 			Debug.Log ("fetched Morning Star, whip powered up");
 			break;
 
