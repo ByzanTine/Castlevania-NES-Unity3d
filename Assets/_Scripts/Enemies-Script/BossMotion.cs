@@ -151,9 +151,8 @@ public class BossMotion : OnWhipEvent {
 	void onPlayerEnter(GameObject gb)
 	{
 		Debug.Log ("Player hitted");
-		HurtManager hmScript = gb.GetComponent<HurtManager> ();
-		if (!hmScript.Hurting)
-			StartCoroutine (hmScript.Hurt());
+		PlayerController pcScript = gb.GetComponent<PlayerController> ();
+		pcScript.HandleHurt ();
 	}
 }
 

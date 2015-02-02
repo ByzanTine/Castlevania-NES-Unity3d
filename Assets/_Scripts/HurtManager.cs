@@ -51,7 +51,6 @@ public class HurtManager : MonoBehaviour {
 		yield return new WaitForSeconds (0.33f);
 		pc.CurHorizontalVelocity = 0;
 		animator.SetBool ("Squat", false);
-
 		
 	}
 	

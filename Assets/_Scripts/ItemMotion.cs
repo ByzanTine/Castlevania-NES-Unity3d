@@ -64,15 +64,48 @@ public class ItemMotion : MonoBehaviour {
 	void itemPickedUp(GameObject plObj)
 	{
 		StatusManager smScript = plObj.GetComponent<StatusManager> ();
-		if (itemName == Globals.ItemName.Money_S) 
+		WhipAttackManager attManager = plObj.GetComponent<WhipAttackManager> ();
+		switch (itemName)
 		{
+		case Globals.ItemName.Money_S:
+
 			smScript.score += 100;
 			Debug.Log ("fetched small money");
-		} 
-		else if (itemName == Globals.ItemName.LargeHeart) 
-		{
+			break;
+
+		case Globals.ItemName.Money_M:
+			
+			smScript.score += 400;
+			Debug.Log ("fetched medium money");
+			break;
+
+		case Globals.ItemName.Money_L:
+			
+			smScript.score += 700;
+			Debug.Log ("fetched large money");
+			break;
+
+		case Globals.ItemName.SmallHeart:
+			
+			smScript.heartNum += 1;
+			Debug.Log ("fetched heart");
+			break;
+
+		case Globals.ItemName.LargeHeart:
+		
 			smScript.heartNum += 5;
 			Debug.Log ("fetched heart");
+			break;
+		
+		case Globals.ItemName.WhipUp:
+	
+			if(attManager.whipLevel < 3)
+				attManager.whipLevel += 1;
+			Debug.Log ("fetched Morning Star, whip powered up");
+			break;
+
+		default:
+			break;
 		}
 
 		Debug.Log ("Player picked Up");
