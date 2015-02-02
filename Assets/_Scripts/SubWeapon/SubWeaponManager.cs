@@ -10,6 +10,7 @@ public class SubWeaponManager : MonoBehaviour {
 
 	private Animator animator;
 	private PlayerController playerControl;
+	private StatusManager status;
 	private int numWeapons = 3; 
 	public GameObject[] subWeapons; // fixed size 
 	private float throwWaitInterval = 0.33f;
@@ -22,6 +23,7 @@ public class SubWeaponManager : MonoBehaviour {
 	void Start () {
 		animator = GetComponent<Animator> ();
 		playerControl = GetComponent<PlayerController> ();
+		status = GetComponent<StatusManager> ();
 		throwing = false;
 		subWeapons = new GameObject[numWeapons];
 		// obtain all prefabs first 
@@ -47,13 +49,14 @@ public class SubWeaponManager : MonoBehaviour {
 	public IEnumerator Throw() {
 		if(isCarrying)
 		{
+
 			// stop if walking 
 			if (playerControl.grounded && animator.GetInteger("Speed") != 0) {
 				animator.SetInteger("Speed", 0);
 			}
 			animator.SetBool ("Throw", true);
 			throwing = true;	
-
+			status.heartNum -= weaponId == (int)Globals.SubWeapon.StopWatch ? 5 : 1;
 			// generate whatever 
 			GameObject thrown = Instantiate (subWeapons [weaponId], transform.position, Quaternion.identity) as GameObject;
 			thrown.transform.localScale = transform.localScale;
