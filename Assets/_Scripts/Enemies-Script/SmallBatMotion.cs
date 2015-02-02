@@ -34,7 +34,7 @@ public class SmallBatMotion : MonoBehaviour {
 
 		if (!facingRight)
 			Flip();
-		CollisionManager cmScript = GetComponent<CollisionManager>();
+		// CollisionManager cmScript = GetComponent<CollisionManager>();
 		animator = GetComponent<Animator> ();
 		if (!animator) {
 			Debug.LogError("animator can't retrieve");

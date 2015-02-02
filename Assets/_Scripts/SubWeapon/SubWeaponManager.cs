@@ -31,6 +31,13 @@ public class SubWeaponManager : MonoBehaviour {
 		weaponId = -1;
 	}
 
+	public GameObject getSubWeaponObject () {
+		if (weaponId == -1)
+			return null;
+		else 
+			return subWeapons[weaponId];
+	}
+
 	public void weaponPickedUp(Globals.SubWeapon weaponId_in)
 	{
 		isCarrying = true;
@@ -42,6 +49,7 @@ public class SubWeaponManager : MonoBehaviour {
 		// TODO
 		// update GUI
 		// 
+
 	}
 
 	public IEnumerator Throw() {
