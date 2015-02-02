@@ -5,8 +5,10 @@ public class PlayerController : MonoBehaviour {
 	public float jumpHeight = 2.0f;
 	public float HorizonalSpeedScale; // define in editor
 	public float initVerticalSpeed;
+	public float DropVerticalSpeed;
 	public float StairStepLength; // absolute value.
 	public float VerticalAccerlation;
+
 
 	// [HideInInspector]
 	public bool facingRight = false;
@@ -52,6 +54,8 @@ public class PlayerController : MonoBehaviour {
 		collManager = GetComponent<CollisionManager> ();
 		subWeaponManager = GetComponent<SubWeaponManager> ();
 		hurtManager = GetComponent<HurtManager> ();
+
+		collManager.ExitGround += handleOnExitGround;
 		Flip (); // since the raw sprite face left
 	}
 	void initInputEventHandler () {
@@ -241,6 +245,16 @@ public class PlayerController : MonoBehaviour {
 		if (!hurtManager.Hurting)
 			StartCoroutine (hurtManager.Hurt ());
 
+	}
+
+	void handleOnExitGround() {
+
+		if (stairManager.isOnStair() || 
+		    animator.GetBool("Jump")) {
+			return;
+		}
+		Debug.Log("Rapid Drop");
+		VerticalSpeed = DropVerticalSpeed;
 	}
 
 	// ============================================================================ //
