@@ -32,7 +32,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.44799995, y: .532999992, z: 0}
+  m_LocalPosition: {x: 23, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -148,6 +148,7 @@ MonoBehaviour:
   jumpHeight: .5
   HorizonalSpeedScale: .699999988
   initVerticalSpeed: 2
+  DropVerticalSpeed: 5
   StairStepLength: 0
   VerticalAccerlation: -5.0999999
   facingRight: 0
@@ -168,7 +169,6 @@ MonoBehaviour:
   score: 0
   heartNum: 0
   playerHealth: 16
-  bossHealth: 16
   portalNum: 0
   transformedVec: {x: 3.40282347e+38, y: 3.40282347e+38, z: 3.40282347e+38}
   savePos: 0
