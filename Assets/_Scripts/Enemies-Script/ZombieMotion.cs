@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ZombieMotion : MonoBehaviour {
 
-	private Vector2 defaultSpeed = new Vector2 (-0.01f, -0.015f);
+	private Vector2 defaultSpeed = new Vector2 (-0.007f, -0.015f);
 	private const float perishInSec = 1.0f;
 
 	private Vector2 speed;

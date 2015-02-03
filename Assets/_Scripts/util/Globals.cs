@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Globals : MonoBehaviour {
 
-	public static float WhipLengthLong = 0.48f; // 48 pixel
+	public static float WhipLengthLong = 0.54f; // 48 pixel
 	public static float WhipLengthShort = 0.32f;  // fixed
 	public static float PivotToWhipStart = 0.00f; // fixed
 	public static float SquatOffset = -0.05f; // 5 pixel 
@@ -21,6 +21,8 @@ public class Globals : MonoBehaviour {
 	public const string playerTag = "Player";
 	public const string groundTag = "Ground";
 	public const string MapTag = "Map";
+	public const string EnemyTag = "Enemy";
+
 	public const int maxPlayerHealth = 16;
 	public const int maxBossHealth = 16;
 
@@ -36,7 +38,7 @@ public class Globals : MonoBehaviour {
 	{
 		Money_S, Money_M, Money_L,
 		LargeHeart, SmallHeart,
-		WhipUp,
+		WhipUp, Rosary,
 		Dagger, Axe, HolyWater, StopWatch
 	}
 

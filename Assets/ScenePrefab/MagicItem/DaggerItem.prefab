@@ -86,7 +86,7 @@ MonoBehaviour:
   perishInSec: 10
   Amplitude: 0
   omega: 2
-  itemName: 6
+  itemName: 7
 --- !u!212 &21292132
 SpriteRenderer:
   m_ObjectHideFlags: 1

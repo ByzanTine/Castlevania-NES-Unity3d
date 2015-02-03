@@ -100,6 +100,23 @@ public class ItemMotion : MonoBehaviour {
 			Debug.Log ("fetched Morning Star, whip powered up");
 			break;
 
+		case Globals.ItemName.Rosary:
+
+			Debug.Log ("fetched Rosery, clear stage");
+
+
+			GameObject[] allEnemy = GameObject.FindGameObjectsWithTag(Globals.EnemyTag);
+			foreach(GameObject enemy in allEnemy)
+			{
+				OnWhipEvent whipScript = enemy.GetComponent<OnWhipEvent>();
+				
+				if(whipScript != null)
+				{
+					whipScript.onWhipEnter();
+				}
+			}
+			break;
+
 		case Globals.ItemName.Dagger:
 			wepManager.weaponPickedUp(Globals.SubWeapon.Dagger);
 			break;
