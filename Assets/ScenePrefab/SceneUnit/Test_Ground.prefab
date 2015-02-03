@@ -14,7 +14,7 @@ GameObject:
   - 50: {fileID: 5055616}
   m_Layer: 0
   m_Name: Test_Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
