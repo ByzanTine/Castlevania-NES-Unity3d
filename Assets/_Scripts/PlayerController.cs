@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour {
 		collManager.ExitGround += handleOnExitGround;
 		Flip (); // since the raw sprite face left
 	}
-	void initInputEventHandler () {
+	public void initInputEventHandler () {
 		InputManager.Instance.OnKeyDown_A += HandleOnKeyDown_A;
 		InputManager.Instance.OnKeyDown_B += HandleOnKeyDown_B;
 		InputManager.Instance.OnKeyDown_Down += HandleOnKeyDown_Down;
@@ -241,7 +241,7 @@ public class PlayerController : MonoBehaviour {
 	// Events
 	// =====
 
-	public void HandleHurt() {
+	public virtual void HandleHurt() {
 		if (!hurtManager.Hurting)
 			StartCoroutine (hurtManager.Hurt ());
 
