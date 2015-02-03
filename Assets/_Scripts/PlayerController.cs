@@ -167,6 +167,8 @@ public class PlayerController : MonoBehaviour {
 	void HandleOnKeyPress_Up ()
 	{
 		// Debug.Log("On Key Press: Up");
+		if (!grounded)
+			return;
 		if (stairManager.isInStairArea())
 			stairManager.tryGoUpStair ();
 	}
