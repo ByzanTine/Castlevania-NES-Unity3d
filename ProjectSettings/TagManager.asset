@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Map
   - Boss
+  - Input
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -49,4 +50,8 @@ TagManager:
   - name: Player
     userID: 1
     uniqueID: 825011621
+    locked: 0
+  - name: Mask
+    userID: 2
+    uniqueID: 3743401115
     locked: 0
