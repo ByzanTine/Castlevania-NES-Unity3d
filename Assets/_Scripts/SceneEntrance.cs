@@ -4,6 +4,9 @@ using System.Collections;
 public class SceneEntrance : MonoBehaviour {
 	public Vector3 newPos;
 	private bool entering = false;
+	void Start() {
+		transform.GetChild (0).GetComponent<SpriteRenderer> ().enabled = false;
+	}
 	void OnTriggerStay2D(Collider2D other) {
 		Debug.Log("ENTRANCE: Enter Trigger of Going into castlevania");
 
@@ -44,6 +47,8 @@ public class SceneEntrance : MonoBehaviour {
 			// small hack to reset the Speed when trying to adjust the facing
 			// Don't let the player controller do a fixed update that mess with the facing
 			pc.GetComponent<Animator> ().SetInteger ("Speed", 0);
+
+			transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
 
 			Vector2 portalPos = new Vector2(prepXcenter + 0.2f, pc.transform.position.y);
 			pc.GetComponent<Animator> ().SetInteger ("Speed", 1);
