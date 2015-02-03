@@ -33,6 +33,8 @@ public class InputManager : MonoBehaviour {
 	// chord
 	public event OnKeyPress OnKeyDown_Up_And_B;
 
+	public bool disableControl = false;
+
 	void Awake ()
 	{
 		// Instance control
@@ -52,6 +54,8 @@ public class InputManager : MonoBehaviour {
 	// Handle our Ray and Hit
 	void Update () 
 	{
+		if (disableControl)
+			return;
 		// chord detection, first priority 
 		if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) &&
 		    (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown (KeyCode.Period))) {

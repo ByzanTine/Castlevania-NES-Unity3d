@@ -181,7 +181,7 @@ public class StairManager : MonoBehaviour {
 		animator.SetBool ("DownStair", false);
 	}
 	// Move object using pure lerp smoothing 
-	private IEnumerator MoveObject(Vector2 from, Vector2 to, float time) {
+	public IEnumerator MoveObject(Vector2 from, Vector2 to, float time) {
 	
 		float i = 0.0f;
 		float rate = 1.0f / time;

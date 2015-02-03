@@ -73,7 +73,7 @@ public class SubWeaponManager : MonoBehaviour {
 			thrown.transform.localScale = new Vector3 (-1 * transform.localScale.x, 
 					                                    transform.localScale.y,
 					                                    transform.localScale.z);
-			yield return new WaitForSeconds(throwWaitInterval);
+			yield return new WaitForSeconds(throwWaitInterval - throwDelay);
 			animator.SetBool ("Throw", false);
 
 			yield return new WaitForSeconds(throwCD);
