@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
 	protected Animator animator;
 	private WhipAttackManager whipAttManager;
 	private StairManager stairManager;
-	private CollisionManager collManager;
+	protected CollisionManager collManager;
 	private SubWeaponManager subWeaponManager;
 	private HurtManager hurtManager;
 	private int curHorizontalVelocity = 0; // should only have values -1, 0, 1

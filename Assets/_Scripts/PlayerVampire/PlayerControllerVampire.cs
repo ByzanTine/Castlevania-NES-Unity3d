@@ -10,6 +10,8 @@ public class PlayerControllerVampire : PlayerController {
 	
 	private hurtVampireMan hurtMan;
 	private StatusManager status;
+//	private CollisionManager collManager;
+
 	
 	// Use this for initialization
 	void Start () {
@@ -20,7 +22,7 @@ public class PlayerControllerVampire : PlayerController {
 		animator = GetComponent<Animator> ();
 //		whipAttManager = GetComponent<WhipAttackManager> ();
 //		stairManager = GetComponent<StairManager> ();
-//		collManager = GetComponent<CollisionManager> ();
+		collManager = GetComponent<CollisionManager> ();
 //		subWeaponManager = GetComponent<SubWeaponManager> ();
 
 	}
@@ -163,10 +165,33 @@ public class PlayerControllerVampire : PlayerController {
 	}
 	// ============================================================ //
 	void FixedUpdate () {
+
+		if (collManager.isWallOn(Globals.Direction.Right)) {
+			
+			CurHorizontalVelocity = CurHorizontalVelocity > 0 ? 0 : CurHorizontalVelocity;
+		}
+		if (collManager.isWallOn(Globals.Direction.Left)) {
+			CurHorizontalVelocity = CurHorizontalVelocity < 0 ? 0 : CurHorizontalVelocity;
+		}
+		// Horizontal Update
+		if (collManager.isWallOn(Globals.Direction.Bottom)) {
+			if(VerticalSpeed < 0)
+			{
+				VerticalSpeed = 0;
+				// Vertical overwrite update
+				transform.position = new Vector2 (
+					transform.position.x ,
+					collManager.curBoxTop + collider2D.bounds.size.y/2.0f
+					);
+			}
+			
+		}
+
 		transform.position = new Vector2 (
 			transform.position.x + CurHorizontalVelocity * Time.fixedDeltaTime,
 			transform.position.y
 			);
+
 		// Vertical update
 		transform.position = new Vector2 (
 			transform.position.x ,
