@@ -98,6 +98,8 @@ public class BossMotion : OnWhipEvent {
 	}
 
 	public override void onWhipEnter (){
+		if (!awake)
+			return;
 		if (!hitted) 
 		{
 			bossHealth -= 2;
