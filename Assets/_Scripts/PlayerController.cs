@@ -195,7 +195,8 @@ public class PlayerController : MonoBehaviour {
 		// Debug.Log ("Key B pressed");
 		// attack
 		// delegate to WhipAttackManager
-		StartCoroutine (whipAttManager.WhipAttack());
+		if(!whipAttManager.attacking)
+			StartCoroutine (whipAttManager.WhipAttack());
 	}
 
 	

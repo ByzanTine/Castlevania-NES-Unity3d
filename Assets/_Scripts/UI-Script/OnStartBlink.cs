@@ -19,8 +19,9 @@ public class OnStartBlink : MonoBehaviour {
 			StartCoroutine(Blink());
 		}
 	}
+
 	IEnumerator Blink () {
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 25; i++) {
 			Debug.Log("turn once");
 			text.enabled = false;
 			yield return new WaitForSeconds (0.1f);

@@ -12,10 +12,25 @@ public class ChangeScene : MonoBehaviour {
 		Debug.Log ("ready to change scene" + collObj.tag);
 
 		if (collObj.tag == Globals.playerTag) {
-			Debug.Log ("changed position");
-			Application.LoadLevel (targetScene);
-			collObj.transform.position = newPos;
-		}
 
+			if(Application.loadedLevelName.Equals("Scene_01")
+				&& targetScene.Equals("Scene_Title_Screen"))
+			{
+				StatusManager smScript = collObj.GetComponent<StatusManager> ();
+
+				if(smScript.bossDefeated)
+				{
+					Destroy (GameObject.Find("InputManager"));
+					Destroy(collObj);
+					Application.LoadLevel (targetScene);
+				}
+			}
+			else
+			{
+				Debug.Log ("changed position");
+				Application.LoadLevel (targetScene);
+				collObj.transform.position = newPos;
+			}
+		}
 	}
 }

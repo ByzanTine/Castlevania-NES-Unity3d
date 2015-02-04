@@ -5,16 +5,16 @@ public class BossMotion : OnWhipEvent {
 	
 	public GameObject itemPrefab;
 	public int bossHealth = Globals.maxBossHealth;
-	private bool awake = false;
+	protected bool awake = false;
 
 	
-	private bool hitted = false;
-	private Animator animator;
+	protected bool hitted = false;
+	protected Animator animator;
 	private Vector2 speed;
 	private Transform playerPos;
 	private Vector2 initPosition;
 	private float horExtent;
-	void Start()
+	public void Start()
 	{
 		float verExtent = Camera.main.camera.orthographicSize;
 		horExtent = verExtent * Screen.width / Screen.height - 0.15f;
@@ -45,7 +45,7 @@ public class BossMotion : OnWhipEvent {
 	}
 
 
-	IEnumerator bossSpeedControl ()
+	protected IEnumerator bossSpeedControl ()
 	{
 		speed = new Vector2 (-0.01f, -0.003f);
 		yield return new WaitForSeconds (2f);
@@ -101,6 +101,10 @@ public class BossMotion : OnWhipEvent {
 		if (!hitted) 
 		{
 			bossHealth -= 2;
+
+			GameObject hitSE = Resources.Load (Globals.SEdir + "hitSE") as GameObject;
+			Instantiate (hitSE, transform.position, Quaternion.identity);
+
 			if(bossHealth <= 0)
 			{
 				StartCoroutine (revealItemAndDestroy());
@@ -110,14 +114,14 @@ public class BossMotion : OnWhipEvent {
 		}
 	}
 
-	IEnumerator onHit()
+	protected virtual IEnumerator onHit()
 	{
 		hitted = true;
 		yield return new WaitForSeconds (0.3f);
 		hitted = false;
 	}
 
-	public void wakeUp()
+	public virtual void wakeUp()
 	{
 		animator.SetBool ("isAwake", true);
 		awake = true;

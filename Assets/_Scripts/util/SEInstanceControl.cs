@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameMusicControl : MonoBehaviour {
+public class SEInstanceControl : MonoBehaviour {
 
-	private static GameMusicControl instance = null;
-//	public static GameMusicControl Instance 
-//	{
-//		get { return instance; }
-//	}
+	private static SEInstanceControl instance = null;
+	//	public static GameMusicControl Instance 
+	//	{
+	//		get { return instance; }
+	//	}
 	void Awake() {
 		if (instance != null && instance != this)// && instCount < lifeTime) 
 		{
@@ -15,6 +15,6 @@ public class GameMusicControl : MonoBehaviour {
 		}
 		instance = this;
 		DontDestroyOnLoad(this.gameObject);
-
+		
 	}
 }

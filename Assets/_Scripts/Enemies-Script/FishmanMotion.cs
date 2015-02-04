@@ -5,6 +5,7 @@ public class FishmanMotion : MonoBehaviour {
 
 	private Vector2 defaultSpeed = new Vector2 (-0.004f, -0.005f);
 	private float jumpSpeed = 0.018f;
+	private float cannonCD = 4.0f;
 	private const float perishInSec = 1.0f;
 	
 	private Vector2 speed;
@@ -14,11 +15,9 @@ public class FishmanMotion : MonoBehaviour {
 	private bool isShooting;
 	private Animator animator;
 	private float initVertPos;
-
+	private bool fishMerging = false;
 
 	public GameObject cannonBallPrefab;
-	public float cannonCD = 6.0f;
-
 
 	// Use this for initialization
 	void Start () {
@@ -47,8 +46,9 @@ public class FishmanMotion : MonoBehaviour {
 	void FixedUpdate () {
 		move ();
 
-		if (transform.position.y < initVertPos) 
+		if (transform.position.y < initVertPos && !fishMerging) 
 		{
+			fishMerging = true;
 			initWave();
 			Destroy(this.gameObject);
 		}
@@ -56,11 +56,12 @@ public class FishmanMotion : MonoBehaviour {
 
 	void initWave()
 	{
+		Debug.Log ("playing fish out");
 		GameObject deathEffect = Resources.Load ("Prefab/fishOut") as GameObject;
 		Vector3 offset = new Vector3 (0.0f, 0.2f, 0.0f);
 		Instantiate (deathEffect, collider2D.bounds.center + offset, Quaternion.identity);
-
 	}
+
 	IEnumerator shooting()
 	{
 		while(!isJumping)
@@ -107,7 +108,8 @@ public class FishmanMotion : MonoBehaviour {
 		isJumping = false;
 		StartCoroutine (shooting());
 	}
-	
+
+
 	void move()
 	{
 		Vector3 pos = this.transform.position;
