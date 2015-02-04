@@ -74,6 +74,55 @@ public class ItemMotion : MonoBehaviour {
 
 		switch (itemName)
 		{
+		case Globals.ItemName.Money_S:			
+		case Globals.ItemName.Money_M:					
+		case Globals.ItemName.Money_L:		
+			GameObject moneySE = Resources.Load (Globals.SEdir + "moneySE") as GameObject;
+			Instantiate (moneySE, transform.position, Quaternion.identity);
+			break;
+			
+		case Globals.ItemName.SmallHeart:		
+		case Globals.ItemName.LargeHeart:	
+			GameObject heartSE = Resources.Load (Globals.SEdir + "heartSE") as GameObject;
+			Instantiate (heartSE, transform.position, Quaternion.identity);
+			break;
+			
+		case Globals.ItemName.WhipUp:
+			
+		case Globals.ItemName.Dagger:
+			
+		case Globals.ItemName.Axe:
+			
+		case Globals.ItemName.HolyWater:
+			
+		case Globals.ItemName.StopWatch:
+			GameObject upgradeSE = Resources.Load (Globals.SEdir + "upgradeSE") as GameObject;
+			Instantiate (upgradeSE, transform.position, Quaternion.identity);
+			break;
+
+			
+		case Globals.ItemName.Rosary:
+			GameObject rosarySE = Resources.Load (Globals.SEdir + "rosarySE") as GameObject;
+			Instantiate (rosarySE, transform.position, Quaternion.identity);
+			break;
+		case Globals.ItemName.BossHeart:
+			
+			while(smScript.playerHealth <= Globals.maxPlayerHealth)
+			{
+				smScript.playerHealth++;
+			}
+			
+			GameObject deathSE = Resources.Load (Globals.SEdir + "WinMusic") as GameObject;
+			Instantiate (deathSE, transform.position, Quaternion.identity);
+			
+			break;
+			
+		default:
+			break;
+		}
+
+		switch (itemName)
+		{
 		case Globals.ItemName.Money_S:
 			smScript.score += 100;
 			Debug.Log ("fetched small money");
@@ -144,16 +193,19 @@ public class ItemMotion : MonoBehaviour {
 			{
 				smScript.playerHealth++;
 			}
-
-			GameObject deathEffect = Resources.Load ("Prefab/AudioObject/WinMusic") as GameObject;
-			Instantiate (deathEffect, transform.position, Quaternion.identity);
+			smScript.bossDefeated = true;
+			GameObject deathSE = Resources.Load (Globals.SEdir + "WinMusic") as GameObject;
+			Instantiate (deathSE, transform.position, Quaternion.identity);
 
 			break;
 
 		default:
 			break;
 		}
+
 		Debug.Log ("Player picked Up");
+		if(audio)
+			audio.Play ();
 		Destroy (this.gameObject);
 	}
 

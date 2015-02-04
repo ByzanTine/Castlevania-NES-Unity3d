@@ -19,6 +19,7 @@ public class DaggerController : MonoBehaviour {
 		if(whipScript != null)
 		{
 			whipScript.onWhipEnter();
+
 			Destroy(this.gameObject);
 		}
 	}	

@@ -29,9 +29,11 @@ public class OnWhipHitDestroy : OnWhipEvent {
 		GameObject deathEffect = Resources.Load ("Prefab/death") as GameObject;
 		Instantiate (deathEffect, collider2D.bounds.center, Quaternion.identity);
 
-		yield return new WaitForSeconds (0.1f);
-
 		randItems = Resources.LoadAll<GameObject>("Prefab/RandItem");
+		GameObject hitSE = Resources.Load (Globals.SEdir + "hitSE") as GameObject;
+
+		Instantiate (hitSE, transform.position, Quaternion.identity);
+
 		if(!fixedItem)
 		{
 			int randId = Random.Range(0, randItems.Length);

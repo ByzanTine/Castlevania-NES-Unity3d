@@ -32,12 +32,18 @@ public class WhipAttackManager : MonoBehaviour {
 		attacking = true;
 		animator.SetInteger (tag_attack, whipLevel);
 
-		yield return new WaitForSeconds(attackWaitInterval);
+		float SEDelay = 0.15f;
+
+		yield return new WaitForSeconds(SEDelay);
+
+		GameObject whipHitSE = Resources.Load (Globals.SEdir + "whipHitSE") as GameObject;
+		Instantiate (whipHitSE, transform.position, Quaternion.identity);
+
+		yield return new WaitForSeconds(attackWaitInterval - SEDelay);
 		animator.SetInteger (tag_attack, 0);
 		attacking = false;
 
 
-		
 	}
 	public void UpgradWhip () {
 		StartCoroutine (UpgradeWhipAnim ());

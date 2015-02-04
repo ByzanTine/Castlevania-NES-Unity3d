@@ -9,9 +9,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 429456}
   - 82: {fileID: 8229456}
-  - 114: {fileID: 11429456}
+  - 114: {fileID: 11469832}
+  - 114: {fileID: 11461580}
   m_Layer: 0
-  m_Name: BGMusic
+  m_Name: hitSE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,9 +38,9 @@ AudioSource:
   m_GameObject: {fileID: 129456}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 84ae8db00d3e1467d9ae910d59d5b752, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2344c7c54642f40e1a0519b037782f47, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .349999994
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -76,13 +77,13 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &11429456
+--- !u!114 &11461580
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -90,9 +91,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 129456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16cd250f1791647868e7020e887af0a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f5edf2f16e614aeea9006f946b19396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11469832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9dc5517dce8ca949b07013fb6e8d5d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lingerTime: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
