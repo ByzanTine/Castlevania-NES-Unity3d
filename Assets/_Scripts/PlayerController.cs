@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 
 
 
-	private Animator animator;
+	protected Animator animator;
 	private WhipAttackManager whipAttManager;
 	private StairManager stairManager;
 	private CollisionManager collManager;

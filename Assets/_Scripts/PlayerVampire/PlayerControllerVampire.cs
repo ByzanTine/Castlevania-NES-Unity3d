@@ -9,20 +9,19 @@ public class PlayerControllerVampire : PlayerController {
 	
 	
 	private hurtVampireMan hurtMan;
-	
-
+	private StatusManager status;
 	
 	// Use this for initialization
 	void Start () {
 		// init input manager
 		initInputEventHandler ();
 		hurtMan = GetComponent<hurtVampireMan> ();
-//		animator = GetComponent<Animator> ();
+		status = GetComponent<StatusManager> ();
+		animator = GetComponent<Animator> ();
 //		whipAttManager = GetComponent<WhipAttackManager> ();
 //		stairManager = GetComponent<StairManager> ();
 //		collManager = GetComponent<CollisionManager> ();
 //		subWeaponManager = GetComponent<SubWeaponManager> ();
-//		hurtManager = GetComponent<HurtManager> ();
 
 	}
 
@@ -93,7 +92,7 @@ public class PlayerControllerVampire : PlayerController {
 	void HandleOnKeyDown_A () {
 		// Debug.Log ("Key A pressed");
 	
-
+		StartCoroutine (Throw ());
 		
 	}
 	
@@ -129,16 +128,32 @@ public class PlayerControllerVampire : PlayerController {
 	void HandleOnKeyPress_Up_And_B () {
 		Debug.Log("INPUT: up and B pressed as chord");
 
-		for (int i = 0; i < 12; i++) {
-			float randomX = Random.Range(-1.0f, 1.0f);
-			float randomY = Random.Range(-1.0f, 1.0f);
-			GameObject gb = Instantiate (weapon, transform.position, Quaternion.identity) as GameObject;
-			gb.rigidbody2D.velocity = new Vector2 (randomX, randomY).normalized;
-			
+		// do what 
+
+	}
+
+	IEnumerator Throw() {
+
+
+		if (status.heartNum >= 10) {
+			animator.SetBool ("Throw", true);
+			GameObject.FindGameObjectWithTag ("Input").GetComponent<InputManager> ().disableControl = true;
+			VerticalSpeed = 0.0f;
+			CurHorizontalVelocity = 0;
+			yield return new WaitForSeconds (1.0f);
+			for (int i = 0; i < 12; i++) {
+				float randomX = Random.Range(-1.0f, 1.0f);
+				float randomY = Random.Range(-1.0f, 1.0f);
+				GameObject gb = Instantiate (weapon, transform.position, Quaternion.identity) as GameObject;
+				gb.rigidbody2D.velocity = new Vector2 (randomX, randomY).normalized;
+				
+			}
+			status.heartNum -= 10;
+
+			animator.SetBool ("Throw", false);
+			GameObject.FindGameObjectWithTag ("Input").GetComponent<InputManager> ().disableControl = false;
 		}
 
-		// do what 
-		// animator.SetBool ("Throw", false);
 	}
 
 	public override void HandleHurt () {
@@ -160,6 +175,7 @@ public class PlayerControllerVampire : PlayerController {
 	}
 
 	void Update () {
+
 	}
 
 
