@@ -100,6 +100,8 @@ public class StatusManager : MonoBehaviour {
 		Instantiate (BGM, transform.position, Quaternion.identity);
 	}
 
+
+
 	public bool savePos = false;
 
 	void positionControl()

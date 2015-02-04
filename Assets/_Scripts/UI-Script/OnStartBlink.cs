@@ -21,7 +21,7 @@ public class OnStartBlink : MonoBehaviour {
 	}
 
 	IEnumerator Blink () {
-		for (int i = 0; i < 25; i++) {
+		for (int i = 0; i < 5; i++) {
 			Debug.Log("turn once");
 			text.enabled = false;
 			yield return new WaitForSeconds (0.1f);
@@ -29,6 +29,6 @@ public class OnStartBlink : MonoBehaviour {
 			yield return new WaitForSeconds (0.1f);
 		}
 		// enter level
-		Application.LoadLevel ("Scene_00");
+		Application.LoadLevel ("Intro-Enter");
 	}
 }

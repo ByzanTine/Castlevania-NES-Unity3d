@@ -71,7 +71,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -141,7 +141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cannonBallPrefab: {fileID: 185978, guid: a2de20c4284f743f5a8c53c82bc67d47, type: 2}
-  fishOut: {fileID: 8300000, guid: 6c8fa5fdfabab4dc4b2fd52df00a7145, type: 3}
 --- !u!114 &11463628
 MonoBehaviour:
   m_ObjectHideFlags: 1
