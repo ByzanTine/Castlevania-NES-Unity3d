@@ -11,7 +11,7 @@ GameObject:
   - 82: {fileID: 8229456}
   - 114: {fileID: 11429456}
   m_Layer: 0
-  m_Name: WinMusic
+  m_Name: BGMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ AudioSource:
   m_GameObject: {fileID: 129456}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 4f1832a0d6e174e85ba416616899a102, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bae9b3803ac5743f5832a5bbfe6097e9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

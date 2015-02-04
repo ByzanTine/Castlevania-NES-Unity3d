@@ -101,6 +101,10 @@ public class BossMotion : OnWhipEvent {
 		if (!hitted) 
 		{
 			bossHealth -= 2;
+
+			GameObject hitSE = Resources.Load (Globals.SEdir + "hitSE") as GameObject;
+			Instantiate (hitSE, transform.position, Quaternion.identity);
+
 			if(bossHealth <= 0)
 			{
 				StartCoroutine (revealItemAndDestroy());

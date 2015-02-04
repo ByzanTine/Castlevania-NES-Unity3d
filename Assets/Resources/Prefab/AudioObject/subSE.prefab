@@ -9,9 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 429456}
   - 82: {fileID: 8229456}
-  - 114: {fileID: 11429456}
+  - 114: {fileID: 11469832}
   m_Layer: 0
-  m_Name: WinMusic
+  m_Name: subSE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,9 +37,9 @@ AudioSource:
   m_GameObject: {fileID: 129456}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 4f1832a0d6e174e85ba416616899a102, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fbef41b1e88c642cb840eece24def0ba, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .349999994
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -82,7 +82,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &11429456
+--- !u!114 &11469832
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -90,9 +90,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 129456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16cd250f1791647868e7020e887af0a4, type: 3}
+  m_Script: {fileID: 11500000, guid: e9dc5517dce8ca949b07013fb6e8d5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lingerTime: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

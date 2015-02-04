@@ -11,6 +11,7 @@ public class StatusManager : MonoBehaviour {
 	private static float prevPos = 0.0f;
 
 	public int portalNum = 0;
+	public bool bossDefeated = false;
 //	public Vector3 transformedVec = new Vector3 (float.MaxValue,float.MaxValue,float.MaxValue);
 //	private bool isTransed = true;
 	private string targetScene;
@@ -94,6 +95,9 @@ public class StatusManager : MonoBehaviour {
 			playerInstance = this;
 		}
 		DontDestroyOnLoad(this.gameObject);
+
+		GameObject BGM = Resources.Load (Globals.SEdir + "BGMusic") as GameObject;
+		Instantiate (BGM, transform.position, Quaternion.identity);
 	}
 
 	public bool savePos = false;

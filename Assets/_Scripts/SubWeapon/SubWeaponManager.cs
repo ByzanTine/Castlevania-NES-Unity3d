@@ -68,6 +68,9 @@ public class SubWeaponManager : MonoBehaviour {
 			status.heartNum -= weaponId == (int)Globals.SubWeapon.StopWatch ? 5 : 1;
 			yield return new WaitForSeconds(throwDelay);
 
+			GameObject subSE = Resources.Load (Globals.SEdir + "subSE") as GameObject;
+			Instantiate (subSE, transform.position, Quaternion.identity);
+
 			// generate whatever 
 			GameObject thrown = Instantiate (subWeapons [weaponId], transform.position, Quaternion.identity) as GameObject;
 			thrown.transform.localScale = new Vector3 (-1 * transform.localScale.x, 
