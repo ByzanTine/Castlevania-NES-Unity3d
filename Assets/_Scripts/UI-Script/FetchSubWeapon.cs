@@ -13,6 +13,7 @@ public class FetchSubWeapon : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		if (!subWeapon) return;
 		GameObject gb = subWeapon.getSubWeaponObject ();
 		if (gb) {
 			SpriteRenderer sprite = subWeapon.getSubWeaponObject ().GetComponent<SpriteRenderer> ();

@@ -5,10 +5,10 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Player-VampireBat-controller
+  m_Name: DragonSkull-Controller
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: Throw
+  - m_Name: Shoot
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -17,7 +17,7 @@ AnimatorController:
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
-    m_StateMachine: {fileID: 110731130}
+    m_StateMachine: {fileID: 110779698}
     m_Mask: {fileID: 0}
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
@@ -26,98 +26,77 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1101 &110101484
+--- !u!1101 &110173508
 Transition:
   serializedVersion: 2
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_SrcState: {fileID: 110260768}
-  m_DstState: {fileID: 110283330}
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
-    m_ExitTime: 1
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
-  m_CanTransitionToSelf: 0
---- !u!1101 &110152790
-Transition:
-  serializedVersion: 2
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110283330}
-  m_DstState: {fileID: 110260768}
+  m_SrcState: {fileID: 110270068}
+  m_DstState: {fileID: 110227312}
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Throw
+    m_ConditionEvent: Shoot
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1102 &110260768
+--- !u!1102 &110227312
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: idleVampire
+  m_Name: DragonSkull-shoot
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 698ae97f4882935469f2b64546538cf9, type: 2}
-  m_ParentStateMachine: {fileID: 110731130}
-  m_Position: {x: 180, y: -156, z: 0}
+  - {fileID: 7400000, guid: 8ff21ca7c423d8e41bf402a7b4298c05, type: 2}
+  m_ParentStateMachine: {fileID: 110779698}
+  m_Position: {x: 12, y: -72, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
---- !u!1102 &110283330
+--- !u!1102 &110270068
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Vampire-Fly
+  m_Name: DragonSkull-idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 62a339757b5565e478f2d303be2c345e, type: 2}
-  m_ParentStateMachine: {fileID: 110731130}
-  m_Position: {x: 24, y: -36, z: 0}
+  - {fileID: 7400000, guid: a53a33f12af0ffa4284fc3073c9bbc11, type: 2}
+  m_ParentStateMachine: {fileID: 110779698}
+  m_Position: {x: -120, y: 48, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
---- !u!1107 &110731130
+--- !u!1107 &110779698
 StateMachine:
   serializedVersion: 2
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Base Layer
-  m_DefaultState: {fileID: 110283330}
+  m_DefaultState: {fileID: 110270068}
   m_States:
-  - {fileID: 110283330}
-  - {fileID: 110260768}
+  - {fileID: 110227312}
+  - {fileID: 110270068}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110260768}
+      first: {fileID: 110270068}
       second:
-      - {fileID: 110101484}
+      - {fileID: 110173508}
     data:
-      first: {fileID: 110283330}
-      second:
-      - {fileID: 110152790}
+      first: {fileID: 110227312}
+      second: []
   m_MotionSetCount: 1
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_AnyStatePosition: {x: 156, y: 144, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
