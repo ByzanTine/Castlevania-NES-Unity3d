@@ -24,12 +24,17 @@ public class ShootFireBall : MonoBehaviour {
 		}
 		animator.SetBool ("Shoot", true);
 		curAngle = Random.Range (0, 360.0f);
-		Destroy (gameObject, 20.0f);
 	}
+
+
 
 	void Shoot() {
 		GameObject gb = Instantiate (fireball, transform.position, Quaternion.identity) as GameObject;
-		gb.rigidbody2D.velocity = new Vector2(-1.0f, 0.0f);
+		// follow transform
+		Vector3 rotate = new Vector3 (-1.0f, 0.0f, 0.0f).normalized;
+		Vector3 rotation = transform.rotation * rotate;
+		gb.rigidbody2D.velocity = rotation;
+
 
 	}
 
@@ -39,9 +44,10 @@ public class ShootFireBall : MonoBehaviour {
 		GameObject gb = Instantiate (fireball, transform.position, Quaternion.identity) as GameObject;
 
 
+	
 		Vector3 rotate = new Vector3 (-1.0f, 0.0f, 0.0f).normalized;
 		Vector3 rotation = Quaternion.Euler(0, 0, curAngle) * rotate;
-
+		transform.rotation = Quaternion.Euler (0, 0, curAngle);
 		gb.rigidbody2D.velocity = rotation;
 		curAngle = (curAngle + angleIncrement) % 360.0f;
 

@@ -10,19 +10,24 @@ public class DragonWakeup : MonoBehaviour {
 	public float AngleIncrement = 20.0f;
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.tag == "Player") {
-			ShootFireBall[] lmScript = GetComponentsInChildren<ShootFireBall>();
-
-
-
-			foreach (ShootFireBall sfb in lmScript) {
-				float wakeupTime = Random.Range(0.0f, randomIndex);
-				sfb.wakeUp (wakeupTime, sprial, Rate, AngleIncrement);
-
-			}
-
-			collider2D.enabled = false;
+			WakeUp ();
 		}
 	}
-	
+
+
+	public virtual void WakeUp (){
+
+		ShootFireBall[] lmScript = GetComponentsInChildren<ShootFireBall>();
+		
+		
+		
+		foreach (ShootFireBall sfb in lmScript) {
+			float wakeupTime = Random.Range(0.0f, randomIndex);
+			sfb.wakeUp (wakeupTime, sprial, Rate, AngleIncrement);
+			
+		}
+		
+		collider2D.enabled = false;
+	}
 
 }
