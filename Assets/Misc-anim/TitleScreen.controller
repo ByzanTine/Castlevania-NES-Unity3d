@@ -5,19 +5,13 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SmallBat-Controller
+  m_Name: TitleScreen
   serializedVersion: 2
-  m_AnimatorParameters:
-  - m_Name: Fly
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+  m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
-    m_StateMachine: {fileID: 110726092}
+    m_StateMachine: {fileID: 110772138}
     m_Mask: {fileID: 0}
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
@@ -26,77 +20,74 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1101 &110171902
+--- !u!1101 &110154204
 Transition:
   serializedVersion: 2
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_SrcState: {fileID: 110267080}
-  m_DstState: {fileID: 110204408}
-  m_TransitionDuration: .25
+  m_SrcState: {fileID: 110239512}
+  m_DstState: {fileID: 110234090}
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Fly
+  - m_ConditionMode: 5
+    m_ConditionEvent: 
     m_EventTreshold: 0
-    m_ExitTime: .75
+    m_ExitTime: 1
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1102 &110204408
+--- !u!1102 &110234090
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SmallBat-Anim
+  m_Name: TitleScreenStay
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 7da0870dc46543241bce0e726d2188aa, type: 2}
-  m_ParentStateMachine: {fileID: 110726092}
-  m_Position: {x: 216, y: -156, z: 0}
+  - {fileID: 7400000, guid: 7ef3a4c145306c84ab07c0bcd6b819ce, type: 2}
+  m_ParentStateMachine: {fileID: 110772138}
+  m_Position: {x: 72, y: 84, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
---- !u!1102 &110267080
+--- !u!1102 &110239512
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SmallBat-Idle
+  m_Name: TitleScreenIn
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: d8f15c5c55c2c9f49ae1fb287fe9b312, type: 2}
-  m_ParentStateMachine: {fileID: 110726092}
-  m_Position: {x: 96, y: -60, z: 0}
+  - {fileID: 7400000, guid: 327a529e64f9a4e4da962c85a3875f2b, type: 2}
+  m_ParentStateMachine: {fileID: 110772138}
+  m_Position: {x: 48, y: -48, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
---- !u!1107 &110726092
+--- !u!1107 &110772138
 StateMachine:
   serializedVersion: 2
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Base Layer
-  m_DefaultState: {fileID: 110267080}
+  m_DefaultState: {fileID: 110239512}
   m_States:
-  - {fileID: 110204408}
-  - {fileID: 110267080}
+  - {fileID: 110239512}
+  - {fileID: 110234090}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110267080}
+      first: {fileID: 110239512}
       second:
-      - {fileID: 110171902}
-    data:
-      first: {fileID: 110204408}
-      second: []
+      - {fileID: 110154204}
   m_MotionSetCount: 1
-  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_AnyStatePosition: {x: -204, y: 36, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
