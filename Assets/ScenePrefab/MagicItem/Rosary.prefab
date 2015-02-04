@@ -14,7 +14,7 @@ GameObject:
   - 50: {fileID: 5037656}
   - 114: {fileID: 11435456}
   m_Layer: 0
-  m_Name: SmallHeart
+  m_Name: Rosary
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.90863323, y: .0298211947, z: 0}
+  m_LocalPosition: {x: -1.29900002, y: .261999995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,7 +56,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .0500000007, y: .0500000007}
+  m_Size: {x: .159999996, y: .170000002}
   m_Center: {x: 0, y: 0}
 --- !u!114 &11435456
 MonoBehaviour:
@@ -82,11 +82,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76afb7848bcc4f2c8522e5fdebbcdb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedY: -.25
+  speedY: -1
   perishInSec: 10
-  Amplitude: .5
-  omega: 3
-  itemName: 3
+  Amplitude: 0
+  omega: 2
+  itemName: 6
 --- !u!212 &21286290
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -107,7 +107,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300060, guid: e2ce5fe20c5cfb3479522227beff46f4, type: 3}
+  m_Sprite: {fileID: 21300052, guid: 83bf2182062249640b3f8e0d8589480b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

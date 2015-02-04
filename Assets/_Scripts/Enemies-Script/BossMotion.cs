@@ -82,8 +82,9 @@ public class BossMotion : OnWhipEvent {
 
 			// Go back to top
 			speed = new Vector2 (-0.005f, 
-			                     (playerPos.position.y + 0.3f * Random.value + 0.2f)/100f);
-			yield return new WaitForSeconds (2f);
+			                     (playerPos.position.y + 0.3f * Random.value + 0.2f)
+			                     * Time.fixedDeltaTime/3f);
+			yield return new WaitForSeconds (3f);
 			speed *= 0;
 			yield return new WaitForSeconds (1f);
 
@@ -132,6 +133,7 @@ public class BossMotion : OnWhipEvent {
 
 		GameObject deathEffect = Resources.Load ("Prefab/death") as GameObject;
 		Instantiate (deathEffect, transform.position, Quaternion.identity);
+
 		yield return new WaitForSeconds (0.1f);
 		Instantiate (itemPrefab, transform.position, Quaternion.identity);
 		

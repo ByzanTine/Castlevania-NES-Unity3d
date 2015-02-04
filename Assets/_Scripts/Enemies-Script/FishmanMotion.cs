@@ -23,8 +23,7 @@ public class FishmanMotion : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator> ();
-		GameObject deathEffect = Resources.Load ("Prefab/fishOut") as GameObject;
-		Instantiate (deathEffect, collider2D.bounds.center, Quaternion.identity);
+		initWave ();
 
 		initVertPos = transform.position.y;
 		speed = new Vector2(0.0f, jumpSpeed + defaultSpeed.y);
@@ -50,12 +49,18 @@ public class FishmanMotion : MonoBehaviour {
 
 		if (transform.position.y < initVertPos) 
 		{
-			GameObject deathEffect = Resources.Load ("Prefab/fishOut") as GameObject;
-			Instantiate (deathEffect, collider2D.bounds.center, Quaternion.identity);
+			initWave();
 			Destroy(this.gameObject);
 		}
 	}
 
+	void initWave()
+	{
+		GameObject deathEffect = Resources.Load ("Prefab/fishOut") as GameObject;
+		Vector3 offset = new Vector3 (0.0f, 0.2f, 0.0f);
+		Instantiate (deathEffect, collider2D.bounds.center + offset, Quaternion.identity);
+
+	}
 	IEnumerator shooting()
 	{
 		while(!isJumping)

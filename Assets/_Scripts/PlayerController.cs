@@ -201,6 +201,8 @@ public class PlayerController : MonoBehaviour {
 	
 	
 	void HandleOnKeyDown_Down () {
+		if (!grounded)
+			return;
 		// Debug.Log ("Key Down arrow or S is activated");
 		// squat enable
 		// TODO enable squat when in prep_up_stair
@@ -215,6 +217,8 @@ public class PlayerController : MonoBehaviour {
 
 	void HandleOnKeyPress_Down ()
 	{
+		if (!grounded)
+			return;
 		// Debug.Log("Get Axis Down");
 		// TODO decide if the object is already going down
 		if (stairManager.isInStairArea()) {

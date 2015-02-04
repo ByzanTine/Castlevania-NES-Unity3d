@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 11418892}
   - 114: {fileID: 11463628}
   - 95: {fileID: 9596004}
+  - 114: {fileID: 11466824}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
@@ -100,6 +101,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallStatus: 00000000000000000000000000000000
   curBoxTop: -1
+--- !u!114 &11466824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9dc5517dce8ca949b07013fb6e8d5d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lingerTime: 30
 --- !u!114 &11495404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 192132, guid: cdd1c93be1471468aad3cad3deb60477, type: 2}
+  fixedItem: 1
 --- !u!212 &21295404
 SpriteRenderer:
   m_ObjectHideFlags: 1

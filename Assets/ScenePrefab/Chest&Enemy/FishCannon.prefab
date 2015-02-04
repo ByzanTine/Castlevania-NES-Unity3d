@@ -12,7 +12,7 @@ GameObject:
   - 50: {fileID: 5085978}
   - 61: {fileID: 6185978}
   - 114: {fileID: 11485978}
-  - 114: {fileID: 11433870}
+  - 114: {fileID: 11475080}
   m_Layer: 0
   m_Name: FishCannon
   m_TagString: Untagged
@@ -58,7 +58,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .0700000003, y: .0599999987}
   m_Center: {x: 0, y: 0}
---- !u!114 &11433870
+--- !u!114 &11475080
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9dc5517dce8ca949b07013fb6e8d5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lingerTime: 2
+  lingerTime: 3
 --- !u!114 &11485978
 MonoBehaviour:
   m_ObjectHideFlags: 1
