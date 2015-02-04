@@ -28,6 +28,6 @@ public class OnStartBlink : MonoBehaviour {
 			yield return new WaitForSeconds (0.1f);
 		}
 		// enter level
-		Application.LoadLevel ("Scene_00");
+		Application.LoadLevel ("Intro-Enter");
 	}
 }
