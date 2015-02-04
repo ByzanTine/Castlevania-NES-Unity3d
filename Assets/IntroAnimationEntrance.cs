@@ -45,6 +45,7 @@ public class IntroAnimationEntrance : MonoBehaviour {
 			pc.GetComponent<Animator> ().SetBool("FaceWall", true);
 			yield return new WaitForSeconds(1.0f);
 			pc.GetComponent<Animator> ().SetBool("FaceWall", false);
+			GameObject.FindGameObjectWithTag ("Input").GetComponent<InputManager> ().disableControl = false;
 			Application.LoadLevel ("Scene_00");
 			pc.transform.position = newPos;
 			
