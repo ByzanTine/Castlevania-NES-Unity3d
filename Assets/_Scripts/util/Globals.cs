@@ -12,10 +12,10 @@ public class Globals : MonoBehaviour {
 	// TODO These can be retrieved dynamically 
 	public static float StairUpTriggerColliderWidth = 0.16f; // 16 pixel
 	public static float playerWidth = 0.16f; // 16 pixelß
-	public static Vector3 groundPortalTarget1 = new Vector3 (-1.92f, 1.30f, 0.00f);
-	public static Vector3 groundPortalTarget2 = new Vector3 (1.28f, 1.30f, 0.00f);
-	public static Vector3 subPortalTarget1 = new Vector3 (14.91f, -0.16f, 0.00f);
-	public static Vector3 subPortalTarget2 = new Vector3 (18.10f, -0.16f, 0.00f);
+//	public static Vector3 groundPortalTarget1 = new Vector3 (-1.92f, 1.30f, 0.00f);
+//	public static Vector3 groundPortalTarget2 = new Vector3 (1.28f, 1.30f, 0.00f);
+//	public static Vector3 subPortalTarget1 = new Vector3 (14.91f, -0.16f, 0.00f);
+//	public static Vector3 subPortalTarget2 = new Vector3 (18.10f, -0.16f, 0.00f);
 
 
 	public const string playerTag = "Player";
@@ -39,7 +39,8 @@ public class Globals : MonoBehaviour {
 		Money_S, Money_M, Money_L,
 		LargeHeart, SmallHeart,
 		WhipUp, Rosary,
-		Dagger, Axe, HolyWater, StopWatch
+		Dagger, Axe, HolyWater, StopWatch,
+		BossHeart
 	}
 
 	public enum SubWeapon

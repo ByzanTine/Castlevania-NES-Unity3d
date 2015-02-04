@@ -45,9 +45,14 @@ public class WhipAttackManager : MonoBehaviour {
 
 	IEnumerator UpgradeWhipAnim() {
 		whipLevel++;
+		Time.timeScale = 0.2f;
+		InputManager.Instance.disableControl = true;
+		animator.SetInteger("Speed", 0);
 		animator.SetBool ("PickUpWhip", true);
 		// TODO pause ?
-		yield return new WaitForSeconds (1.0f);
+		yield return new WaitForSeconds (0.2f);
+		InputManager.Instance.disableControl = false;
+		Time.timeScale = 1.0f;
 		animator.SetBool ("PickUpWhip", false);
 
 	}

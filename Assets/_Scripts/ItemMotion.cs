@@ -15,6 +15,11 @@ public class ItemMotion : MonoBehaviour {
 	private float time;
 	private StatusManager status;
 	private CollisionManager cmScript;
+
+	StatusManager smScript;
+	WhipAttackManager attManager;
+	SubWeaponManager wepManager;
+
 	// Use this for initialization
 	void Start () {
 		time = Time.time;
@@ -63,9 +68,9 @@ public class ItemMotion : MonoBehaviour {
 
 	void itemPickedUp(GameObject plObj)
 	{
-		StatusManager smScript = plObj.GetComponent<StatusManager> ();
-		WhipAttackManager attManager = plObj.GetComponent<WhipAttackManager> ();
-		SubWeaponManager wepManager = plObj.GetComponent<SubWeaponManager> ();
+		smScript = plObj.GetComponent<StatusManager> ();
+		attManager = plObj.GetComponent<WhipAttackManager> ();
+		wepManager = plObj.GetComponent<SubWeaponManager> ();
 
 		switch (itemName)
 		{
@@ -132,12 +137,24 @@ public class ItemMotion : MonoBehaviour {
 		case Globals.ItemName.StopWatch:
 			wepManager.weaponPickedUp(Globals.SubWeapon.StopWatch);
 			break;
+		
+		case Globals.ItemName.BossHeart:
+
+			while(smScript.playerHealth <= Globals.maxPlayerHealth)
+			{
+				smScript.playerHealth++;
+			}
+
+			GameObject deathEffect = Resources.Load ("Prefab/AudioObject/WinMusic") as GameObject;
+			Instantiate (deathEffect, transform.position, Quaternion.identity);
+
+			break;
 
 		default:
 			break;
 		}
-
 		Debug.Log ("Player picked Up");
 		Destroy (this.gameObject);
 	}
+
 }
