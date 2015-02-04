@@ -61,7 +61,7 @@ public class CollisionResolve : MonoBehaviour {
 
 			if (collidedObj.tag == "Player") {
 				StairManager smScript = collidedObj.GetComponent<StairManager>();
-				if(smScript.isOnStair())
+				if(smScript && smScript.isOnStair())
 				{
 					collIndex = 3;
 				}

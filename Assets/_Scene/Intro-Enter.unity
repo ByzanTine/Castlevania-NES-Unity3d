@@ -362,7 +362,12 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 6ea86496fd46f09418f898db60f12067,
         type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 11493434, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11493434, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: be5ae8606d2ce6240b40b99f11382191, type: 2}
   m_RootGameObject: {fileID: 1677072544}
   m_IsPrefabParent: 0
@@ -497,7 +502,7 @@ Prefab:
     - target: {fileID: 8229456, guid: 4cc78ca1e91c84ba2a64a0459a02f365, type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: bae9b3803ac5743f5832a5bbfe6097e9, type: 3}
+      objectReference: {fileID: 8300000, guid: 84ae8db00d3e1467d9ae910d59d5b752, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4cc78ca1e91c84ba2a64a0459a02f365, type: 2}
   m_RootGameObject: {fileID: 1412840667}
@@ -676,7 +681,7 @@ AudioSource:
   m_GameObject: {fileID: 1412840667}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: bae9b3803ac5743f5832a5bbfe6097e9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 84ae8db00d3e1467d9ae910d59d5b752, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -705,7 +710,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -715,7 +720,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: .5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -748,7 +753,6 @@ GameObject:
   - 114: {fileID: 1677072545}
   - 114: {fileID: 1677072551}
   - 114: {fileID: 1677072552}
-  - 114: {fileID: 1677072553}
   - 114: {fileID: 1677072555}
   - 114: {fileID: 1677072554}
   m_Layer: 0
@@ -891,23 +895,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallStatus: 00000000000000000000000000000000
   curBoxTop: -10
---- !u!114 &1677072553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11493434, guid: be5ae8606d2ce6240b40b99f11382191,
-    type: 2}
-  m_PrefabInternal: {fileID: 532488925}
-  m_GameObject: {fileID: 1677072544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83ffa6b906b6d4427b4d32157e1129ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  heartNum: 0
-  playerHealth: 16
-  portalNum: 0
-  savePos: 0
 --- !u!114 &1677072554
 MonoBehaviour:
   m_ObjectHideFlags: 0

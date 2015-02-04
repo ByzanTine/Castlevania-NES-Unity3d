@@ -4811,6 +4811,7 @@ GameObject:
   - 61: {fileID: 571050849}
   - 114: {fileID: 571050850}
   - 114: {fileID: 571050851}
+  - 114: {fileID: 571050852}
   m_Layer: 0
   m_Name: Player-VampireBat
   m_TagString: Player
@@ -4847,7 +4848,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 571050844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4915,6 +4916,7 @@ MonoBehaviour:
   heartNum: 0
   playerHealth: 16
   portalNum: 0
+  bossDefeated: 0
   savePos: 0
 --- !u!114 &571050851
 MonoBehaviour:
@@ -4929,6 +4931,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InvisibleInterval: 1
   initHurtVericalSpeed: 1
+--- !u!114 &571050852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 571050844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f97c063a5184ea08648025a21207be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallStatus: 00000000000000000000000000000000
+  curBoxTop: -3
 --- !u!1001 &589067260
 Prefab:
   m_ObjectHideFlags: 0

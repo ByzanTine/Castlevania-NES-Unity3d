@@ -5,7 +5,7 @@ public class FishmanMotion : MonoBehaviour {
 
 	private Vector2 defaultSpeed = new Vector2 (-0.004f, -0.005f);
 	private float jumpSpeed = 0.018f;
-	private float cannonCD = 4.0f;
+	private float cannonCD = 3.0f;
 	private const float perishInSec = 1.0f;
 	
 	private Vector2 speed;
@@ -66,7 +66,6 @@ public class FishmanMotion : MonoBehaviour {
 	{
 		while(!isJumping)
 		{
-			yield return new WaitForSeconds(cannonCD);
 			if(speed.y == 0)
 			{
 				isShooting = true;
@@ -91,6 +90,8 @@ public class FishmanMotion : MonoBehaviour {
 				isShooting = false;
 				animator.SetBool("isShooting", false);
 			}
+			yield return new WaitForSeconds(cannonCD);
+
 		}
 	}
 
