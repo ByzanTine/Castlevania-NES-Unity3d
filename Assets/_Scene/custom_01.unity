@@ -2938,8 +2938,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomIndex: 0
   sprial: 0
-  Rate: 1
-  AngleIncrement: -72
+  Rate: .100000001
+  AngleIncrement: 0
 --- !u!1 &415020152
 GameObject:
   m_ObjectHideFlags: 0
@@ -4985,6 +4985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  curTime: 300
   heartNum: 0
   playerHealth: 16
   portalNum: 0

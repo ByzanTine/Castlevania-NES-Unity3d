@@ -13,18 +13,19 @@ public class ChangeScene : MonoBehaviour {
 
 		if (collObj.tag == Globals.playerTag) {
 
-			if(targetScene.Equals("Scene_Title_Screen"))
+			StatusManager smScript = collObj.GetComponent<StatusManager> ();
+			CameraMove cmScript = Camera.main.camera.GetComponent<CameraMove>();
+
+			if(targetScene.Equals("Scene_Title_Screen")
+			   || targetScene.Equals("Custom_01"))
 			{
-				StatusManager smScript = collObj.GetComponent<StatusManager> ();
 
 				if(smScript.bossDefeated)
 				{
 					Destroy (GameObject.Find("InputManager"));
 					Destroy(collObj);
 
-					CameraMove cmScript = Camera.main.camera.GetComponent<CameraMove>();
 					cmScript.defrost();
-
 					Application.LoadLevel (targetScene);
 
 				}
@@ -32,6 +33,7 @@ public class ChangeScene : MonoBehaviour {
 			else
 			{
 				Debug.Log ("changed position");
+//				cmScript.defrost();
 				Application.LoadLevel (targetScene);
 				collObj.transform.position = newPos;
 			}
