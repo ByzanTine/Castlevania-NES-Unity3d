@@ -37,15 +37,11 @@ public class hurtVampireMan : MonoBehaviour {
 	}
 	// ============================================================================ //
 	public IEnumerator Hurt () {
-		status.playerHealth -= 2;
-		
+		status.playerHealth -= 1;
 
 		hurting = true;
 		StartCoroutine (turnInvisible ());	
 		yield return null;
-
-
-		
 	}
 	
 	public IEnumerator turnInvisible () {

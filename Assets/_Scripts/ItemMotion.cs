@@ -193,6 +193,7 @@ public class ItemMotion : MonoBehaviour {
 			{
 				smScript.playerHealth++;
 			}
+			smScript.score += 10000;
 			smScript.bossDefeated = true;
 			GameObject deathSE = Resources.Load (Globals.SEdir + "WinMusic") as GameObject;
 			Instantiate (deathSE, transform.position, Quaternion.identity);

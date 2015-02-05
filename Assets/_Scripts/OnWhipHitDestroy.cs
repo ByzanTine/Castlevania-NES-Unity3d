@@ -32,6 +32,16 @@ public class OnWhipHitDestroy : OnWhipEvent {
 		randItems = Resources.LoadAll<GameObject>("Prefab/RandItem");
 		GameObject hitSE = Resources.Load (Globals.SEdir + "hitSE") as GameObject;
 
+		GameObject pObj = GameObject.FindGameObjectWithTag (Globals.playerTag);
+		if(pObj)
+		{
+			StatusManager smScript = 
+				pObj.GetComponent<StatusManager> ();
+			if(smScript)
+				smScript.score += 100;
+		}
+
+
 		Instantiate (hitSE, transform.position, Quaternion.identity);
 
 		if(!fixedItem)

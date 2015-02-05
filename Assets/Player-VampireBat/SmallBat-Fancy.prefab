@@ -95,9 +95,9 @@ TrailRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: 5
+  m_Time: .5
   m_StartWidth: .300000012
-  m_EndWidth: .300000012
+  m_EndWidth: .100000001
   m_Colors:
     m_Color[0]:
       serializedVersion: 2
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9dc5517dce8ca949b07013fb6e8d5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lingerTime: 5
+  lingerTime: .800000012
 --- !u!114 &11482800
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -22,7 +22,8 @@ public class AxeController : MonoBehaviour {
 		if(whipScript != null)
 		{
 			whipScript.onWhipEnter();
-			Destroy(this.gameObject);
+			GameObject deathEffect = Resources.Load ("Prefab/death") as GameObject;
+			Instantiate (deathEffect, transform.position, Quaternion.identity);
 		}
 	}
 }
