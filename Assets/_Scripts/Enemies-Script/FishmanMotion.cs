@@ -66,6 +66,7 @@ public class FishmanMotion : MonoBehaviour {
 	{
 		while(!isJumping)
 		{
+			yield return new WaitForSeconds(cannonCD);
 			if(speed.y == 0)
 			{
 				isShooting = true;
@@ -90,8 +91,6 @@ public class FishmanMotion : MonoBehaviour {
 				isShooting = false;
 				animator.SetBool("isShooting", false);
 			}
-			yield return new WaitForSeconds(cannonCD);
-
 		}
 	}
 
