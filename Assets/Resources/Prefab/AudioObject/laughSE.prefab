@@ -9,9 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 429456}
   - 82: {fileID: 8229456}
-  - 114: {fileID: 11478156}
+  - 114: {fileID: 11469832}
   m_Layer: 0
-  m_Name: SimonDead
+  m_Name: laughSE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ AudioSource:
   m_GameObject: {fileID: 129456}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 29bf6471ffbe645c7be5b7e9b0908dd7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b603d9ae5360f4e839731a172e1db35d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -82,7 +82,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &11478156
+--- !u!114 &11469832
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -90,9 +90,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 129456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16cd250f1791647868e7020e887af0a4, type: 3}
+  m_Script: {fileID: 11500000, guid: e9dc5517dce8ca949b07013fb6e8d5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lingerTime: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

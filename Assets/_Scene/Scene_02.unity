@@ -537,7 +537,7 @@ MonoBehaviour:
   numberOfMonsters: 1
   createAt: {x: -1, y: -.699999988}
   creationDelayInSec: .5
-  refreshTime: 10
+  refreshTime: 6
 --- !u!61 &83114038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -696,7 +696,7 @@ MonoBehaviour:
   numberOfMonsters: 1
   createAt: {x: 1, y: -.699999988}
   creationDelayInSec: .5
-  refreshTime: 10
+  refreshTime: 6
 --- !u!61 &215561238
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1399,7 +1399,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11452546, guid: b12cbf448acb74554a4165db47440216, type: 2}
       propertyPath: refreshTime
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b12cbf448acb74554a4165db47440216, type: 2}
@@ -1917,7 +1917,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11452546, guid: b12cbf448acb74554a4165db47440216, type: 2}
       propertyPath: refreshTime
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b12cbf448acb74554a4165db47440216, type: 2}
@@ -2150,7 +2150,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11452546, guid: b12cbf448acb74554a4165db47440216, type: 2}
       propertyPath: refreshTime
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b12cbf448acb74554a4165db47440216, type: 2}
@@ -2318,7 +2318,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11452546, guid: b12cbf448acb74554a4165db47440216, type: 2}
       propertyPath: refreshTime
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b12cbf448acb74554a4165db47440216, type: 2}
@@ -3001,7 +3001,7 @@ MonoBehaviour:
   numberOfMonsters: 1
   createAt: {x: 1, y: -.699999988}
   creationDelayInSec: .5
-  refreshTime: 10
+  refreshTime: 6
 --- !u!61 &1157941115
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3206,7 +3206,7 @@ MonoBehaviour:
   numberOfMonsters: 1
   createAt: {x: -1, y: -.699999988}
   creationDelayInSec: .5
-  refreshTime: 10
+  refreshTime: 6
 --- !u!61 &1257925643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3998,7 +3998,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11452546, guid: b12cbf448acb74554a4165db47440216, type: 2}
       propertyPath: refreshTime
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b12cbf448acb74554a4165db47440216, type: 2}
@@ -4268,9 +4268,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  curTime: 35
   heartNum: 0
   playerHealth: 16
   portalNum: 0
+  bossDefeated: 0
   savePos: 0
 --- !u!114 &1677072554
 MonoBehaviour:
@@ -4661,7 +4663,7 @@ MonoBehaviour:
   numberOfMonsters: 1
   createAt: {x: 1, y: -.699999988}
   creationDelayInSec: .5
-  refreshTime: 10
+  refreshTime: 6
 --- !u!61 &1869270092
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4979,7 +4981,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11452546, guid: b12cbf448acb74554a4165db47440216, type: 2}
       propertyPath: refreshTime
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b12cbf448acb74554a4165db47440216, type: 2}
@@ -5122,7 +5124,7 @@ MonoBehaviour:
   numberOfMonsters: 1
   createAt: {x: -1, y: -.699999988}
   creationDelayInSec: .5
-  refreshTime: 10
+  refreshTime: 6
 --- !u!61 &2111040272
 BoxCollider2D:
   m_ObjectHideFlags: 0

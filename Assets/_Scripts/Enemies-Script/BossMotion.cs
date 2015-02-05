@@ -29,7 +29,7 @@ public class BossMotion : OnWhipEvent {
 			move();
 	}
 
-	void move ()
+	protected void move ()
 	{
 		Vector3 pos = transform.position;
 		pos.x += speed.x;
@@ -41,6 +41,7 @@ public class BossMotion : OnWhipEvent {
 		if (pos.y > initPosition.y) {
 			speed.y *= 0;
 		}
+
 		transform.position = pos;
 	}
 
@@ -133,9 +134,6 @@ public class BossMotion : OnWhipEvent {
 	IEnumerator revealItemAndDestroy()
 	{
 		hitted = true;
-
-		CameraMove cmScript = Camera.main.camera.GetComponent<CameraMove>();
-		cmScript.defrost();
 
 		GameObject deathEffect = Resources.Load ("Prefab/death") as GameObject;
 		Instantiate (deathEffect, transform.position, Quaternion.identity);

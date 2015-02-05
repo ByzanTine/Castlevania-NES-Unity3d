@@ -4,6 +4,7 @@ using System.Collections;
 public class StatusManager : MonoBehaviour {
 
 	public int score = 0;
+	public int curTime = 35;
 	public int heartNum = 0;
 	public int playerHealth = Globals.maxPlayerHealth;
 
@@ -126,13 +127,12 @@ public class StatusManager : MonoBehaviour {
 
 	IEnumerator playerDying()
 	{
-
-		yield return new WaitForSeconds (0.5f);
-
+//		yield return new WaitForSeconds (0.5f);
+		InputManager.Instance.disableControl = true;
 		GameObject bossMusic = Resources.Load ("Prefab/AudioObject/SimonDead") as GameObject;
 		Instantiate (bossMusic, transform.position, Quaternion.identity);
 
-		yield return new WaitForSeconds (1.5f);
+		yield return new WaitForSeconds (2.5f);
 
 		Destroy (GameObject.Find("InputManager"));
 		Destroy (this.gameObject);

@@ -4,10 +4,6 @@ using System.Collections;
 public class PlayerControllerVampire : PlayerController {
 
 	public GameObject weapon;
-
-
-	
-	
 	private hurtVampireMan hurtMan;
 	private StatusManager status;
 //	private CollisionManager collManager;
@@ -103,7 +99,12 @@ public class PlayerControllerVampire : PlayerController {
 		// attack
 		// delegate to WhipAttackManager
 		GameObject gb = Instantiate (weapon, transform.position, Quaternion.identity) as GameObject;
-		gb.rigidbody2D.velocity = new Vector2 (1.0f, 0);
+		float shootSpeed = 2.0f;
+
+		if(!facingRight)
+			shootSpeed *= -1;
+
+		gb.rigidbody2D.velocity = new Vector2 (shootSpeed, 0);
 	}
 	
 	
@@ -136,21 +137,29 @@ public class PlayerControllerVampire : PlayerController {
 
 	IEnumerator Throw() {
 
-
 		if (status.heartNum >= 10) {
+
+			GameObject laughSE = Resources.Load (Globals.SEdir + "laughSE") as GameObject;
+			Instantiate (laughSE, transform.position, Quaternion.identity);
+
 			animator.SetBool ("Throw", true);
 			GameObject.FindGameObjectWithTag ("Input").GetComponent<InputManager> ().disableControl = true;
 			VerticalSpeed = 0.0f;
 			CurHorizontalVelocity = 0;
 			yield return new WaitForSeconds (1.0f);
-			for (int i = 0; i < 12; i++) {
-				float randomX = Random.Range(-1.0f, 1.0f);
-				float randomY = Random.Range(-1.0f, 1.0f);
+			int batNum = 10;
+			for (int i = 0; i < batNum; i++) {
+
+//				float randomX = Random.Range(-1.0f, 1.0f);
+//				float randomY = Random.Range(-1.0f, 1.0f);
+				float degreeDelta = 2 * 3.14f * i / batNum;
+				yield return new WaitForSeconds (0.05f);
+				status.heartNum -= 1;
+
 				GameObject gb = Instantiate (weapon, transform.position, Quaternion.identity) as GameObject;
-				gb.rigidbody2D.velocity = new Vector2 (randomX, randomY).normalized;
-				
+				gb.rigidbody2D.velocity = new Vector2 (Mathf.Sin(degreeDelta), Mathf.Cos(degreeDelta)).normalized;
+				gb.rigidbody2D.velocity *= 1.8f;
 			}
-			status.heartNum -= 10;
 
 			animator.SetBool ("Throw", false);
 			GameObject.FindGameObjectWithTag ("Input").GetComponent<InputManager> ().disableControl = false;
@@ -174,21 +183,36 @@ public class PlayerControllerVampire : PlayerController {
 			CurHorizontalVelocity = CurHorizontalVelocity < 0 ? 0 : CurHorizontalVelocity;
 		}
 		// Horizontal Update
-		if (collManager.isWallOn(Globals.Direction.Bottom)) {
-			if(VerticalSpeed < 0)
-			{
-				VerticalSpeed = 0;
-				// Vertical overwrite update
-				transform.position = new Vector2 (
-					transform.position.x ,
-					collManager.curBoxTop + collider2D.bounds.size.y/2.0f
-					);
-			}
-			
+		if (collManager.isWallOn (Globals.Direction.Bottom)) {
+						if (VerticalSpeed < 0) {
+								VerticalSpeed = 0;
+								// Vertical overwrite update
+								transform.position = new Vector2 (
+					transform.position.x,
+					collManager.curBoxTop + collider2D.bounds.size.y / 2.0f
+								);
+						}
+				} 
+		else {
+
+//			VerticalSpeed -= 0.2f;
+		}
+
+		if (CurHorizontalVelocity > 0 && !facingRight)
+			facingRight = !facingRight;
+		if (CurHorizontalVelocity < 0 && facingRight)
+			facingRight = !facingRight;
+
+		float horizontalSpeedFix = 0.7f;
+
+		if(animator.GetBool ("Throw"))
+		{
+			VerticalSpeed = 0;
+			CurHorizontalVelocity = 0;
 		}
 
 		transform.position = new Vector2 (
-			transform.position.x + CurHorizontalVelocity * Time.fixedDeltaTime,
+			transform.position.x + horizontalSpeedFix * CurHorizontalVelocity * Time.fixedDeltaTime,
 			transform.position.y
 			);
 

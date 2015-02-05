@@ -12,6 +12,11 @@ public class CustomBoss : BossMotion {
 
 	}
 
+	void FixedUpdate()
+	{
+		if(awake && !hitted)
+			move();
+	}
 
 	public override void wakeUp()
 	{
@@ -24,13 +29,16 @@ public class CustomBoss : BossMotion {
 
 	protected override IEnumerator onHit()
 	{
+
 		hitted = true;
+
+		yield return new WaitForSeconds (0.2f);
+
 		drwake.enable ();
-		int len = 90;
+		int len = 12;
 		for (int i = 0; i < len; i++) {
 			transform.rotation *= Quaternion.Euler (0, 0, 360.0f/len);
-			yield return new WaitForSeconds (5.0f/len);
-
+			yield return new WaitForSeconds (1.0f/len);
 		}
 		drwake.disable ();
 		hitted = false;

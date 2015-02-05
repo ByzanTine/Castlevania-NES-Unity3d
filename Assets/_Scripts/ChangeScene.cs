@@ -13,8 +13,7 @@ public class ChangeScene : MonoBehaviour {
 
 		if (collObj.tag == Globals.playerTag) {
 
-			if(Application.loadedLevelName.Equals("Scene_01")
-				&& targetScene.Equals("Scene_Title_Screen"))
+			if(targetScene.Equals("Scene_Title_Screen"))
 			{
 				StatusManager smScript = collObj.GetComponent<StatusManager> ();
 
@@ -22,7 +21,12 @@ public class ChangeScene : MonoBehaviour {
 				{
 					Destroy (GameObject.Find("InputManager"));
 					Destroy(collObj);
+
+					CameraMove cmScript = Camera.main.camera.GetComponent<CameraMove>();
+					cmScript.defrost();
+
 					Application.LoadLevel (targetScene);
+
 				}
 			}
 			else

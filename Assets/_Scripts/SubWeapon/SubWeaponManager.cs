@@ -56,7 +56,7 @@ public class SubWeaponManager : MonoBehaviour {
 	}
 
 	public IEnumerator Throw() {
-		if(isCarrying)
+		if(isCarrying && status.heartNum > 0)
 		{
 
 			// stop if walking 

@@ -11,6 +11,8 @@ public class CameraMove : MonoBehaviour {
 	private float maxX;	// bound to right
 	private bool isFrozen;
 	private float frozenPos;
+
+	private GameObject playerObj;
 	// assume the bg is x is at the center 
 	void Start() {
 		isFrozen = false;
@@ -41,20 +43,22 @@ public class CameraMove : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
-		target = GameObject.FindGameObjectWithTag (Globals.playerTag).transform;
-
-		if (target)
+		playerObj = GameObject.FindGameObjectWithTag (Globals.playerTag);
+		if (playerObj) 
 		{
-			Vector3 point = camera.WorldToViewportPoint(target.position);
-			Vector3 delta = target.position - camera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, point.z)); //(new Vector3(0.5, 0.5, point.z));
-			Vector3 destination = transform.position + delta;
-			destination.y = transform.position.y;
-			// clamp x 
-			destination.x = Mathf.Clamp(destination.x, minX, maxX);
-			if(isFrozen)
-				destination.x = frozenPos;
-			transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);
+			target = GameObject.FindGameObjectWithTag (Globals.playerTag).transform;
+			if (target)
+			{
+				Vector3 point = camera.WorldToViewportPoint(target.position);
+				Vector3 delta = target.position - camera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, point.z)); //(new Vector3(0.5, 0.5, point.z));
+				Vector3 destination = transform.position + delta;
+				destination.y = transform.position.y;
+				// clamp x 
+				destination.x = Mathf.Clamp(destination.x, minX, maxX);
+				if(isFrozen)
+					destination.x = frozenPos;
+				transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);
+			}
 		}
 	}
 }

@@ -6,6 +6,9 @@ public class ThrowBatControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		GetComponent<Animator> ().SetBool ("Fly", true);
+
+		GameObject whipHitSE = Resources.Load (Globals.SEdir + "whipHitSE") as GameObject;
+		Instantiate (whipHitSE, transform.position, Quaternion.identity);
 	}
 	
 	void OnTriggerEnter2D( Collider2D coll ) {
