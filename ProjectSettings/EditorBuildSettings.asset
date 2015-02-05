@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/_Scene/Scene_02.unity
   - enabled: 0
     path: Assets/_Scene/Scene_Custom.unity
+  - enabled: 0
+    path: Assets/_Scene/customTest.unity
