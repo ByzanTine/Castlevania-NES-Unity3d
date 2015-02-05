@@ -4,7 +4,7 @@ using System.Collections;
 public class StatusManager : MonoBehaviour {
 
 	public int score = 0;
-	public int curTime = 35;
+	public int curTime = 300;
 	public int heartNum = 0;
 	public int playerHealth = Globals.maxPlayerHealth;
 
@@ -17,6 +17,7 @@ public class StatusManager : MonoBehaviour {
 //	private bool isTransed = true;
 	private string targetScene;
 	private bool isDying = false;
+	private Animator animator;
 
 
 	public void enterStairPortal(string levelName) {
@@ -62,6 +63,11 @@ public class StatusManager : MonoBehaviour {
 	void Awake () {
 		instanceControl ();
 		positionControl ();
+	}
+
+	void Start()
+	{
+		animator = GetComponent<Animator>();
 	}
 
 	void Update()
@@ -129,6 +135,7 @@ public class StatusManager : MonoBehaviour {
 	{
 //		yield return new WaitForSeconds (0.5f);
 		InputManager.Instance.disableControl = true;
+		animator.SetBool ("Dead", true);
 		GameObject bossMusic = Resources.Load ("Prefab/AudioObject/SimonDead") as GameObject;
 		Instantiate (bossMusic, transform.position, Quaternion.identity);
 
