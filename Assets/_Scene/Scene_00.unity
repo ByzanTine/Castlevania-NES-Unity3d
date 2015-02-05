@@ -3270,9 +3270,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  curTime: 300
   heartNum: 0
   playerHealth: 16
   portalNum: 0
+  bossDefeated: 0
   savePos: 0
 --- !u!114 &1677072554
 MonoBehaviour:
