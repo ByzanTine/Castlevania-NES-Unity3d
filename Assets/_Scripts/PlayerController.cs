@@ -167,7 +167,7 @@ public class PlayerController : MonoBehaviour {
 	void HandleOnKeyPress_Up ()
 	{
 		// Debug.Log("On Key Press: Up");
-		if (!grounded)
+		if (!grounded || whipAttManager.attacking || subWeaponManager.throwing)
 			return;
 		if (stairManager.isInStairArea())
 			stairManager.tryGoUpStair ();
@@ -192,6 +192,9 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void HandleOnKeyDown_B () {
+		if (stairManager.isOnStairAnimationPlaying()) {
+			return;
+		}
 		// Debug.Log ("Key B pressed");
 		// attack
 		// delegate to WhipAttackManager
@@ -202,7 +205,7 @@ public class PlayerController : MonoBehaviour {
 	
 	
 	void HandleOnKeyDown_Down () {
-		if (!grounded)
+		if (!grounded || whipAttManager.attacking)
 			return;
 		// Debug.Log ("Key Down arrow or S is activated");
 		// squat enable
@@ -218,7 +221,7 @@ public class PlayerController : MonoBehaviour {
 
 	void HandleOnKeyPress_Down ()
 	{
-		if (!grounded)
+		if (!grounded || whipAttManager.attacking)
 			return;
 		// Debug.Log("Get Axis Down");
 		// TODO decide if the object is already going down
@@ -234,6 +237,8 @@ public class PlayerController : MonoBehaviour {
 
 	void HandleOnKeyPress_Up_And_B () {
 		Debug.Log("INPUT: up and B pressed as chord");
+		if (stairManager.isOnStairAnimationPlaying())
+			return;
 
 		if(!subWeaponManager.throwing && subWeaponManager.isCarrying && !whipAttManager.attacking)
 			StartCoroutine (subWeaponManager.Throw());
