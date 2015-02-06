@@ -210,7 +210,8 @@ public class PlayerController : MonoBehaviour {
 		// Debug.Log ("Key Down arrow or S is activated");
 		// squat enable
 		// TODO enable squat when in prep_up_stair
-		if (stairManager.onStairArea == StairManager.ON_STAIR_AREA.PrepUp) {
+		if (stairManager.onStairArea == StairManager.ON_STAIR_AREA.PrepUp && 
+		    !stairManager.isOnStair()) {
 			animator.SetBool ("Squat", true);
 		}
 		else if (stairManager.isInStairArea()) {
@@ -228,6 +229,7 @@ public class PlayerController : MonoBehaviour {
 			return;
 		// Debug.Log("Get Axis Down");
 		// TODO decide if the object is already going down
+
 		if (stairManager.isInStairArea()) {
 			stairManager.tryGoDownStair();
 		}
