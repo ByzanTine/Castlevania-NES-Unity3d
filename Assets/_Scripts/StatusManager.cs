@@ -21,22 +21,6 @@ public class StatusManager : MonoBehaviour {
 
 
 	public void enterStairPortal(string levelName) {
-//		if (levelName == "Scene_00")
-//			print("Woohoo");
-//		else if (levelName == "Scene_01")
-//		{
-//			if(portalNum == 1)
-//				this.gameObject.transform.position = Globals.subPortalTarget1;
-//			else if(portalNum == 2)
-//				this.gameObject.transform.position = Globals.subPortalTarget2;
-//		}
-//		else if (levelName == "Scene_02")
-//		{
-//			if(portalNum == 1)
-//				this.gameObject.transform.position = Globals.groundPortalTarget1;
-//			else if(portalNum == 2)
-//				this.gameObject.transform.position = Globals.groundPortalTarget2;
-//		}
 
 		if (portalNum != 0) {
 			portalNum = 0;
@@ -103,10 +87,17 @@ public class StatusManager : MonoBehaviour {
 		}
 		DontDestroyOnLoad(this.gameObject);
 
+
+
 		GameObject BGM = Resources.Load (Globals.SEdir + "BGMusic") as GameObject;
 		Instantiate (BGM, transform.position, Quaternion.identity);
 	}
 
+	public void changeBGM()
+	{
+		GameObject BGM = Resources.Load (Globals.SEdir + "BGMcus") as GameObject;	
+		Instantiate (BGM, transform.position, Quaternion.identity);
+	}
 
 
 	public bool savePos = false;
@@ -136,15 +127,15 @@ public class StatusManager : MonoBehaviour {
 //		yield return new WaitForSeconds (0.5f);
 		InputManager.Instance.disableControl = true;
 		animator.SetBool ("Dead", true);
-		GameObject bossMusic = Resources.Load ("Prefab/AudioObject/SimonDead") as GameObject;
-		Instantiate (bossMusic, transform.position, Quaternion.identity);
+		GameObject SimonDead = Resources.Load (Globals.SEdir + "SimonDead") as GameObject;
+		Instantiate (SimonDead, transform.position, Quaternion.identity);
 
 		yield return new WaitForSeconds (2.5f);
 
 		Destroy (GameObject.Find("InputManager"));
-		Destroy (this.gameObject);
 
-		Application.LoadLevel (Application.loadedLevel);
+		GameObject transEvent = Resources.Load ("Prefab/transEvent") as GameObject;
+		Instantiate (transEvent, transform.position, Quaternion.identity);
 	}
 
 
