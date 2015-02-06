@@ -107,17 +107,14 @@ public class ItemMotion : MonoBehaviour {
 			break;
 		case Globals.ItemName.BossHeart:
 			
-			while(smScript.playerHealth <= Globals.maxPlayerHealth)
-			{
-				smScript.playerHealth++;
-			}
-			
 			GameObject deathSE = Resources.Load (Globals.SEdir + "WinMusic") as GameObject;
 			Instantiate (deathSE, transform.position, Quaternion.identity);
 			
 			break;
 			
 		default:
+			GameObject defaultSE = Resources.Load (Globals.SEdir + "heartSE") as GameObject;
+			Instantiate (defaultSE, transform.position, Quaternion.identity);
 			break;
 		}
 
@@ -189,6 +186,11 @@ public class ItemMotion : MonoBehaviour {
 		
 		case Globals.ItemName.BossHeart:
 			getBossHeart();
+			break;
+
+		case Globals.ItemName.ChickenLeg:
+			smScript.playerHealth += 6;
+			Mathf.Clamp(smScript.playerHealth, 0, Globals.maxBossHealth);
 			break;
 
 		default:

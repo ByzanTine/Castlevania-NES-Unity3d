@@ -47,6 +47,14 @@ TagManager:
     userID: 0
     uniqueID: 0
     locked: 0
+  - name: BlackCover
+    userID: 3
+    uniqueID: 2151669089
+    locked: 0
+  - name: HiddenChest
+    userID: 4
+    uniqueID: 103185365
+    locked: 0
   - name: Player
     userID: 1
     uniqueID: 825011621
