@@ -101,8 +101,12 @@ public class PlayerControllerVampire : PlayerController {
 		GameObject gb = Instantiate (weapon, transform.position, Quaternion.identity) as GameObject;
 		float shootSpeed = 2.0f;
 
-		if(!facingRight)
+		if(!facingRight) {
 			shootSpeed *= -1;
+			gb.transform.localScale = new Vector3(gb.transform.localScale.x * -1, 
+			                                      gb.transform.localScale.y,
+			                                      gb.transform.localScale.z);
+		}
 
 		gb.rigidbody2D.velocity = new Vector2 (shootSpeed, 0);
 	}
