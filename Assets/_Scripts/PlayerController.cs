@@ -254,7 +254,7 @@ public class PlayerController : MonoBehaviour {
 	// =====
 
 	public virtual void HandleHurt() {
-		if (!hurtManager.Hurting)
+		if (!hurtManager.Hurting && !animator.GetBool("Dead"))
 			StartCoroutine (hurtManager.Hurt ());
 
 	}
