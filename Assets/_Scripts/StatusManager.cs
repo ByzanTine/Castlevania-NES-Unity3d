@@ -6,6 +6,7 @@ public class StatusManager : MonoBehaviour {
 	public int score = 0;
 	public int curTime = 300;
 	public int heartNum = 0;
+	public static int lives = 3;
 	public int playerHealth = Globals.maxPlayerHealth;
 
 	private static StatusManager playerInstance = null;
@@ -19,6 +20,15 @@ public class StatusManager : MonoBehaviour {
 	private bool isDying = false;
 	private Animator animator;
 
+
+	void OnLevelWasLoaded(int level)
+	{
+		if(Application.loadedLevelName.Equals("Scene_00") ||
+		   Application.loadedLevelName.Equals("Custom_00"))
+		{
+			lives = 3;
+		}
+	}
 
 	public void enterStairPortal(string levelName) {
 
@@ -52,6 +62,9 @@ public class StatusManager : MonoBehaviour {
 	void Start()
 	{
 		animator = GetComponent<Animator>();
+
+		InputManager.Instance.OnKeyDown_G += HandleOnKeyDown_G;
+
 	}
 
 	void Update()
@@ -62,14 +75,6 @@ public class StatusManager : MonoBehaviour {
 			playerDie();	
 		}
 	}
-
-//	IEnumerator delayingTrans()
-//	{
-//		//transform.position = transformedVec;
-//		yield return new WaitForSeconds(0.2f);
-//
-//	}
-
 
 	void instanceControl()
 	{
@@ -99,6 +104,13 @@ public class StatusManager : MonoBehaviour {
 		Instantiate (BGM, transform.position, Quaternion.identity);
 	}
 
+	void HandleOnKeyDown_G () {
+		// Gibson mode activated 
+		heartNum += 10;
+		playerHealth = Globals.maxPlayerHealth;
+		curTime += 30;
+	}
+
 
 	public bool savePos = false;
 
@@ -126,6 +138,7 @@ public class StatusManager : MonoBehaviour {
 	{
 //		yield return new WaitForSeconds (0.5f);
 		InputManager.Instance.disableControl = true;
+		lives--;
 		animator.SetBool ("Dead", true);
 		GameObject SimonDead = Resources.Load (Globals.SEdir + "SimonDead") as GameObject;
 		Instantiate (SimonDead, transform.position, Quaternion.identity);
