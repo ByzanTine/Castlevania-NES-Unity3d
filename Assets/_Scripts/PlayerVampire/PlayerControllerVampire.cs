@@ -32,11 +32,12 @@ public class PlayerControllerVampire : PlayerController {
 		InputManager.Instance.OnKeyPress_Left += HandleOnKeyPress_Left;
 		InputManager.Instance.OnKeyPress_Right += HandleOnKeyPress_Right;
 		InputManager.Instance.OnKeyUp_Left += HandleOnKeyUp_Left;
-		InputManager.Instance.OnKeyUp_Right += HandleOnKeyUp_Right;;
+		InputManager.Instance.OnKeyUp_Right += HandleOnKeyUp_Right;
 		InputManager.Instance.OnKeyPress_Up += HandleOnKeyPress_Up;
 		InputManager.Instance.OnKeyUp_Up += HandleOnKeyUp_Up;
 		InputManager.Instance.OnKeyPress_Down += HandleOnKeyPress_Down;
 		InputManager.Instance.OnKeyDown_Up_And_B += HandleOnKeyPress_Up_And_B;
+
 	}
 	// ============================================================================ //
 	/*

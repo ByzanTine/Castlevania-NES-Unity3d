@@ -14,7 +14,7 @@ public class fetchLife : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// replace this coming int
-		int lifeNum = 1;
+		int lifeNum = status.lives;
 		int life = Mathf.Clamp (lifeNum, 0, 99);
 		string score = life.ToString ("D2");
 		text.text = score;

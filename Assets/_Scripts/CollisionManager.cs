@@ -23,6 +23,17 @@ public class CollisionManager : MonoBehaviour {
 		{
 			if(EnterGround != null)
 				EnterGround();
+//			if(tag.Equals(Globals.playerTag))
+//			{
+//				Animator animator = GetComponent<Animator>();
+//
+//				if(!animator.GetBool("Jump"))
+//				{
+//					GameObject dropSE = Resources.Load (Globals.SEdir + "dropSE") as GameObject;
+//					Instantiate (dropSE, transform.position, Quaternion.identity);
+//				}
+//
+//			}
 			curBoxTop = boxTop;	
 		}
 	}

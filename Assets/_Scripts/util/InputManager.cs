@@ -30,6 +30,7 @@ public class InputManager : MonoBehaviour {
 	public event OnKeyPress OnKeyUp_Up;
 	public event OnKeyPress OnKeyDown_B;
 	public event OnKeyPress OnKeyDown_A;
+	public event OnKeyPress OnKeyDown_G;
 	// chord
 	public event OnKeyPress OnKeyDown_Up_And_B;
 
@@ -97,6 +98,9 @@ public class InputManager : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.X) || Input.GetKeyDown (KeyCode.Period)) {
 			OnKeyDown_B();
 		}
-	
+		if (Input.GetKeyDown (KeyCode.G)) {
+			OnKeyDown_G();
+		}
+
 	}
 }

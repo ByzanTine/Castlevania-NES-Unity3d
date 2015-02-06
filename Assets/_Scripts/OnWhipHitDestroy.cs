@@ -11,12 +11,6 @@ public class OnWhipHitDestroy : OnWhipEvent {
 
 	private static GameObject[] randItems;
 
-	void Start()
-	{
-
-	}
-
-
 	public override void onWhipEnter (){
 		if(!hitted)
 			StartCoroutine (revealItemAndDestroy());
@@ -31,6 +25,7 @@ public class OnWhipHitDestroy : OnWhipEvent {
 
 		randItems = Resources.LoadAll<GameObject>("Prefab/RandItem");
 		GameObject hitSE = Resources.Load (Globals.SEdir + "hitSE") as GameObject;
+		Instantiate (hitSE, transform.position, Quaternion.identity);
 
 		GameObject pObj = GameObject.FindGameObjectWithTag (Globals.playerTag);
 		if(pObj)
@@ -42,7 +37,6 @@ public class OnWhipHitDestroy : OnWhipEvent {
 		}
 
 
-		Instantiate (hitSE, transform.position, Quaternion.identity);
 
 		if(!fixedItem)
 		{
@@ -61,7 +55,6 @@ public class OnWhipHitDestroy : OnWhipEvent {
 		}
 
 		Instantiate (itemPrefab, transform.position, Quaternion.identity);
-
 		Destroy (this.gameObject);
 		yield return null;
 	}
