@@ -11,8 +11,8 @@ GameObject:
   - 212: {fileID: 21285978}
   - 50: {fileID: 5085978}
   - 61: {fileID: 6185978}
-  - 114: {fileID: 11485978}
   - 114: {fileID: 11475080}
+  - 114: {fileID: 11461290}
   m_Layer: 0
   m_Name: FishCannon
   m_TagString: Untagged
@@ -58,6 +58,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: .0700000003, y: .0599999987}
   m_Center: {x: 0, y: 0}
+--- !u!114 &11461290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e4e4ebcad9c4282b26439cddd1426f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -.0199999996
 --- !u!114 &11475080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,18 +82,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lingerTime: 3
---- !u!114 &11485978
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0e4e4ebcad9c4282b26439cddd1426f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: -.0199999996
 --- !u!212 &21285978
 SpriteRenderer:
   m_ObjectHideFlags: 1
