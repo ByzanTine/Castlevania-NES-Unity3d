@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class OnStartBlink : MonoBehaviour {
 
 	private Text text;
+
+	public string levelName = "Intro-Enter";
 	void Start() {
 		text = GetComponent<Text> ();
 	}
@@ -29,6 +31,6 @@ public class OnStartBlink : MonoBehaviour {
 			yield return new WaitForSeconds (0.1f);
 		}
 		// enter level
-		Application.LoadLevel ("Intro-Enter");
+		Application.LoadLevel (levelName);
 	}
 }
