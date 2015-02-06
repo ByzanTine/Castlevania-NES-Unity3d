@@ -73,8 +73,8 @@ public class CollisionResolve : MonoBehaviour {
 
 	void OnDestroy()
 	{
-		if(collIdTable.Contains(
-			GameObject.FindGameObjectWithTag(Globals.playerTag).GetInstanceID()))
+		GameObject playerObj = GameObject.FindGameObjectWithTag(Globals.playerTag);
+		if(playerObj && collIdTable.Contains(playerObj.GetInstanceID()))
 		{
 			releaseItem (GameObject.FindGameObjectWithTag(Globals.playerTag));
 		}

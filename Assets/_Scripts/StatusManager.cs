@@ -6,7 +6,7 @@ public class StatusManager : MonoBehaviour {
 	public int score = 0;
 	public int curTime = 300;
 	public int heartNum = 0;
-	public int lives = 3;
+	public static int lives = 3;
 	public int playerHealth = Globals.maxPlayerHealth;
 
 	private static StatusManager playerInstance = null;
@@ -21,7 +21,14 @@ public class StatusManager : MonoBehaviour {
 	private Animator animator;
 
 
-
+	void OnLevelWasLoaded(int level)
+	{
+		if(Application.loadedLevelName.Equals("Scene_00") ||
+		   Application.loadedLevelName.Equals("Custom_00"))
+		{
+			lives = 3;
+		}
+	}
 
 	public void enterStairPortal(string levelName) {
 

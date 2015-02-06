@@ -25,6 +25,8 @@ public class PlayerControllerVampire : PlayerController {
 
 
 	void initInputEventHandler () {
+		if (InputManager.Instance == null)
+			return;
 		InputManager.Instance.OnKeyDown_A += HandleOnKeyDown_A;
 		InputManager.Instance.OnKeyDown_B += HandleOnKeyDown_B;
 		InputManager.Instance.OnKeyDown_Down += HandleOnKeyDown_Down;

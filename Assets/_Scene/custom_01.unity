@@ -4884,6 +4884,7 @@ GameObject:
   - 114: {fileID: 571050850}
   - 114: {fileID: 571050851}
   - 114: {fileID: 571050852}
+  - 114: {fileID: 571050853}
   m_Layer: 0
   m_Name: Player-VampireBat
   m_TagString: Player
@@ -4921,7 +4922,7 @@ Transform:
   m_PrefabInternal: {fileID: 1194689945}
   m_GameObject: {fileID: 571050844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23, y: 0, z: 0}
+  m_LocalPosition: {x: -.600000024, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5024,6 +5025,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallStatus: 00000000000000000000000000000000
   curBoxTop: -3
+--- !u!114 &571050853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11403282, guid: 6a45bbde99ae543b38508dd5f9c5b19b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1194689945}
+  m_GameObject: {fileID: 571050844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb35b4a9e6c3d7945976f66a08202661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onStairArea: 3
+  onStairState: 2
+  curNumOfSteps: 0
+  curStairSteps: 0
 --- !u!1001 &589067260
 Prefab:
   m_ObjectHideFlags: 0
@@ -10206,7 +10223,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 473866, guid: 6a45bbde99ae543b38508dd5f9c5b19b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 23
+      value: -.600000024
       objectReference: {fileID: 0}
     - target: {fileID: 473866, guid: 6a45bbde99ae543b38508dd5f9c5b19b, type: 2}
       propertyPath: m_LocalPosition.y
