@@ -20,7 +20,7 @@ public class PlayerControllerVampire : PlayerController {
 //		stairManager = GetComponent<StairManager> ();
 		collManager = GetComponent<CollisionManager> ();
 //		subWeaponManager = GetComponent<SubWeaponManager> ();
-
+		status.changeBGM ();
 	}
 
 

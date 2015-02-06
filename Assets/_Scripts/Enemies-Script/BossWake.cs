@@ -36,7 +36,9 @@ public class BossWake : MonoBehaviour {
 		GameObject leftBorder = Instantiate (borderPrefab) as GameObject;
 		leftBorder.transform.position = new Vector2(bossTransform.position.x - horExtent, 0.5f);
 
-		GameObject bossMusic = Resources.Load ("Prefab/AudioObject/BossMusic") as GameObject;
+		GameObject bossMusic = Resources.Load (Globals.SEdir + "BossMusic") as GameObject;
+		if(Application.loadedLevelName == "Custom_01")
+			bossMusic = Resources.Load (Globals.SEdir + "BossCus") as GameObject;
 		Instantiate (bossMusic, transform.position, Quaternion.identity);
 
 //		GameObject rightBorder = Instantiate (borderPrefab) as GameObject;

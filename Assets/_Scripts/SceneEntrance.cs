@@ -37,6 +37,9 @@ public class SceneEntrance : MonoBehaviour {
 				(Globals.StairUpTriggerColliderWidth / 2 + Globals.playerWidth / 2);
 			// Debug.Log ("animRatio: " + animRatio);
 			animRatio = Mathf.Clamp (animRatio, 0.01f, 1.0f);
+
+			GameObject portalSE = Resources.Load (Globals.SEdir + "portalSE") as GameObject;
+			Instantiate (portalSE, transform.position, Quaternion.identity);
 			
 			yield return StartCoroutine(other.GetComponent<StairManager>().MoveObject(pc.transform.position, destination, animRatio * 1.0f));
 

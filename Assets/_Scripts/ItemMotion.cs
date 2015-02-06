@@ -188,16 +188,7 @@ public class ItemMotion : MonoBehaviour {
 			break;
 		
 		case Globals.ItemName.BossHeart:
-
-			while(smScript.playerHealth <= Globals.maxPlayerHealth)
-			{
-				smScript.playerHealth++;
-			}
-			smScript.score += 10000;
-			smScript.bossDefeated = true;
-			GameObject deathSE = Resources.Load (Globals.SEdir + "WinMusic") as GameObject;
-			Instantiate (deathSE, transform.position, Quaternion.identity);
-
+			getBossHeart();
 			break;
 
 		default:
@@ -209,5 +200,23 @@ public class ItemMotion : MonoBehaviour {
 			audio.Play ();
 		Destroy (this.gameObject);
 	}
+
+	void getBossHeart()
+	{
+		while(smScript.playerHealth <= Globals.maxPlayerHealth)
+		{
+			smScript.playerHealth++;
+		}
+		smScript.score += 10000;
+		smScript.bossDefeated = true;
+		GameObject deathSE = Resources.Load (Globals.SEdir + "WinMusic") as GameObject;
+		Instantiate (deathSE, transform.position, Quaternion.identity);
+
+		if(Application.loadedLevelName.Equals("Custom_00"))
+		{
+			smScript.playerDie();
+		}
+	}
+
 
 }
