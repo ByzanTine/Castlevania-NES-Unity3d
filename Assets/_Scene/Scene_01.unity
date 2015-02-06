@@ -563,7 +563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772d5bda1f2fd47198b582891d6b09e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: Scene_Title
+  targetScene: GateWay
   newPos: {x: 0, y: 0, z: 0}
 --- !u!50 &54670670
 Rigidbody2D:
@@ -5193,7 +5193,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11437690, guid: 4df6df1bda6a6430fbd9988e5873329e, type: 2}
       propertyPath: targetScene
-      value: Scene_Title
+      value: GateWay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4df6df1bda6a6430fbd9988e5873329e, type: 2}

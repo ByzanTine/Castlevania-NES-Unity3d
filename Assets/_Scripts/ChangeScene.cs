@@ -16,7 +16,7 @@ public class ChangeScene : MonoBehaviour {
 			StatusManager smScript = collObj.GetComponent<StatusManager> ();
 			CameraMove cmScript = Camera.main.camera.GetComponent<CameraMove>();
 
-			if(targetScene.Equals("Scene_Title_Screen")
+			if(targetScene.Equals("GateWay")
 			   || targetScene.Equals("Custom_01"))
 			{
 
