@@ -12,7 +12,7 @@ GameObject:
   - 50: {fileID: 5085978}
   - 61: {fileID: 6185978}
   - 114: {fileID: 11433870}
-  - 114: {fileID: 11482700}
+  - 114: {fileID: 11443900}
   m_Layer: 0
   m_Name: FishCannon
   m_TagString: Untagged
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lingerTime: 2
---- !u!114 &11482700
+--- !u!114 &11443900
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 185978}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06ed708e91269d9498a1b3b169d3ea9c, type: 3}
+  m_Script: {fileID: 11500000, guid: 11222531025dafd4b8c4291537586c92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -.0199999996

@@ -4706,7 +4706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772d5bda1f2fd47198b582891d6b09e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: Scene_Title_Screen
+  targetScene: GateWay
   newPos: {x: 0, y: 0, z: 0}
 --- !u!50 &563552990
 Rigidbody2D:
@@ -4922,7 +4922,7 @@ Transform:
   m_PrefabInternal: {fileID: 1194689945}
   m_GameObject: {fileID: 571050844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.600000024, y: 0, z: 0}
+  m_LocalPosition: {x: -.910000026, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10223,7 +10223,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 473866, guid: 6a45bbde99ae543b38508dd5f9c5b19b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.600000024
+      value: -.910000026
       objectReference: {fileID: 0}
     - target: {fileID: 473866, guid: 6a45bbde99ae543b38508dd5f9c5b19b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -13157,7 +13157,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11437690, guid: 4df6df1bda6a6430fbd9988e5873329e, type: 2}
       propertyPath: targetScene
-      value: Scene_Title_Screen
+      value: GateWay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4df6df1bda6a6430fbd9988e5873329e, type: 2}

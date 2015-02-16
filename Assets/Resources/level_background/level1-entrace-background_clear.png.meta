@@ -7,6 +7,7 @@ TextureImporter:
     21300004: level1-entrace-background_clear_2
     21300006: level1-entrace-background_clear_3
     21300008: level1-entrace-background_clear_4
+    21300010: level1-entrace-background_clear_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -95,6 +96,16 @@ TextureImporter:
         y: 89
         width: 16
         height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: level1-entrace-background_clear_5
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 228
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -42,7 +42,8 @@ public class Globals : MonoBehaviour {
 		LargeHeart, SmallHeart,
 		WhipUp, Rosary,
 		Dagger, Axe, HolyWater, StopWatch,
-		BossHeart
+		BossHeart,
+		ChickenLeg
 	}
 
 	public enum SubWeapon

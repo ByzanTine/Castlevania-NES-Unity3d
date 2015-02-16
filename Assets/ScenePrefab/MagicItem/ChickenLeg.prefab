@@ -14,7 +14,7 @@ GameObject:
   - 50: {fileID: 5037656}
   - 114: {fileID: 11435456}
   m_Layer: 0
-  m_Name: LargeHeart
+  m_Name: ChickenLeg
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   perishInSec: 10
   Amplitude: 0
   omega: 2
-  itemName: 3
+  itemName: 12
 --- !u!212 &21286290
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -107,7 +107,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 103185365
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300062, guid: e2ce5fe20c5cfb3479522227beff46f4, type: 3}
+  m_Sprite: {fileID: 21300018, guid: e2ce5fe20c5cfb3479522227beff46f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
